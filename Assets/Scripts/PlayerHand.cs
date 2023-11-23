@@ -41,11 +41,6 @@ public class PlayerHand : MonoBehaviour
         }
     }
 
-    public void BuyMonument(GameObject prefab)
-    {
-        Instantiate(prefab, gameObject.transform);
-    }
-
     private void AddCardUpper(CardStocker cardStocker, GameObject prefab)
     {
         print("Au dessus");
