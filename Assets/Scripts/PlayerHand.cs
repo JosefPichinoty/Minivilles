@@ -24,12 +24,12 @@ public class PlayerHand : MonoBehaviour
 
         for (int i = 0; i < 15; i++)
         {
-            if (cartes[i].currentAmount == 0 && cartes[i].cardIndex == prefab.GetComponent<CardInfo>().cardId)
+            if (cartes[i].currentAmount == 0 && cartes[i].cardIndex == prefab.GetComponent<CardData>().cardIndex)
             {
                 AddCardBasic(cartes[i], prefab);
                 print("rien");
             }
-            else if(cartes[i].currentAmount > 0 && cartes[i].cardIndex == prefab.GetComponent<CardInfo>().cardId)
+            else if(cartes[i].currentAmount > 0 && cartes[i].cardIndex == prefab.GetComponent<CardData>().cardIndex)
             {
                 print("rien2");
                 AddCardUpper(cartes[i], prefab);
@@ -42,14 +42,12 @@ public class PlayerHand : MonoBehaviour
         print("Au dessus");
         print("Au dessus = " + cardStocker.carteStock[cardStocker.currentAmount - 1].name);
         GameObject obj = Instantiate(prefab, cardStocker.carteStock[cardStocker.currentAmount - 1].transform);
-        obj.GetComponent<CardInfo>().isEmpiled = false;
         cardStocker.carteStock.Add(obj.gameObject);
         cartes[cardStocker.cardIndex].currentAmount++;
     }
     private void AddCardBasic(CardStocker cardStocker, GameObject prefab)
     {
         GameObject obj = Instantiate(prefab, handParent.transform);
-        obj.GetComponent<CardInfo>().isEmpiled = false;
         Debug.Log("prefab = " + obj);
         cardStocker.carteStock.Add(obj.gameObject);
         cartes[cardStocker.cardIndex].currentAmount++;

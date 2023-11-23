@@ -10,4 +10,5 @@ public class CardData : ScriptableObject
     public int secondValueDice;
     public int maxNumCard;
     public bool onlyCard;
+    public int cardIndex;
 }

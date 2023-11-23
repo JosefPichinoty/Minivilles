@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 406303583082686295}
   - component: {fileID: 1669181921349161083}
   - component: {fileID: 2012881549150741519}
-  - component: {fileID: -5562415524385477392}
+  - component: {fileID: 5755577851117195280}
   m_Layer: 5
   m_Name: Ferme
   m_TagString: Card
@@ -103,7 +103,7 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &-5562415524385477392
+--- !u!114 &5755577851117195280
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,8 +112,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7066318275581547428}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 921d6c93052cf6d4e872c4b239fdc4e6, type: 3}
+  m_Script: {fileID: 11500000, guid: 2892411aa9a1522498ced4fd9a531334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEmpiled: 0
-  cardId: 1
+  cardData: {fileID: 11400000, guid: 3e03a5b2f542a6149b5fbb2f9711e534, type: 2}
