@@ -18,3 +18,4 @@ MonoBehaviour:
   secondValueDice: 3
   maxNumCard: 6
   onlyCard: 0
+  cardIndex: 2

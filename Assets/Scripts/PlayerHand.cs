@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class PlayerHand : MonoBehaviour
 {
@@ -24,17 +25,25 @@ public class PlayerHand : MonoBehaviour
 
         for (int i = 0; i < 15; i++)
         {
-            if (cartes[i].currentAmount == 0 && cartes[i].cardIndex == prefab.GetComponent<CardData>().cardIndex)
+            if (cartes[i].currentAmount == 0 && cartes[i].cardIndex == prefab.GetComponent<CardContainer>().cardData.cardIndex)
             {
                 AddCardBasic(cartes[i], prefab);
                 print("rien");
             }
-            else if(cartes[i].currentAmount > 0 && cartes[i].cardIndex == prefab.GetComponent<CardData>().cardIndex)
+            else if(cartes[i].currentAmount > 0 && cartes[i].cardIndex == prefab.GetComponent<CardContainer>().cardData.cardIndex)
             {
-                print("rien2");
-                AddCardUpper(cartes[i], prefab);
+                if (cartes[i].currentAmount < prefab.GetComponent<CardContainer>().cardData.maxNumCard)
+                {
+                    print("rien2");
+                    AddCardUpper(cartes[i], prefab);
+                }
             }
         }
+    }
+
+    public void BuyMonument(GameObject prefab)
+    {
+        Instantiate(prefab, gameObject.transform);
     }
 
     private void AddCardUpper(CardStocker cardStocker, GameObject prefab)
