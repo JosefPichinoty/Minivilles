@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class Monument : MonoBehaviour
 {
 
-    [SerializeField] private Image image;
+    public Image image;
     public void BuyMonument(Sprite prefab)
     {
         print(gameObject.name);
