@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class ButtonSFX : MonoBehaviour
 {
-
-    private AudioSource audio;
     [SerializeField]
     private GameObject panel;
 
@@ -16,27 +14,23 @@ public class ButtonSFX : MonoBehaviour
 
     void Start()
     {
-        audio = GetComponent<AudioSource>();
-
+        yourButton = this.gameObject.GetComponent<Button>();
+        if(this.gameObject.name != "PlayBtn")
+        {
+            panel = null;
+        }
         yourButton.onClick.AddListener(TaskOnClick);
 
     }
 
     void TaskOnClick()
     {
-        Debug.Log("You have clicked the button!");
-        panel.SetActive(true);
+        if (this.gameObject.name == "PlayBtn")
+        {
+            panel.SetActive(true);
+        }
     }
 
-    public void playSFX()
-    {
-        audio.Play();
-    }
-
-    public void modalPlayers()
-    {
-        panel.SetActive(true);
-    }
 
 
 
