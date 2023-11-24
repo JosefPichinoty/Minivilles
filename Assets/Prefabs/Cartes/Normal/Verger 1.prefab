@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 406303583082686295}
   - component: {fileID: 1669181921349161083}
   - component: {fileID: 2012881549150741519}
-  - component: {fileID: 8667963297280158586}
-  - component: {fileID: 5543566251152229084}
+  - component: {fileID: 7748054227686403903}
   m_Layer: 5
-  m_Name: Gare-1
+  m_Name: Verger 1
   m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 89334a220016f7b4db871b5c89ad1498, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3cf283d3a2aafe643a29921c0cf723a9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -93,7 +92,7 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 30
+    m_Top: 10
     m_Bottom: 0
   m_ChildAlignment: 1
   m_Spacing: 0
@@ -104,7 +103,7 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &8667963297280158586
+--- !u!114 &7748054227686403903
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,18 +112,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7066318275581547428}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd79ee862f6ddbd489d42c44c74d6926, type: 3}
+  m_Script: {fileID: 11500000, guid: 2892411aa9a1522498ced4fd9a531334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5543566251152229084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7066318275581547428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd79ee862f6ddbd489d42c44c74d6926, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  cardData: {fileID: 11400000, guid: 1e830e198b43e054984a2c1ca9d54e46, type: 2}
