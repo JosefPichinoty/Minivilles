@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1669181921349161083}
   - component: {fileID: 2012881549150741519}
   - component: {fileID: -8287287568630359510}
+  - component: {fileID: 1964266891914613787}
   m_Layer: 5
   m_Name: Boulangerie
   m_TagString: Card
@@ -59,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: a3d3634f27d531e4b93712335d9030ab, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -116,3 +117,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardData: {fileID: 11400000, guid: 0d6f6906148561543a05268f0c5e125b, type: 2}
+--- !u!114 &1964266891914613787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7066318275581547428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd1a19a39d3664945814a2a109b3c61a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
