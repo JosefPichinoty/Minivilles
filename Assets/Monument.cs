@@ -5,11 +5,13 @@ using UnityEngine.UIElements;
 
 public class Monument : MonoBehaviour
 {
+
+    public Image image;
     public void BuyMonument(Sprite prefab)
     {
         print(gameObject.name);
-        gameObject.GetComponent<Image>().sprite = prefab;
-        gameObject.GetComponent<Button>().SetEnabled(false);
+        image.sprite = prefab;
+        //gameObject.GetComponent<Button>().SetEnabled(false);
         
     }
 
