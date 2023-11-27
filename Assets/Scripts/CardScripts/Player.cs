@@ -7,10 +7,15 @@ using UnityEngine.Rendering;
 [CreateAssetMenu(fileName = "newPlayer", menuName = "playerContainer/player")]
 public class Player : ScriptableObject
 {
+    public Color color;
+
     public List<Card> cardObtained = new List<Card>();
     public List<Card> monumentObtained = new List<Card>();
 
+    public bool bothDice = false;
+    public bool bonusMoney = false;
     public bool playerTurn = false;
+    public bool rethrowDice = false;
     public int money = 3;
 
     void Start()

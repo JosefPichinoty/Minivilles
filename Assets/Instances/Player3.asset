@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef5c7cddbd47f674bb682c25a789b719, type: 3}
   m_Name: Player3
   m_EditorClassIdentifier: 
+  color: {r: 0, g: 1, b: 0, a: 0}
   cardObtained: []
   monumentObtained: []
   playerTurn: 0

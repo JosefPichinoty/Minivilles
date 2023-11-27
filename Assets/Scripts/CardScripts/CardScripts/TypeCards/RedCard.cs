@@ -25,12 +25,20 @@ public class RedCard : Card
         if (data.nameCard == "Café")
         {
             GameManager.GetInstance().activePlayer.money--;
-            /*owner.money++;*/
+            owner.money++;
+            if (owner.bonusMoney == true)
+            {
+                owner.money++;
+            }
         }
         if (data.nameCard == "Restaurant")
         {
             GameManager.GetInstance().activePlayer.money -= 2;
-            /*owner.money += 2;*/
+            owner.money += 2;
+            if (owner.bonusMoney == true)
+            {
+                owner.money++;
+            }
         }
     }
 }

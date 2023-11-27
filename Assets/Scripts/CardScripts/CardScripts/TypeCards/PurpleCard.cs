@@ -38,11 +38,11 @@ public class PurpleCard : Card
         }
         if (data.nameCard == "Centre d'affaires")
         {
-
+            /*owner.TradeCard();*/
         }
         if (data.nameCard == "Chaine de télévision")
         {
-
+            /*owner.GetMoney();*/
         }
     }
 }
