@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     public List <Player> playerList = new List<Player>();
     public Player activePlayer;
 
+    public Card selectedCard;
+
     public int turn;
 
     void Start()

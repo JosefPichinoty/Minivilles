@@ -22,20 +22,25 @@ public class PlayerHand : MonoBehaviour
     }
     public void Buy(GameObject prefab)
     {
-
-        for (int i = 0; i < 15; i++)
+        if (GameManager.GetInstance().selectedCard.buyable)
         {
-            if (cartes[i].currentAmount == 0 && cartes[i].cardIndex == prefab.GetComponent<CardContainer>().cardData.cardIndex)
+            GameManager.GetInstance().selectedCard.owner = GameManager.GetInstance().activePlayer;
+            GameManager.GetInstance().activePlayer.money -= GameManager.GetInstance().selectedCard.data.valueMoney;
+
+            for (int i = 0; i < 15; i++)
             {
-                AddCardBasic(cartes[i], prefab);
-                print("rien");
-            }
-            else if(cartes[i].currentAmount > 0 && cartes[i].cardIndex == prefab.GetComponent<CardContainer>().cardData.cardIndex)
-            {
-                if (cartes[i].currentAmount < prefab.GetComponent<CardContainer>().cardData.maxNumCard)
+                if (cartes[i].currentAmount == 0 && cartes[i].cardIndex == prefab.GetComponent<CardContainer>().cardData.cardIndex)
                 {
-                    print("rien2");
-                    AddCardUpper(cartes[i], prefab);
+                    AddCardBasic(cartes[i], prefab);
+                    print("rien");
+                }
+                else if (cartes[i].currentAmount > 0 && cartes[i].cardIndex == prefab.GetComponent<CardContainer>().cardData.cardIndex)
+                {
+                    if (cartes[i].currentAmount < prefab.GetComponent<CardContainer>().cardData.maxNumCard)
+                    {
+                        print("rien2");
+                        AddCardUpper(cartes[i], prefab);
+                    }
                 }
             }
         }
@@ -43,6 +48,14 @@ public class PlayerHand : MonoBehaviour
 
     public void BuyMonument(GameObject prefab)
     {
+        foreach (OrangeCard monument in GameManager.GetInstance().activePlayer.monumentList)
+        {
+            if (monument.data.valueMoney <= GameManager.GetInstance().activePlayer.money)
+            {
+                monument.buyable = true;
+            }
+        }
+
         Instantiate(prefab, gameObject.transform);
     }
 
