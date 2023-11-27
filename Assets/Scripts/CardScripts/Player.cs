@@ -4,7 +4,8 @@ using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class Player : MonoBehaviour
+[CreateAssetMenu(fileName = "newPlayer", menuName = "playerContainer/player")]
+public class Player : ScriptableObject
 {
     public List<Card> cardObtained = new List<Card>();
     public List<Card> monumentObtained = new List<Card>();
