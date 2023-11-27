@@ -22,7 +22,7 @@ public class PurpleCard : Card
 
     public override void Effect()
     {
-        if (data.nameCard == "Stade")
+        if (data.dice.diceThrow == 6 && data.nameCard == "Stade")
         {
             int gainedMoney = 0;
 
@@ -36,11 +36,11 @@ public class PurpleCard : Card
             }
             owner.money += gainedMoney;
         }
-        if (data.nameCard == "Centre d'affaires")
+        if (data.dice.diceThrow == 6 && data.nameCard == "Centre d'affaires")
         {
             /*owner.TradeCard();*/
         }
-        if (data.nameCard == "Chaine de télévision")
+        if (data.dice.diceThrow == 6 && data.nameCard == "Chaine de tï¿½lï¿½vision")
         {
             /*owner.GetMoney();*/
         }

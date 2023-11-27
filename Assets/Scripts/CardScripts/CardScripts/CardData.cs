@@ -5,6 +5,7 @@ public class CardData : ScriptableObject
 {
     public string nameCard;
     protected Player owner;
+    public Dice dice;
     public int valueMoney;
     public int valueDice;
     public int secondValueDice;

@@ -20,29 +20,29 @@ public class BlueCard : Card
     {
         if (type == typeCard.wheat)
         {
-            if (data.nameCard == "Champs de blé")
+            if (data.dice.diceThrow == 1 && data.nameCard == "Champs de blï¿½")
             {
                 owner.money++;
             }
-            if (data.nameCard == "Verger")
+            if (data.dice.diceThrow == 10 && data.nameCard == "Verger")
             {
                 owner.money += 3;
             }
         }
         else if (type == typeCard.animal)
         {
-            if (data.nameCard == "Ferme")
+            if (data.dice.diceThrow == 2 && data.nameCard == "Ferme")
             {
                 owner.money++;
             }
         }
         else if (type == typeCard.industry)
         {
-            if (data.nameCard == "Forêt")
+            if (data.dice.diceThrow == 5 && data.nameCard == "Forï¿½t")
             {
                 owner.money++;
             }
-            if (data.nameCard == "Mine")
+            if (data.dice.diceThrow == 9 && data.nameCard == "Mine")
             {
                 owner.money += 5;
             }

@@ -13,6 +13,7 @@ public class Card : MonoBehaviour
 
     public CardData data;
     public Player owner;
+    public Dice dice;
 
     public bool buyable = false;
 
@@ -33,7 +34,12 @@ public class Card : MonoBehaviour
 
     void Start()
     {
-        
+        dice = data.dice;
+        if(dice == null)
+        {
+            Debug.Log("Dice not found");
+        }
+
     }
 
     // Update is called once per frame
