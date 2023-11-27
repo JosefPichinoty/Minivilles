@@ -14,6 +14,7 @@ public class Card : MonoBehaviour
     public CardData data;
     public Player owner;
     public Dice dice;
+    public GameObject card;
 
     public bool buyable = false;
 
@@ -62,4 +63,5 @@ public class Card : MonoBehaviour
     {
         GameManager.GetInstance().selectedCard = this;
     }
+
 }
