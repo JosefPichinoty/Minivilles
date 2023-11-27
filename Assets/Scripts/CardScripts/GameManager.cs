@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     {
         selectedCard = prefab;
 
-        BuyUI.SetActive(false);
+        BuyUI.SetActive(true);
     }
 
     private void InitGame()
