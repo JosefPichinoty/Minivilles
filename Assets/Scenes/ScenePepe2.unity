@@ -208,7 +208,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1244058380}
         m_TargetAssemblyTypeName: CamPosition, Assembly-CSharp
-        m_MethodName: camAll
+        m_MethodName: CamAll
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -475,7 +475,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1244058380}
         m_TargetAssemblyTypeName: CamPosition, Assembly-CSharp
-        m_MethodName: camUp
+        m_MethodName: CamUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1091,7 +1091,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1244058380}
         m_TargetAssemblyTypeName: CamPosition, Assembly-CSharp
-        m_MethodName: camDown
+        m_MethodName: CamDown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

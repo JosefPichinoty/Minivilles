@@ -9,7 +9,7 @@ public class CamPosition : MonoBehaviour
     public GameObject follower;
     public CinemachineVirtualCamera virtualCamera;
     public bool isUnzoomed = false;
-    public void camUp()
+    public void CamUp()
     {
         if (currentCam == 1 || currentCam == 2 || currentCam == 3)
         {
@@ -21,7 +21,7 @@ public class CamPosition : MonoBehaviour
         }
 
     }
-    public void camDown()
+    public void CamDown()
     {
         if (currentCam == 4 || currentCam == 2 || currentCam == 3)
         {
@@ -33,7 +33,7 @@ public class CamPosition : MonoBehaviour
         }
 
     }
-    public void camAll()
+    public void CamAll()
     {
         currentCam = 5;
         
