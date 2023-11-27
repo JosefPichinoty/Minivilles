@@ -77,18 +77,7 @@ public class Player : ScriptableObject
 
     public void BuyMonument()
     {
-        foreach (OrangeCard monument in monumentList)
-        {
-            if (monument.data.valueMoney <= money)
-            {
-                monument.buyable = true;
-            }
-        }
-
-        foreach (OrangeCard monument in monumentList)
-        {
-
-        }
+        
     }
 
     
