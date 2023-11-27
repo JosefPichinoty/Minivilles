@@ -206,7 +206,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1244058380}
+      - m_Target: {fileID: 1866261327}
         m_TargetAssemblyTypeName: CamPosition, Assembly-CSharp
         m_MethodName: CamAll
         m_Mode: 1
@@ -473,7 +473,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1244058380}
+      - m_Target: {fileID: 1866261327}
         m_TargetAssemblyTypeName: CamPosition, Assembly-CSharp
         m_MethodName: CamUp
         m_Mode: 1
@@ -603,7 +603,6 @@ GameObject:
   - component: {fileID: 1244058383}
   - component: {fileID: 1244058382}
   - component: {fileID: 1244058381}
-  - component: {fileID: 1244058380}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -611,22 +610,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1244058380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1244058379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 791f8535246439e49a252d294a69e70c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentCam: 1
-  button: {fileID: 231799309}
-  tempPlayer: 0
-  camera: {fileID: 1866261323}
 --- !u!114 &1244058381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -929,7 +912,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1244058380}
+      - m_Target: {fileID: 1866261327}
         m_TargetAssemblyTypeName: CamPosition, Assembly-CSharp
         m_MethodName: CamDown
         m_Mode: 1
@@ -1209,6 +1192,7 @@ GameObject:
   - component: {fileID: 1866261323}
   - component: {fileID: 1866261322}
   - component: {fileID: 1866261326}
+  - component: {fileID: 1866261327}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1334,6 +1318,23 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &1866261327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866261321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 791f8535246439e49a252d294a69e70c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCam: 1
+  button: {fileID: 231799309}
+  tempPlayer: 0
+  camera: {fileID: 1866261323}
+  CameraSpeed: 7
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

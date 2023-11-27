@@ -3,9 +3,9 @@ using UnityEngine.UI;
 
 public class CamPosition : MonoBehaviour
 {
-    public int currentCam = 1;
+    private int currentCam = 1;
     public Button button;
-    public int tempPlayer;
+    private int tempPlayer;
     public Camera camera;
     public float CameraSpeed = 10;
 
@@ -48,7 +48,7 @@ public class CamPosition : MonoBehaviour
                 camera.orthographicSize =
                     Mathf.Lerp(camera.orthographicSize, 8, Mathf.Clamp(CameraSpeed * Time.deltaTime, 0, 1));
                 camera.transform.rotation =
-                    Quaternion.Lerp(camera.transform.rotation, Quaternion.Euler(0, 0, 0),
+                    Quaternion.Lerp(camera.transform.rotation, Quaternion.Euler(0, 0, -0),
                         Mathf.Clamp(CameraSpeed * Time.deltaTime, 0, 1));
                 break;
             case 2:
@@ -66,7 +66,7 @@ public class CamPosition : MonoBehaviour
                 camera.orthographicSize =
                     Mathf.Lerp(camera.orthographicSize, 8, Mathf.Clamp(CameraSpeed * Time.deltaTime, 0, 1));
                 camera.transform.rotation =
-                    Quaternion.Lerp(camera.transform.rotation, Quaternion.Euler(0, 0, 180),
+                    Quaternion.Lerp(camera.transform.rotation, Quaternion.Euler(0, 0, -180),
                         Mathf.Clamp(CameraSpeed * Time.deltaTime, 0, 1));
                 break;
             case 4:
