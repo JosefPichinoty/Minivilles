@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        
+        InitGame();
     }
 
     private void InitGame()
