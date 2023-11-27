@@ -52,8 +52,4 @@ public class Card : MonoBehaviour
 
     }
 
-    public void ChangeSelectedCard()
-    {
-        GameManager.GetInstance().selectedCard = this;
-    }
 }

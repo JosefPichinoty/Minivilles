@@ -21,13 +21,21 @@ public class GameManager : MonoBehaviour
     public List <Player> playerList = new List<Player>();
     public Player activePlayer;
 
-    public Card selectedCard;
+    public GameObject selectedCard;
+    public GameObject BuyUI;
 
     public int turn;
 
     void Start()
     {
         InitGame();
+    }
+
+    public void ChangeSelectedCard(GameObject prefab)
+    {
+        selectedCard = prefab;
+
+        BuyUI.SetActive(false);
     }
 
     private void InitGame()
@@ -43,5 +51,9 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void SetSellectedCard() {
+    
     }
 }
