@@ -20,7 +20,7 @@ public class OrangeCard : Card
     // Update is called once per frame
     void Update()
     {
-
+        Effect();
     }
 
     public override void Effect()
