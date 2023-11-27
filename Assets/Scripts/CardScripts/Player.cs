@@ -4,12 +4,19 @@ using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class Player : MonoBehaviour
+[CreateAssetMenu(fileName = "newPlayer", menuName = "playerContainer/player")]
+public class Player : ScriptableObject
 {
-    public List<Card> cardObtained = new List<Card>();
-    public List<Card> monumentObtained = new List<Card>();
+    public Color color;
 
+    public List<Card> cardObtained = new List<Card>();
+    public List<Card> monumentList = new List<Card>();
+    public List<Card> monumentAcquired = new List<Card>();
+
+    public bool bothDice = false;
+    public bool bonusMoney = false;
     public bool playerTurn = false;
+    public bool rethrowDice = false;
     public int money = 3;
 
     void Start()
@@ -43,14 +50,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    void BuyCard()
-    {
-        if (/*selectedCard.onlyCard == true && numCardObtained = 1*/ 1 == 1)
-        {
-            //On peut pas acheter
-        }
-    }
-
     public void ChangeTurn()
     {
         if (playerTurn == true)
@@ -58,4 +57,28 @@ public class Player : MonoBehaviour
             GameManager.GetInstance().activePlayer = this;
         }
     }
+
+    public void Turn()
+    {
+
+    }
+
+    /*public void BuyCard()
+    {
+        //MARCHE PAS ENCORE
+        if (GameManager.GetInstance().selectedCard.data.onlyCard != true && GameManager.GetInstance().selectedCard.data.numCard != 0)
+        {
+            if (GameManager.GetInstance().selectedCard.buyable == true)
+            {
+                GameManager.GetInstance().selectedCard.owner = this;
+            }
+        }
+    }*/
+
+    public void BuyMonument()
+    {
+        
+    }
+
+    
 }

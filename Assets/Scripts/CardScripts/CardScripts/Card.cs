@@ -11,8 +11,10 @@ public class Card : MonoBehaviour
         type = pType;
     }
 
-    protected CardData data;
-    protected Player owner;
+    public CardData data;
+    public Player owner;
+
+    public bool buyable = false;
 
     public typeCard type;
 
@@ -48,5 +50,10 @@ public class Card : MonoBehaviour
     public virtual void Effect()
     {
 
+    }
+
+    public void ChangeSelectedCard()
+    {
+        GameManager.GetInstance().selectedCard = this;
     }
 }
