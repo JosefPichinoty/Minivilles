@@ -22,18 +22,22 @@ public class Dissolve : MonoBehaviour
         {
             isDissolving = true;
         }
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            isDissolving = false;
+        }
 
         if (isDissolving)
         {
-            fade -= Time.deltaTime;
-
-            if (fade <= 0f) 
-            { 
-                fade = 0f;
-                isDissolving = false;
-            }
-
+            fade = Mathf.Clamp01(fade - Time.deltaTime);
             material.SetFloat("_Fade", fade);
+            material.SetColor("_Color", Color.red);
+        }
+        else
+        {
+            material.SetColor("_Color", Color.blue);
+            material.SetFloat("_Fade", fade);
+            fade = Mathf.Clamp01(fade + Time.deltaTime);
         }
     }
 }
