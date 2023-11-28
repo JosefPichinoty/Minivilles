@@ -17,6 +17,8 @@ public class Player : ScriptableObject
     public bool bonusMoney = false;
     public bool playerTurn = false;
     public bool rethrowDice = false;
+    public bool doubleTurn = false;
+    public string playerName;
     public int money = 3;
 
     void Start()
@@ -50,35 +52,23 @@ public class Player : ScriptableObject
         }
     }
 
-    public void ChangeTurn()
+    public void BecomeActivePlayer()
     {
-        if (playerTurn == true)
-        {
-            GameManager.GetInstance().activePlayer = this;
-        }
+        GameManager.GetInstance().activePlayer = this;
     }
 
     public void Turn()
     {
-
+        
     }
-
-    /*public void BuyCard()
-    {
-        //MARCHE PAS ENCORE
-        if (GameManager.GetInstance().selectedCard.data.onlyCard != true && GameManager.GetInstance().selectedCard.data.numCard != 0)
-        {
-            if (GameManager.GetInstance().selectedCard.buyable == true)
-            {
-                GameManager.GetInstance().selectedCard.owner = this;
-            }
-        }
-    }*/
 
     public void BuyMonument()
     {
         
     }
 
-    
+    public void DisplayTurnOptions()
+    {
+
+    }
 }
