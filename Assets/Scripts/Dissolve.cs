@@ -7,12 +7,12 @@ public class Dissolve : MonoBehaviour
 {
     Material material;
 
-    bool isDissolving = false;
+    public bool isDissolving = false;
     float fade = 1f;
 
     void Start()
     {
-        material = GetComponent<Image>().material;
+        material = GetComponent<UnityEngine.UI.Image>().material;
     }
 
     // Update is called once per frame

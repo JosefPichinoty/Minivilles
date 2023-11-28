@@ -12,11 +12,8 @@ GameObject:
   - component: {fileID: 406303583082686295}
   - component: {fileID: 1669181921349161083}
   - component: {fileID: 2012881549150741519}
-  - component: {fileID: 67255230520226942}
-<<<<<<< Updated upstream
-  - component: {fileID: -7557477933461614216}
-=======
->>>>>>> Stashed changes
+  - component: {fileID: 7204324222958393454}
+  - component: {fileID: -2020006143662457364}
   m_Layer: 5
   m_Name: Centre D'affaire
   m_TagString: Card
@@ -63,11 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
-  m_Material: {fileID: 2100000, guid: a3d3634f27d531e4b93712335d9030ab, type: 2}
-=======
-  m_Material: {fileID: 0}
->>>>>>> Stashed changes
+  m_Material: {fileID: 2100000, guid: d40a55e799b45cf4eb5062e2335a56a5, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -111,21 +104,7 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &67255230520226942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7066318275581547428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2892411aa9a1522498ced4fd9a531334, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardData: {fileID: 11400000, guid: b5d596805b717394eaa39755ada0e877, type: 2}
-<<<<<<< Updated upstream
---- !u!114 &-7557477933461614216
+--- !u!114 &7204324222958393454
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,5 +116,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd1a19a39d3664945814a2a109b3c61a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-=======
->>>>>>> Stashed changes
+  isDissolving: 0
+--- !u!114 &-2020006143662457364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7066318275581547428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7443b76179ca4584c985630213b1d4b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardData: {fileID: 11400000, guid: b5d596805b717394eaa39755ada0e877, type: 2}
