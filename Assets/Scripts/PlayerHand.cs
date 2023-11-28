@@ -26,19 +26,19 @@ public class PlayerHand : MonoBehaviour
         {
             if (cartes[i].currentAmount == 0 && cartes[i].cardIndex == GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.cardIndex)
             {
-                if (GameManager.GetInstance().activePlayer.money >= GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney)
-                {
-                    AddCardBasic(cartes[i], GameManager.GetInstance().selectedCard);
-                    GameManager.GetInstance().activePlayer.money -= GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney;
-                }
+                //if (GameManager.GetInstance().activePlayer.money >= GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney)
+                //{
+                AddCardBasic(cartes[i], GameManager.GetInstance().selectedCard);
+                //GameManager.GetInstance().activePlayer.money -= GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney;
+                //}
             }
             else if(cartes[i].currentAmount > 0 && cartes[i].cardIndex == GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.cardIndex)
             {
-                if (cartes[i].currentAmount < GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.maxNumCard)
-                {
-                    print("rien2");
+                //if (cartes[i].currentAmount < GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.maxNumCard)
+                //{
+                //    print("rien2");
                     AddCardUpper(cartes[i], GameManager.GetInstance().selectedCard);
-                }
+                //}
             }
         }
     }
@@ -48,12 +48,16 @@ public class PlayerHand : MonoBehaviour
         GameObject obj = Instantiate(prefab, cardStocker.carteStock[cardStocker.currentAmount - 1].transform);
         cardStocker.carteStock.Add(obj.gameObject);
         cartes[cardStocker.cardIndex].currentAmount++;
+        GameManager.GetInstance().BuyUI.SetActive(false);
+        prefab.GetComponent<Dissolve>().ActiveShader();
     }
     private void AddCardBasic(CardStocker cardStocker, GameObject prefab)
     {
         GameObject obj = Instantiate(prefab, handParent.transform);
         cardStocker.carteStock.Add(obj.gameObject);
         cartes[cardStocker.cardIndex].currentAmount++;
+        GameManager.GetInstance().BuyUI.SetActive(false);
+        prefab.GetComponent<Dissolve>().ActiveShader();
     }
 
     public void OpenBuyUI(GameObject prefab)
