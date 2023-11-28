@@ -7058,6 +7058,23 @@ MonoBehaviour:
   BuyUI: {fileID: 1802150195}
   activePlayer: {fileID: 0}
   selectedCard: {fileID: 0}
+  allCards:
+  - {fileID: 1511624402}
+  - {fileID: 1918901603}
+  - {fileID: 1600766678}
+  - {fileID: 141953475}
+  - {fileID: 250922161}
+  - {fileID: 547467432}
+  - {fileID: 891046553}
+  - {fileID: 499345636}
+  - {fileID: 933444358}
+  - {fileID: 1183478870}
+  - {fileID: 906219155}
+  - {fileID: 955406089}
+  - {fileID: 1981873934}
+  - {fileID: 1850987856}
+  - {fileID: 137419253}
+  isDissolving: 0
   turn: 0
 --- !u!1 &1918901603 stripped
 GameObject:
@@ -7424,7 +7441,7 @@ PrefabInstance:
     - target: {fileID: 1669181921349161083, guid: 5cbf6a934be326d41898fd569ed0bd12, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 83b93fa11266b644592c8375a8903a10, type: 3}
+      objectReference: {fileID: 21300000, guid: a40722cc8ca8ce848b8e34e82a3fb08c, type: 3}
     - target: {fileID: 1669181921349161083, guid: 5cbf6a934be326d41898fd569ed0bd12, type: 3}
       propertyPath: m_Material
       value: 
