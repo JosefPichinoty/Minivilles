@@ -26,7 +26,7 @@ public class PurpleCard : Card
         {
             int gainedMoney = 0;
 
-            foreach (Player player in GameManager.GetInstance().playerList)
+            foreach (Player player in PlayerManager.GetInstance().playerList)
             {
                 if (player != GameManager.GetInstance().activePlayer)
                 {

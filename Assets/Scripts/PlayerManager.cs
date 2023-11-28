@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
@@ -16,7 +18,7 @@ public class PlayerManager : MonoBehaviour
     private PlayerManager() : base() { }
     #endregion
 
-    public int numPlayers = 2;
+    [HideInInspector] int numPlayers = 4;
     public List<Player> playerList = new List<Player>();
 
     public Player player1;
@@ -33,6 +35,8 @@ public class PlayerManager : MonoBehaviour
         }
 
         instance = this;
+
+        CreationPlayers();
     }
 
 
@@ -64,6 +68,32 @@ public class PlayerManager : MonoBehaviour
             playerList.Add(player2);
             playerList.Add(player3);
             playerList.Add(player4);
+            Debug.Log("4");
         }
+
+        GameManager.GetInstance().activePlayer = playerList[0];
+    }
+
+    void RefreshListPlayers()
+    {
+        if (GameManager.GetInstance().activePlayer.doubleTurn == false)
+        {
+            Player stockPlayer = playerList[0];
+            playerList.RemoveAt(0);
+            playerList.Add(stockPlayer);
+        }
+        else
+        {
+            GameManager.GetInstance().activePlayer.doubleTurn = false;
+        }
+    }
+
+    public void ChangeTurn()
+    {
+        RefreshListPlayers();
+        playerList[0].BecomeActivePlayer();
+        Debug.Log(playerList[0].playerName);
+        MoneyText.GetInstance().ChangeText();
+        GameManager.GetInstance().activePlayer.Turn();
     }
 }

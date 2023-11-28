@@ -6,16 +6,31 @@ using UnityEngine;
 
 public class MoneyText : MonoBehaviour
 {
-    // Start is called before the first frame update
+    static private MoneyText instance;
+
+    static public MoneyText GetInstance()
+    {
+        if (instance == null) instance = new MoneyText();
+        return instance;
+    }
+
     public TMP_Text textMoney;
     void Start()
     {
+        if (instance != null)
+        {
+            Destroy(instance);
+            return;
+        }
+
+        instance = this;
+
         textMoney = GetComponent<TMP_Text>();
+        ChangeText();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ChangeText()
     {
-        textMoney.text = "Player Money :" + Convert.ToString(GameManager.GetInstance().activePlayer.money);
+        textMoney.text = "Player Money : " + Convert.ToString(GameManager.GetInstance().activePlayer.money);
     }
 }
