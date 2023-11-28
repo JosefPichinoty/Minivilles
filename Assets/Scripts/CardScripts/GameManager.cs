@@ -40,6 +40,14 @@ public class GameManager : MonoBehaviour
 
     private void InitGame()
     {
+        if (instance != null)
+        {
+            Destroy(instance);
+            return;
+        }
+
+        instance = this;
+
         for (int i = 0; i < numPlayers; i++)
         {
             Player player = new Player();
