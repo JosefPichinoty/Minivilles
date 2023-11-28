@@ -548,7 +548,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: c8cc703863bb23844a60a83a786d47e4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1358898546}
   m_SourcePrefab: {fileID: 100100000, guid: c8cc703863bb23844a60a83a786d47e4, type: 3}
 --- !u!1 &250922161 stripped
 GameObject:
@@ -2013,7 +2016,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 421.1, y: 154.99}
+  m_AnchoredPosition: {x: 421.10004, y: 154.98999}
   m_SizeDelta: {x: 842.2, y: 382.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &704590568
@@ -2114,7 +2117,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1381, y: 154.415}
+  m_AnchoredPosition: {x: 1381, y: 154.41498}
   m_SizeDelta: {x: 1077.5, y: 380.962}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &718915005
@@ -3848,6 +3851,24 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8391580647320020310, guid: 97e0df8eff900db4392e5d279988da16, type: 3}
   m_PrefabInstance: {fileID: 534055865}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1358898541 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7066318275581547428, guid: c8cc703863bb23844a60a83a786d47e4, type: 3}
+  m_PrefabInstance: {fileID: 179519815}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1358898546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358898541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb641f703747aed45b938b65caf5b44a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDissolving: 0
 --- !u!1001 &1379997790
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5655,18 +5676,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1763417551}
-        m_TargetAssemblyTypeName: ZoomAndShow, Assembly-CSharp
-        m_MethodName: showCard
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1763417551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6365,6 +6374,7 @@ MonoBehaviour:
   playerList: []
   activePlayer: {fileID: 0}
   selectedCard: {fileID: 0}
+  BuyUI: {fileID: 0}
   turn: 0
 --- !u!1 &1918901603 stripped
 GameObject:
@@ -7154,8 +7164,8 @@ Canvas:
   m_GameObject: {fileID: 2010407380}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
