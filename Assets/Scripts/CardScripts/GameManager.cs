@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     private GameManager() : base() { }
     #endregion
 
-    public int numPlayers = 2;
+    public int numPlayers = 4;
     public List <Player> playerList = new List<Player>();
     public Player activePlayer;
 
