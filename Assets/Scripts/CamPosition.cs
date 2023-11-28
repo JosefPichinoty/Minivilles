@@ -4,7 +4,6 @@ using UnityEngine.UI;
 public class CamPosition : MonoBehaviour
 {
     private int currentCam = 1;
-    public Button button;
     private int tempPlayer;
     public Camera camera;
     public float CameraSpeed = 10;
