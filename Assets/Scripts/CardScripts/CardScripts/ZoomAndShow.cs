@@ -18,7 +18,7 @@ public class ZoomAndShow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bg = GameObject.Find("BackGround");
+        bg = GameObject.Find("GameCanvas");
         anim = GetComponent<Animator>();
         if(anim == null)
         {
@@ -37,6 +37,7 @@ public class ZoomAndShow : MonoBehaviour
     {
         GameObject cardToZoom = Instantiate(thisCard, thisCard.transform.position, thisCard.transform.rotation);
         cardToZoom.transform.SetParent(bg.transform);
+        cardToZoom.transform.SetAsLastSibling();
         Debug.Log("isntante");
         //Play animation
     }

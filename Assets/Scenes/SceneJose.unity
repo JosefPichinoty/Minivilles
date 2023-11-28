@@ -612,19 +612,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1701126414}
         m_TargetAssemblyTypeName: PlayerHand, Assembly-CSharp
-        m_MethodName: Buy
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7066318275581547428, guid: 0770a08f3c5a2e943b6758680fdf8f8b, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1879969752}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ChangeSelectedCard
+        m_MethodName: OpenBuyUI
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 7066318275581547428, guid: 0770a08f3c5a2e943b6758680fdf8f8b, type: 3}
@@ -1065,9 +1053,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 382212175}
-        m_TargetAssemblyTypeName: BuyButtons, Assembly-CSharp
-        m_MethodName: BuyCard
+      - m_Target: {fileID: 1701126414}
+        m_TargetAssemblyTypeName: PlayerHand, Assembly-CSharp
+        m_MethodName: Buy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3170,7 +3158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -858.109, y: 211.781}
+  m_AnchoredPosition: {x: -734, y: 214}
   m_SizeDelta: {x: 317.782, y: 106.437}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &882540364
@@ -4091,7 +4079,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1082184560
 Transform:
   m_ObjectHideFlags: 0
@@ -4101,7 +4089,7 @@ Transform:
   m_GameObject: {fileID: 1082184559}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.044547, y: -12.977178, z: 16.913158}
+  m_LocalPosition: {x: -6.0445538, y: -12.977161, z: 16.913158}
   m_LocalScale: {x: 2.0187097, y: 2.0187097, z: 2.0187097}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4272,19 +4260,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1701126414}
         m_TargetAssemblyTypeName: PlayerHand, Assembly-CSharp
-        m_MethodName: Buy
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7066318275581547428, guid: e862d4b6ae58049448df8f1dddef4a79, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1879969752}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ChangeSelectedCard
+        m_MethodName: OpenBuyUI
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 7066318275581547428, guid: e862d4b6ae58049448df8f1dddef4a79, type: 3}
@@ -4456,19 +4432,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1701126414}
         m_TargetAssemblyTypeName: PlayerHand, Assembly-CSharp
-        m_MethodName: Buy
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7066318275581547428, guid: f59f2bb57056ed545b291bb010c8ac05, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1879969752}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ChangeSelectedCard
+        m_MethodName: OpenBuyUI
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 7066318275581547428, guid: f59f2bb57056ed545b291bb010c8ac05, type: 3}
@@ -4684,10 +4648,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1288317901}
-        m_TargetAssemblyTypeName: BuyButtons, Assembly-CSharp
-        m_MethodName: CloseMenu
-        m_Mode: 1
+      - m_Target: {fileID: 1082184559}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5005,19 +4969,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1701126414}
         m_TargetAssemblyTypeName: PlayerHand, Assembly-CSharp
-        m_MethodName: Buy
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7066318275581547428, guid: 51589b294d6354e498b1a9878ca24ac5, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1879969752}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ChangeSelectedCard
+        m_MethodName: OpenBuyUI
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 7066318275581547428, guid: 51589b294d6354e498b1a9878ca24ac5, type: 3}
@@ -5189,19 +5141,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1701126414}
         m_TargetAssemblyTypeName: PlayerHand, Assembly-CSharp
-        m_MethodName: Buy
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7066318275581547428, guid: 2ce79fdeba9f213439f287a58337535c, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1879969752}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ChangeSelectedCard
+        m_MethodName: OpenBuyUI
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 7066318275581547428, guid: 2ce79fdeba9f213439f287a58337535c, type: 3}
@@ -5596,19 +5536,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1701126414}
         m_TargetAssemblyTypeName: PlayerHand, Assembly-CSharp
-        m_MethodName: Buy
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7066318275581547428, guid: e4f634bc8563a2f4bbf46f87211b1cbe, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1879969752}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ChangeSelectedCard
+        m_MethodName: OpenBuyUI
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 7066318275581547428, guid: e4f634bc8563a2f4bbf46f87211b1cbe, type: 3}
@@ -5887,19 +5815,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1701126414}
         m_TargetAssemblyTypeName: PlayerHand, Assembly-CSharp
-        m_MethodName: Buy
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7066318275581547428, guid: 13c27b522b6b3a34c9aee505d6bf595e, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1879969752}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ChangeSelectedCard
+        m_MethodName: OpenBuyUI
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 7066318275581547428, guid: 13c27b522b6b3a34c9aee505d6bf595e, type: 3}
@@ -6243,19 +6159,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1701126414}
         m_TargetAssemblyTypeName: PlayerHand, Assembly-CSharp
-        m_MethodName: Buy
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7066318275581547428, guid: 4681dd99e404de24087ab524c6faac9b, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1879969752}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ChangeSelectedCard
+        m_MethodName: OpenBuyUI
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 7066318275581547428, guid: 4681dd99e404de24087ab524c6faac9b, type: 3}
@@ -6596,19 +6500,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1701126414}
         m_TargetAssemblyTypeName: PlayerHand, Assembly-CSharp
-        m_MethodName: Buy
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7066318275581547428, guid: a44db35e65cd30f489f0cca0dde595d2, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1879969752}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ChangeSelectedCard
+        m_MethodName: OpenBuyUI
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 7066318275581547428, guid: a44db35e65cd30f489f0cca0dde595d2, type: 3}
@@ -6780,22 +6672,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1701126414}
         m_TargetAssemblyTypeName: PlayerHand, Assembly-CSharp
-        m_MethodName: Buy
+        m_MethodName: OpenBuyUI
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 7066318275581547428, guid: c8cc703863bb23844a60a83a786d47e4, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1879969752}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ChangeSelectedCard
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1511624402}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -7134,19 +7014,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1701126414}
         m_TargetAssemblyTypeName: PlayerHand, Assembly-CSharp
-        m_MethodName: Buy
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7066318275581547428, guid: 114c233b2fff79d4f9e60153a6b64d8b, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1879969752}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ChangeSelectedCard
+        m_MethodName: OpenBuyUI
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 7066318275581547428, guid: 114c233b2fff79d4f9e60153a6b64d8b, type: 3}
@@ -7324,8 +7192,8 @@ MonoBehaviour:
   numPlayers: 2
   playerList: []
   activePlayer: {fileID: 0}
-  selectedCard: {fileID: 0}
   BuyUI: {fileID: 1082184559}
+  selectedCard: {fileID: 0}
   turn: 0
 --- !u!1 &1918901603 stripped
 GameObject:
@@ -7389,19 +7257,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1701126414}
         m_TargetAssemblyTypeName: PlayerHand, Assembly-CSharp
-        m_MethodName: Buy
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7066318275581547428, guid: f9f2a046dfa15fc4992c5fc677084400, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1879969752}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ChangeSelectedCard
+        m_MethodName: OpenBuyUI
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 7066318275581547428, guid: f9f2a046dfa15fc4992c5fc677084400, type: 3}
@@ -7670,19 +7526,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1701126414}
         m_TargetAssemblyTypeName: PlayerHand, Assembly-CSharp
-        m_MethodName: Buy
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7066318275581547428, guid: bb6f0f7c7d355ef44a346c1f82dc02cc, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1879969752}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ChangeSelectedCard
+        m_MethodName: OpenBuyUI
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 7066318275581547428, guid: bb6f0f7c7d355ef44a346c1f82dc02cc, type: 3}
@@ -7858,35 +7702,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1701126414}
         m_TargetAssemblyTypeName: PlayerHand, Assembly-CSharp
-        m_MethodName: Buy
+        m_MethodName: OpenBuyUI
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 7066318275581547428, guid: 5cbf6a934be326d41898fd569ed0bd12, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1879969752}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ChangeSelectedCard
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7066318275581547428, guid: 5cbf6a934be326d41898fd569ed0bd12, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerHand, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7954,19 +7774,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1701126414}
         m_TargetAssemblyTypeName: PlayerHand, Assembly-CSharp
-        m_MethodName: Buy
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7066318275581547428, guid: 4fa7710c6070eed408251540e191f5fa, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1879969752}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ChangeSelectedCard
+        m_MethodName: OpenBuyUI
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 7066318275581547428, guid: 4fa7710c6070eed408251540e191f5fa, type: 3}
@@ -8205,8 +8013,8 @@ RectTransform:
   - {fileID: 1784912314}
   - {fileID: 1701126413}
   - {fileID: 797860048}
-  - {fileID: 1082184560}
   - {fileID: 882540363}
+  - {fileID: 1082184560}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
