@@ -35,6 +35,7 @@ public class Dissolve : MonoBehaviour
 
     public void ActiveShader()
     {
+        material.SetFloat("_Fade", 0);
         isDissolving = false;
     }
 
