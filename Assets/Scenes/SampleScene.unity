@@ -5484,6 +5484,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 112370392}
     m_Modifications:
+    - target: {fileID: 2012881549150741519, guid: a44db35e65cd30f489f0cca0dde595d2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7066318275581547428, guid: a44db35e65cd30f489f0cca0dde595d2, type: 3}
       propertyPath: m_Name
       value: Restaurant
@@ -5575,6 +5579,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: a44db35e65cd30f489f0cca0dde595d2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1763417550}
+    - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: a44db35e65cd30f489f0cca0dde595d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1763417551}
   m_SourcePrefab: {fileID: 100100000, guid: a44db35e65cd30f489f0cca0dde595d2, type: 3}
 --- !u!224 &1763417545 stripped
 RectTransform:
@@ -5648,6 +5655,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1763417551}
+        m_TargetAssemblyTypeName: ZoomAndShow, Assembly-CSharp
+        m_MethodName: showCard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1763417551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955406089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95f800f06a764fcbb44c14daf0af8a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisCard: {fileID: 955406089}
+  data: {fileID: 11400000, guid: ad88040f6cd87504f91ae0a093974211, type: 2}
+  bg: {fileID: 0}
 --- !u!1001 &1777641529
 PrefabInstance:
   m_ObjectHideFlags: 0

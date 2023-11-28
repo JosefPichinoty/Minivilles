@@ -24,18 +24,18 @@ public class GreenCard : Card
     {
         if (type == typeCard.shop)
         {
-            if (data.nameCard == "Boulangerie")
+            if ( (data.dice.diceThrow == 2 || data.dice.diceThrow == 3) && data.nameCard == "Boulangerie")
             {
                 owner.money++;
             }
-            if (data.nameCard == "Supérette")
+            if (data.nameCard == "Supï¿½rette")
             {
                 owner.money += 3;
             }
         }
         else if (type == typeCard.factory)
         {
-            if (data.nameCard == "Fromagerie")
+            if (data.dice.diceThrow == 7 && data.nameCard == "Fromagerie")
             {
                 foreach (Card card in owner.cardObtained)
                 {
@@ -45,7 +45,7 @@ public class GreenCard : Card
                     }
                 }
             }
-            if (data.nameCard == "Fabrique de meubles")
+            if (data.dice.diceThrow == 8 && data.nameCard == "Fabrique de meubles")
             {
                 foreach (Card card in owner.cardObtained)
                 {
@@ -58,7 +58,7 @@ public class GreenCard : Card
         }
         else if (type == typeCard.fruits)
         {
-            if (data.nameCard == "Marché de fruits et légumes")
+            if ( (data.dice.diceThrow == 11 || data.dice.diceThrow == 12) && data.nameCard == "Marchï¿½ de fruits et lï¿½gumes")
             {
                 foreach (Card card in owner.cardObtained)
                 {
