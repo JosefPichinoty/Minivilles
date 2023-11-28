@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 406303583082686295}
   - component: {fileID: 1669181921349161083}
   - component: {fileID: 2012881549150741519}
-  - component: {fileID: 8743396498713313280}
+  - component: {fileID: -3021217549276632660}
+  - component: {fileID: 1198232996746248509}
   m_Layer: 5
   m_Name: Mine
   m_TagString: Card
@@ -59,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 23adefb9ebccaf14dbea22a112c0679b, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -103,7 +104,7 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &8743396498713313280
+--- !u!114 &-3021217549276632660
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,7 +113,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 7066318275581547428}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2892411aa9a1522498ced4fd9a531334, type: 3}
+  m_Script: {fileID: 11500000, guid: bd1a19a39d3664945814a2a109b3c61a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  isDissolving: 0
+  canDissolve: 0
+--- !u!114 &1198232996746248509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7066318275581547428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7443b76179ca4584c985630213b1d4b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cardData: {fileID: 11400000, guid: df28363a302dfe54cbb6d801ff8f44d1, type: 2}
