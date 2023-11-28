@@ -14,6 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 1, g: 1, b: 0, a: 0}
   cardObtained: []
-  monumentObtained: []
+  monumentList: []
+  monumentAcquired: []
+  bothDice: 0
+  bonusMoney: 0
   playerTurn: 0
+  rethrowDice: 0
+  playerName: Joueur 4
   money: 3

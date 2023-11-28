@@ -39,7 +39,7 @@ public class OrangeCard : Card
             {
                 /*if(diceResult1 == diceResult2)
                 {
-                    TurnPlayer()
+                    owner.doubleTurn = true
                 }*/
             }
             if (data.nameCard == "Tour radio")
