@@ -58,7 +58,7 @@ public class PlayerHand : MonoBehaviour
 
     public void OpenBuyUI(GameObject prefab)
     {
-        GameManager.GetInstance().BuyUI.SetActive(!GameManager.GetInstance().BuyUI.activeSelf);
+        GameManager.GetInstance().BuyUI.SetActive(true);
 
         GameManager.GetInstance().selectedCard = prefab;
     }
