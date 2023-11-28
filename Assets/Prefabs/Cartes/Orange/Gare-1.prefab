@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 406303583082686295}
   - component: {fileID: 1669181921349161083}
   - component: {fileID: 2012881549150741519}
-  - component: {fileID: -5562415524385477392}
+  - component: {fileID: 8667963297280158586}
+  - component: {fileID: 5543566251152229084}
   m_Layer: 5
   m_Name: Gare-1
   m_TagString: Card
@@ -103,7 +104,7 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &-5562415524385477392
+--- !u!114 &8667963297280158586
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,8 +113,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 7066318275581547428}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 921d6c93052cf6d4e872c4b239fdc4e6, type: 3}
+  m_Script: {fileID: 11500000, guid: dd79ee862f6ddbd489d42c44c74d6926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEmpiled: 0
-  cardId: 0
+--- !u!114 &5543566251152229084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7066318275581547428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd79ee862f6ddbd489d42c44c74d6926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

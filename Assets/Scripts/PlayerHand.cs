@@ -22,7 +22,6 @@ public class PlayerHand : MonoBehaviour
     }
     public void Buy(GameObject prefab)
     {
-
         for (int i = 0; i < 15; i++)
         {
             if (cartes[i].currentAmount == 0 && cartes[i].cardIndex == prefab.GetComponent<CardContainer>().cardData.cardIndex)
@@ -39,11 +38,6 @@ public class PlayerHand : MonoBehaviour
                 }
             }
         }
-    }
-
-    public void BuyMonument(GameObject prefab)
-    {
-        Instantiate(prefab, gameObject.transform);
     }
 
     private void AddCardUpper(CardStocker cardStocker, GameObject prefab)

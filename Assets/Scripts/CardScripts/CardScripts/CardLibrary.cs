@@ -37,7 +37,7 @@ public class CardLibrary : MonoBehaviour
 
     private void Start()
     {
-        Init();
+       // Init();
     }
 
     void Init()

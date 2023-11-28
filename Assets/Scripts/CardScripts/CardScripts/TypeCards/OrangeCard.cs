@@ -20,7 +20,7 @@ public class OrangeCard : Card
     // Update is called once per frame
     void Update()
     {
-
+        Effect();
     }
 
     public override void Effect()
@@ -29,19 +29,22 @@ public class OrangeCard : Card
         {
             if (data.nameCard == "Gare")
             {
-
+                owner.bothDice = true;
             }
             if (data.nameCard == "Centre Commercial")
             {
-
+                owner.bonusMoney = true;
             }
             if (data.nameCard == "Parc d'attractions")
             {
-
+                /*if(diceResult1 == diceResult2)
+                {
+                    TurnPlayer()
+                }*/
             }
             if (data.nameCard == "Tour radio")
             {
-
+                owner.rethrowDice = true;
             }
         }
     }

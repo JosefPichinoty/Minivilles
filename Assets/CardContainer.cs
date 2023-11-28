@@ -5,4 +5,5 @@ using UnityEngine;
 public class CardContainer : MonoBehaviour
 {
     public CardData cardData;
+
 }
