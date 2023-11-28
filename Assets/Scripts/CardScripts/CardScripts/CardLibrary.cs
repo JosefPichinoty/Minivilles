@@ -61,7 +61,7 @@ public class CardLibrary : MonoBehaviour
     }
     
 
-    /*cards.Add(Instantiate(new BlueCard("Champs de blé", 1, 1, 0, false, Card.typeCard.wheat)));
+    /*cards.Add(Instantiate(new BlueCard("Champs de blÃ©", 1, 1, 0, false, Card.typeCard.wheat)));
     cards.Add(Instantiate(ferme));
     cards.Add(Instantiate(boulangerie));
     cards.Add(Instantiate(cafe));
@@ -78,21 +78,21 @@ public class CardLibrary : MonoBehaviour
     cards.Add(Instantiate(marcheDeFruitsEtLegumes));*/
 
 
-    //cards.Add(new BlueCard("Champs de blé", 1, 1, 0, false, Card.typeCard.wheat));
+    //cards.Add(new BlueCard("Champs de blÃ©", 1, 1, 0, false, Card.typeCard.wheat));
     //cards.Add(new BlueCard("Ferme", 1, 2, 0, false, Card.typeCard.animal));
     //cards.Add(new GreenCard("Boulangerie", 1, 2, 3,false, Card.typeCard.shop));
-    //cards.Add(new RedCard("Café", 2, 3, 0, false, Card.typeCard.coffee));
-    //cards.Add(new GreenCard("Supérette", 2, 4, 0, false, Card.typeCard.shop));
-    //cards.Add(new BlueCard("Forêt", 3, 5, 0, false, Card.typeCard.industry));
+    //cards.Add(new RedCard("CafÃ©", 2, 3, 0, false, Card.typeCard.coffee));
+    //cards.Add(new GreenCard("SupÃ©rette", 2, 4, 0, false, Card.typeCard.shop));
+    //cards.Add(new BlueCard("ForÃªt", 3, 5, 0, false, Card.typeCard.industry));
     //cards.Add(new PurpleCard("Stade", 6, 6, 0, true, Card.typeCard.business));
     //cards.Add(new PurpleCard("Centre d'affaires", 8, 6, 0, true, Card.typeCard.business));
-    //cards.Add(new PurpleCard("Chaîne de télévision", 7, 6, 0, true, Card.typeCard.business));
+    //cards.Add(new PurpleCard("ChaÃ®ne de tÃ©lÃ©vision", 7, 6, 0, true, Card.typeCard.business));
     //cards.Add(new GreenCard("Fromagerie", 5, 7, 0, false, Card.typeCard.factory));
     //cards.Add(new GreenCard("Fabrique de meubles", 3, 8, 0, false, Card.typeCard.factory));
     //cards.Add(new BlueCard("Mine", 6, 9, 0, false, Card.typeCard.industry));
     //cards.Add(new RedCard("Restaurant", 3, 9, 10, false, Card.typeCard.coffee));
     //cards.Add(new BlueCard("Verger", 3, 10, 0, false, Card.typeCard.wheat));
-    //cards.Add(new GreenCard("Marché de fruits et légumes", 2, 11, 12, false, Card.typeCard.wheat));
+    //cards.Add(new GreenCard("MarchÃ© de fruits et lÃ©gumes", 2, 11, 12, false, Card.typeCard.wheat));
 }
 
 //[System.Serializable]
