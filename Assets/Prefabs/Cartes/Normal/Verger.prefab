@@ -13,7 +13,10 @@ GameObject:
   - component: {fileID: 1669181921349161083}
   - component: {fileID: 2012881549150741519}
   - component: {fileID: 7748054227686403903}
+<<<<<<< Updated upstream
   - component: {fileID: -2730653333034924444}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: Verger
   m_TagString: Card
@@ -117,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardData: {fileID: 11400000, guid: 1e830e198b43e054984a2c1ca9d54e46, type: 2}
+<<<<<<< Updated upstream
 --- !u!114 &-2730653333034924444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,3 +133,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd1a19a39d3664945814a2a109b3c61a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> Stashed changes

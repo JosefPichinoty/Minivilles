@@ -13,7 +13,10 @@ GameObject:
   - component: {fileID: 1669181921349161083}
   - component: {fileID: 2012881549150741519}
   - component: {fileID: 5755577851117195280}
+<<<<<<< Updated upstream
   - component: {fileID: 4148237146831198114}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: Ferme
   m_TagString: Card
@@ -60,7 +63,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   m_Material: {fileID: 2100000, guid: a3d3634f27d531e4b93712335d9030ab, type: 2}
+=======
+  m_Material: {fileID: 0}
+>>>>>>> Stashed changes
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -117,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardData: {fileID: 11400000, guid: 3e03a5b2f542a6149b5fbb2f9711e534, type: 2}
+<<<<<<< Updated upstream
 --- !u!114 &4148237146831198114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,3 +137,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd1a19a39d3664945814a2a109b3c61a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> Stashed changes
