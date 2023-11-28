@@ -566,7 +566,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 0.5723472, g: 1, b: 0.45490193, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -596,7 +596,7 @@ MonoBehaviour:
         m_MethodName: set_sprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 907f4a9e341a2d74c888dc93febf4bc3, type: 3}
+          m_ObjectArgument: {fileID: 21300000, guid: 1997475ad0ebef04bb9835c21d87b305, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -627,6 +627,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd79ee862f6ddbd489d42c44c74d6926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &261824345
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261824333}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b3bf00bbe5ee3a54f8df9e0466f55a79, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &293597460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1193,7 +1214,7 @@ PrefabInstance:
     - target: {fileID: 1669181921349161083, guid: 0ec7f5dd300c1124189b05e9e0be659e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: cd7a4111bd9fb9c4f9c573664b8bd663, type: 3}
+      objectReference: {fileID: 21300000, guid: eb74354c8c8ad984ebc040148c10b8c1, type: 3}
     - target: {fileID: 7066318275581547428, guid: 0ec7f5dd300c1124189b05e9e0be659e, type: 3}
       propertyPath: m_Name
       value: Parc d'attraction-1
@@ -3060,7 +3081,7 @@ MonoBehaviour:
         m_MethodName: set_sprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: f092d614ec934044a842bb0b0c0bf322, type: 3}
+          m_ObjectArgument: {fileID: 21300000, guid: f0c3b6bb4afad4e4b89cb670a061e57b, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -5422,6 +5443,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: d1d6b5ca1c1854746a4a1a246a5650d9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 261824340}
+    - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: d1d6b5ca1c1854746a4a1a246a5650d9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 261824345}
   m_SourcePrefab: {fileID: 100100000, guid: d1d6b5ca1c1854746a4a1a246a5650d9, type: 3}
 --- !u!1001 &1661042712
 PrefabInstance:
@@ -6019,7 +6043,7 @@ MonoBehaviour:
         m_MethodName: set_sprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 523f4ade0008d894d991e7b0a06e6027, type: 3}
+          m_ObjectArgument: {fileID: 21300000, guid: 552fb5b184386f5499bf35479f31470f, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -6308,7 +6332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisCard: {fileID: 955406089}
   data: {fileID: 11400000, guid: ad88040f6cd87504f91ae0a093974211, type: 2}
-  bg: {fileID: 0}
+  nuevoObjeto: {fileID: 0}
 --- !u!1001 &1777641529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6759,7 +6783,7 @@ MonoBehaviour:
         m_MethodName: set_sprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: f1f7800805fc35e4cbf3309042e1f57b, type: 3}
+          m_ObjectArgument: {fileID: 21300000, guid: b888c0c6dfba72d478497cb997d041d2, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
