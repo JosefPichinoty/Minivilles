@@ -18,15 +18,6 @@ public class Dissolve : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            isDissolving = true;
-        }
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            isDissolving = false;
-        }
-
         if (isDissolving)
         {
             fade = Mathf.Clamp01(fade - Time.deltaTime);
@@ -40,4 +31,11 @@ public class Dissolve : MonoBehaviour
             fade = Mathf.Clamp01(fade + Time.deltaTime);
         }
     }
+
+
+    public void ActiveShader()
+    {
+        isDissolving = false;
+    }
+
 }
