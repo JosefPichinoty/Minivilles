@@ -116,7 +116,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd1a19a39d3664945814a2a109b3c61a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  material: {fileID: 0}
   isDissolving: 0
+  canDissolve: 0
 --- !u!114 &-1000800563915980527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,4 +131,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7443b76179ca4584c985630213b1d4b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardData: {fileID: 0}
+  cardData: {fileID: 11400000, guid: ad88040f6cd87504f91ae0a093974211, type: 2}

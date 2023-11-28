@@ -5,38 +5,64 @@ using UnityEngine.UI;
 
 public class Dissolve : MonoBehaviour
 {
-    Material material;
+    public Material material;
 
+    public bool disolve = false;
+    public bool canDissolve = false;
     public bool isDissolving = false;
-    float fade = 1f;
+    float fade = 0f;
 
     void Start()
     {
-        material = GetComponent<UnityEngine.UI.Image>().material;
+        material = gameObject.GetComponent<UnityEngine.UI.Image>().material;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isDissolving)
+        if (canDissolve)
         {
-            fade = Mathf.Clamp01(fade - Time.deltaTime);
-            material.SetFloat("_Fade", fade);
-            material.SetColor("_Color", Color.red);
-        }
-        else
-        {
-            material.SetColor("_Color", Color.blue);
-            material.SetFloat("_Fade", fade);
-            fade = Mathf.Clamp01(fade + Time.deltaTime);
+            if (disolve)
+            {
+                //isDissolving = true;
+                fade = Mathf.Clamp01(fade - Time.deltaTime);
+                material.SetFloat("_Fade", fade);
+                material.SetColor("_Color", Color.red);
+
+                if (fade <= 0f)
+                {
+                    //isDissolving = false;
+                    canDissolve = false;
+                }
+            }
+            else
+            {
+                //isDissolving = true;
+                material.SetColor("_Color", Color.blue);
+                material.SetFloat("_Fade", fade);
+                fade = Mathf.Clamp01(fade + Time.deltaTime);
+
+                if (fade >= 1f)
+                {
+                    fade = 0f;
+                    //isDissolving = false;
+                    canDissolve = false;
+                }
+            }
         }
     }
 
 
     public void ActiveShader()
     {
-        material.SetFloat("_Fade", 0);
-        isDissolving = false;
+        canDissolve = true;
+        GetComponent<UnityEngine.UI.Image>().material.SetFloat("_Fade", 0);
+        disolve = false;
     }
+
+   /* IEnumerator WaitForDisolve()
+    {
+
+    }*/
 
 }

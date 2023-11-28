@@ -116,7 +116,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd1a19a39d3664945814a2a109b3c61a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  material: {fileID: 0}
   isDissolving: 0
+  canDissolve: 0
 --- !u!114 &25171693254969479
 MonoBehaviour:
   m_ObjectHideFlags: 0
