@@ -20,21 +20,24 @@ public class PlayerHand : MonoBehaviour
             cartes.Add(new CardStocker(i));
         }
     }
-    public void Buy(GameObject prefab)
+    public void Buy()
     {
         for (int i = 0; i < 15; i++)
         {
-            if (cartes[i].currentAmount == 0 && cartes[i].cardIndex == prefab.GetComponent<CardContainer>().cardData.cardIndex)
+            if (cartes[i].currentAmount == 0 && cartes[i].cardIndex == GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.cardIndex)
             {
-                AddCardBasic(cartes[i], prefab);
-                print("rien");
+                if (GameManager.GetInstance().activePlayer.money >= GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney)
+                {
+                    AddCardBasic(cartes[i], GameManager.GetInstance().selectedCard);
+                    GameManager.GetInstance().activePlayer.money -= GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney;
+                }
             }
-            else if(cartes[i].currentAmount > 0 && cartes[i].cardIndex == prefab.GetComponent<CardContainer>().cardData.cardIndex)
+            else if(cartes[i].currentAmount > 0 && cartes[i].cardIndex == GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.cardIndex)
             {
-                if (cartes[i].currentAmount < prefab.GetComponent<CardContainer>().cardData.maxNumCard)
+                if (cartes[i].currentAmount < GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.maxNumCard)
                 {
                     print("rien2");
-                    AddCardUpper(cartes[i], prefab);
+                    AddCardUpper(cartes[i], GameManager.GetInstance().selectedCard);
                 }
             }
         }
@@ -42,8 +45,6 @@ public class PlayerHand : MonoBehaviour
 
     private void AddCardUpper(CardStocker cardStocker, GameObject prefab)
     {
-        print("Au dessus");
-        print("Au dessus = " + cardStocker.carteStock[cardStocker.currentAmount - 1].name);
         GameObject obj = Instantiate(prefab, cardStocker.carteStock[cardStocker.currentAmount - 1].transform);
         cardStocker.carteStock.Add(obj.gameObject);
         cartes[cardStocker.cardIndex].currentAmount++;
@@ -51,12 +52,16 @@ public class PlayerHand : MonoBehaviour
     private void AddCardBasic(CardStocker cardStocker, GameObject prefab)
     {
         GameObject obj = Instantiate(prefab, handParent.transform);
-        Debug.Log("prefab = " + obj);
         cardStocker.carteStock.Add(obj.gameObject);
         cartes[cardStocker.cardIndex].currentAmount++;
-        print("En dessous = " + cardStocker.cardIndex);
     }
 
+    public void OpenBuyUI(GameObject prefab)
+    {
+        GameManager.GetInstance().BuyUI.SetActive(true);
+
+        GameManager.GetInstance().selectedCard = prefab;
+    }
 }
 
 [System.Serializable]
