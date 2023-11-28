@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject BuyUI;
 
+    public Player activePlayer;
+
     public GameObject selectedCard;
 
     public int turn;

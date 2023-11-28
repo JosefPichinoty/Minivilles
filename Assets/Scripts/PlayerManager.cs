@@ -18,7 +18,11 @@ public class PlayerManager : MonoBehaviour
 
     public int numPlayers = 2;
     public List<Player> playerList = new List<Player>();
-    public Player activePlayer;
+
+    public Player player1;
+    public Player player2;
+    public Player player3;
+    public Player player4;
 
     void Start()
     {
@@ -31,9 +35,35 @@ public class PlayerManager : MonoBehaviour
         instance = this;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         
+    }
+
+    void CreationPlayers()
+    {
+        if (numPlayers == 1)
+        {
+            //PAS ENCORE POSSIBLE SANS IA
+        }
+        if (numPlayers == 2)
+        {
+            playerList.Add(player1);
+            playerList.Add(player2);
+        }
+        if (numPlayers == 3)
+        {
+            playerList.Add(player1);
+            playerList.Add(player2);
+            playerList.Add(player3);
+        }
+        if (numPlayers == 4)
+        {
+            playerList.Add(player1);
+            playerList.Add(player2);
+            playerList.Add(player3);
+            playerList.Add(player4);
+        }
     }
 }
