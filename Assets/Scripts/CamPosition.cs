@@ -3,43 +3,43 @@ using UnityEngine.UI;
 
 public class CamPosition : MonoBehaviour
 {
-    private int currentCam = 1;
-    private int tempPlayer;
+    private int _currentCam = 1;
+    private int _tempPlayer;
     public Camera camera;
     public float CameraSpeed = 10;
 
     public void CamUp()
     {
-        if (currentCam == 1 || currentCam == 2 || currentCam == 3)
-            currentCam++;
+        if (_currentCam == 1 || _currentCam == 2 || _currentCam == 3)
+            _currentCam++;
         else
-            currentCam = 1;
+            _currentCam = 1;
     }
 
     public void CamDown()
     {
-        if (currentCam == 4 || currentCam == 2 || currentCam == 3)
-            currentCam--;
+        if (_currentCam == 4 || _currentCam == 2 || _currentCam == 3)
+            _currentCam--;
         else
-            currentCam = 4;
+            _currentCam = 4;
     }
 
     public void CamAll()
     {
-        if (currentCam != 5)
+        if (_currentCam != 5)
         {
-            tempPlayer = currentCam;
-            currentCam = 5;
+            _tempPlayer = _currentCam;
+            _currentCam = 5;
         }
-        else if (currentCam == 5)
+        else if (_currentCam == 5)
         {
-            currentCam = tempPlayer;
+            _currentCam = _tempPlayer;
         }
     }
 
     private void Update()
     {
-        switch (currentCam)
+        switch (_currentCam)
         {
             case 1:
                 camera.transform.position = Vector2.Lerp(camera.transform.position, new Vector2(15, 10),
