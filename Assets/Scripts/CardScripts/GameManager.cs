@@ -17,10 +17,6 @@ public class GameManager : MonoBehaviour
     private GameManager() : base() { }
     #endregion
 
-    public int numPlayers = 2;
-    public List <Player> playerList = new List<Player>();
-    public Player activePlayer;
-
     public GameObject BuyUI;
 
     public GameObject selectedCard;
@@ -41,13 +37,6 @@ public class GameManager : MonoBehaviour
         }
 
         instance = this;
-
-        for (int i = 0; i < numPlayers; i++)
-        {
-            Player player = new Player();
-            player.name = "player_" + (i + 1).ToString();
-            playerList.Add(player);
-        }
     }
 
     void Update()
