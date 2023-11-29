@@ -45,6 +45,13 @@ public class PlayerHand : MonoBehaviour
 
     private void AddCardUpper(CardStocker cardStocker, GameObject prefab)
     {
+        for (int i = 0; i < CardLibrary.GetInstance().brutCardContainer.Count; i++)
+        {
+            if (CardLibrary.GetInstance().brutCardContainer[i].data.nameCard == GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.nameCard)
+            {
+                GameManager.GetInstance().activePlayer.cardObtained.Add(CardLibrary.GetInstance().brutCardContainer[i]);
+            }
+        }
         GameObject obj = Instantiate(prefab, cardStocker.carteStock[cardStocker.currentAmount - 1].transform);
         cardStocker.carteStock.Add(obj.gameObject);
         cartes[cardStocker.cardIndex].currentAmount++;
@@ -53,6 +60,14 @@ public class PlayerHand : MonoBehaviour
     }
     private void AddCardBasic(CardStocker cardStocker, GameObject prefab)
     {
+        for (int i = 0; i < CardLibrary.GetInstance().brutCardContainer.Count; i++)
+        {
+            if (CardLibrary.GetInstance().brutCardContainer[i].data.nameCard == GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.nameCard)
+            {
+                GameManager.GetInstance().activePlayer.cardObtained.Add(CardLibrary.GetInstance().brutCardContainer[i]);
+            }
+
+        }
         GameObject obj = Instantiate(prefab, handParent.transform);
         cardStocker.carteStock.Add(obj.gameObject);
         cartes[cardStocker.cardIndex].currentAmount++;

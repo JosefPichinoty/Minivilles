@@ -10,6 +10,7 @@ public class Player : ScriptableObject
     public Color color;
 
     public List<Card> cardObtained = new List<Card>();
+    public List<GameObject> cardObtainedScrptable = new List<GameObject>();
     public List<GameObject> monumentList = new List<GameObject>();
     public List<GameObject> monumentAcquired = new List<GameObject>();
 
@@ -33,7 +34,7 @@ public class Player : ScriptableObject
 
     void CheckCardEffect()
     {
-        if (playerTurn == true)
+        if (playerTurn)
         {
             foreach (GreenCard greenCard in cardObtained)
             {

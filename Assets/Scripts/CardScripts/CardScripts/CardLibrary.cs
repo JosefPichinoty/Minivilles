@@ -49,11 +49,6 @@ public class CardLibrary : MonoBehaviour
         instance = this;
 
         Init();
-
-        for (int i = 0; i < brutCardContainer.Count; i++)
-        {
-            Debug.Log(brutCardContainer[i].data.nameCard);
-        }
     }
 
     void Init()
