@@ -10,8 +10,8 @@ public class Player : ScriptableObject
     public Color color;
 
     public List<Card> cardObtained = new List<Card>();
-    public List<Card> monumentList = new List<Card>();
-    public List<Card> monumentAcquired = new List<Card>();
+    public List<GameObject> monumentList = new List<GameObject>();
+    public List<GameObject> monumentAcquired = new List<GameObject>();
 
     public bool bothDice = false;
     public bool bonusMoney = false;
@@ -70,5 +70,10 @@ public class Player : ScriptableObject
     public void DisplayTurnOptions()
     {
 
+    }
+
+    public void AddBoughtCardToList()
+    {
+        
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Card : MonoBehaviour 
+public class Card
     {
     public Card(CardData pData, typeCard pType)
     {
