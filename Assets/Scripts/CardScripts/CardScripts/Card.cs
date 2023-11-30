@@ -5,16 +5,17 @@ using UnityEngine.UIElements;
 
 public class Card
     {
-    public Card(CardData pData, typeCard pType)
+    public Card(CardData pData, typeCard pType, bool pBuyable)
     {
         data = pData;
         type = pType;
+        buyable = pBuyable;
     }
 
     public CardData data;
     public Player owner;
 
-    public bool buyable = false;
+    public bool buyable;
 
     public typeCard type;
 
@@ -52,4 +53,24 @@ public class Card
 
     }
 
+    public void ChangeStateCard()
+    {
+        foreach (Player player in PlayerManager.GetInstance().playerList)
+        {
+            foreach (OrangeCard monument in player.monumentList)
+            {
+                if (monument.owner.money >= monument.data.valueMoney)
+                {
+                    monument.buyable = true;
+                }
+            }
+            foreach (Card card in player.cardObtained)
+            {
+                if (card.owner.money >= card.data.valueMoney)
+                {
+                    card.buyable = true;
+                }
+            }
+        }
+    }
 }

@@ -11,7 +11,7 @@ public class Player : ScriptableObject
 
     public List<Card> cardObtained = new List<Card>();
     public List<GameObject> cardObtainedScrptable = new List<GameObject>();
-    public List<GameObject> monumentList = new List<GameObject>();
+    public List<OrangeCard> monumentList = new List<OrangeCard>();
     public List<GameObject> monumentAcquired = new List<GameObject>();
 
     public bool bothDice = false;

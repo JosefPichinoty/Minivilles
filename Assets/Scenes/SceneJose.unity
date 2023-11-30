@@ -4000,6 +4000,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ad88040f6cd87504f91ae0a093974211, type: 2}
   - {fileID: 11400000, guid: 1e830e198b43e054984a2c1ca9d54e46, type: 2}
   - {fileID: 11400000, guid: 0df9b4cc311dc09489acee86f0680648, type: 2}
+  monuments:
+  - {fileID: 11400000, guid: 8e3c12aa2fb5bf34dab138b556979ceb, type: 2}
+  - {fileID: 11400000, guid: b6c53a5f0d3f95648a00184f0c3f0bc0, type: 2}
+  - {fileID: 11400000, guid: 3a91722bfc3d86a4f82b957f42cbf782, type: 2}
+  - {fileID: 11400000, guid: 9444927abccee35428e96ff3fdbee0ca, type: 2}
 --- !u!4 &1006567982
 Transform:
   m_ObjectHideFlags: 0
@@ -7507,6 +7512,8 @@ MonoBehaviour:
   BuyUI: {fileID: 1082184559}
   activePlayer: {fileID: 0}
   selectedCard: {fileID: 0}
+  allCards: []
+  isDissolving: 0
   turn: 0
 --- !u!1 &1918901603 stripped
 GameObject:

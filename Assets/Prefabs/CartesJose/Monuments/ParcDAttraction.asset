@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5ea48df3f45db94d8cc47e2069db603, type: 3}
-  m_Name: ChaineDeTelevision
+  m_Name: ParcDAttraction
   m_EditorClassIdentifier: 
-  nameCard: "Chaine de t\xE9l\xE9vision"
+  nameCard: Parc d'attraction
   dice: {fileID: 0}
-  valueMoney: 8
-  valueDice: 6
+  valueMoney: 16
+  valueDice: 0
   secondValueDice: 0
-  maxNumCard: 4
-  numCard: 0
+  maxNumCard: 1
+  numCard: 1
   onlyCard: 1
-  cardIndex: 8
+  cardIndex: 18
