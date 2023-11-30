@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Stade
   m_EditorClassIdentifier: 
   nameCard: Stade
+  dice: {fileID: 0}
   valueMoney: 6
   valueDice: 6
   secondValueDice: 0
   maxNumCard: 4
-  onlyCard: 0
+  numCard: 0
+  onlyCard: 1
   cardIndex: 6

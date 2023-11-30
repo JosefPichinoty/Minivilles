@@ -19,8 +19,10 @@ public class CardLibrary : MonoBehaviour
     #endregion
 
     public List<CardData> cards = new List<CardData>();
+    public List<CardData> monuments = new List<CardData>();
 
     public List<Card> brutCardContainer = new List<Card>();
+    public List<Card> brutMonumentContainer = new List<Card>();
 
     public Card champsDeBle;
     public Card ferme;
@@ -38,6 +40,11 @@ public class CardLibrary : MonoBehaviour
     public Card verger;
     public Card marcheDeFruitsEtLegumes;
 
+    public Card gare;
+    public Card centreCommercial;
+    public Card parcDAttraction;
+    public Card tourRadio;
+
     private void Start()
     {
         if (instance != null)
@@ -49,11 +56,6 @@ public class CardLibrary : MonoBehaviour
         instance = this;
 
         Init();
-
-        for (int i = 0; i < brutCardContainer.Count; i++)
-        {
-            Debug.Log(brutCardContainer[i].data.nameCard);
-        }
     }
 
     void Init()
@@ -74,6 +76,11 @@ public class CardLibrary : MonoBehaviour
         verger = new BlueCard(GetInstance().cards[13], Card.typeCard.wheat);
         marcheDeFruitsEtLegumes = new GreenCard(GetInstance().cards[14], Card.typeCard.wheat);
 
+        gare = new OrangeCard(GetInstance().monuments[0], Card.typeCard.business);
+        centreCommercial = new OrangeCard(GetInstance().monuments[1], Card.typeCard.business);
+        parcDAttraction = new OrangeCard(GetInstance().monuments[2], Card.typeCard.business);
+        tourRadio = new OrangeCard(GetInstance().monuments[3], Card.typeCard.business);
+
         brutCardContainer.Add(champsDeBle);
         brutCardContainer.Add(ferme);
         brutCardContainer.Add(boulangerie);
@@ -89,6 +96,19 @@ public class CardLibrary : MonoBehaviour
         brutCardContainer.Add(restaurant);
         brutCardContainer.Add(verger);
         brutCardContainer.Add(marcheDeFruitsEtLegumes);
+
+        brutMonumentContainer.Add(gare);
+        brutMonumentContainer.Add(centreCommercial);
+        brutMonumentContainer.Add(parcDAttraction);
+        brutMonumentContainer.Add(tourRadio);
+
+        foreach (Player player in PlayerManager.GetInstance().playerList)
+        {
+            player.monumentList.Add((OrangeCard)gare);
+            player.monumentList.Add((OrangeCard)centreCommercial);
+            player.monumentList.Add((OrangeCard)parcDAttraction);
+            player.monumentList.Add((OrangeCard)tourRadio);
+        }
     }
     
 
