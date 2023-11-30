@@ -11,7 +11,7 @@ public class Player : ScriptableObject
 
     public List<Card> cardObtained = new List<Card>();
     public List<GameObject> cardObtainedScrptable = new List<GameObject>();
-    public List<GameObject> monumentList = new List<GameObject>();
+    public List<OrangeCard> monumentList = new List<OrangeCard>();
     public List<GameObject> monumentAcquired = new List<GameObject>();
 
     public bool bothDice = false;
@@ -56,6 +56,13 @@ public class Player : ScriptableObject
     public void BecomeActivePlayer()
     {
         GameManager.GetInstance().activePlayer = this;
+    }
+
+    public void ChangeStateMonument()
+    {
+        foreach (OrangeCard monument in monumentList)
+            if (GameManager.GetInstance().activePlayer.money >= monument.data.valueMoney)
+                monument.buyable = true;
     }
 
     public void Turn()
