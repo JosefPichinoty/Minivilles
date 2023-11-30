@@ -956,6 +956,7 @@ GameObject:
   - component: {fileID: 370033400}
   - component: {fileID: 370033399}
   - component: {fileID: 370033398}
+  - component: {fileID: 370033401}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -973,11 +974,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 3161270262503507767, guid: 5c7e9783064d74ed489a5982be652cf0, type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 73a15fe5d3872459fab56dddf22a487d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.63
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1170,6 +1171,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &370033401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370033397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95a19f6fcc8ed4750a70556e83c38c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btnHover: {fileID: 8300000, guid: 5a981bafe9bb54a56b2a9a0dad9bc8f2, type: 3}
+  btnClick: {fileID: 8300000, guid: 82ebd55224ea94b7ba06e1c336d92e9d, type: 3}
+  audioSource:
+  - {fileID: 370033399}
+  - {fileID: 370033398}
+  music: {fileID: 8300000, guid: 73a15fe5d3872459fab56dddf22a487d, type: 3}
 --- !u!1001 &404404335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1883,9 +1902,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91425941179df423687f12b5b69690e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioManager: {fileID: 0}
-  hoverSFX: {fileID: 8300000, guid: 5a981bafe9bb54a56b2a9a0dad9bc8f2, type: 3}
-  clickSFX: {fileID: 8300000, guid: 82ebd55224ea94b7ba06e1c336d92e9d, type: 3}
 --- !u!1001 &615843345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5376,9 +5392,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91425941179df423687f12b5b69690e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioManager: {fileID: 0}
-  hoverSFX: {fileID: 8300000, guid: 5a981bafe9bb54a56b2a9a0dad9bc8f2, type: 3}
-  clickSFX: {fileID: 8300000, guid: 82ebd55224ea94b7ba06e1c336d92e9d, type: 3}
 --- !u!1001 &1640052803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6648,6 +6661,7 @@ GameObject:
   - component: {fileID: 1791819170}
   - component: {fileID: 1791819169}
   - component: {fileID: 1791819168}
+  - component: {fileID: 1791819171}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -6768,6 +6782,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1791819166}
   m_CullTransparentMesh: 1
+--- !u!114 &1791819171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791819166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91425941179df423687f12b5b69690e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1799093205
 GameObject:
   m_ObjectHideFlags: 0
@@ -6823,7 +6849,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1802150196
 RectTransform:
   m_ObjectHideFlags: 0
