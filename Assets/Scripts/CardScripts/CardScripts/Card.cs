@@ -52,4 +52,24 @@ public class Card
 
     }
 
+    public void ChangeStateCard()
+    {
+        foreach (Player player in PlayerManager.GetInstance().playerList)
+        {
+            foreach (OrangeCard monument in player.monumentList)
+            {
+                if (monument.owner.money >= monument.data.valueMoney)
+                {
+                    monument.buyable = true;
+                }
+            }
+            foreach (Card card in player.cardObtained)
+            {
+                if (card.owner.money >= card.data.valueMoney)
+                {
+                    card.buyable = true;
+                }
+            }
+        }
+    }
 }
