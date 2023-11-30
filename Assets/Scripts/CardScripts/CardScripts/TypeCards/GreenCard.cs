@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class GreenCard : Card
 {
-    public GreenCard(CardData pData, typeCard pType, bool pBuyable) : base(pData, pType, pBuyable)
+    public GreenCard(CardData pData, typeCard pType) : base(pData, pType)
     {
         data = pData;
         type = pType;
-        buyable = pBuyable;
     }
     void Start()
     {
@@ -29,7 +28,7 @@ public class GreenCard : Card
             {
                 owner.money++;
             }
-            if (data.nameCard == "Sup�rette")
+            if (data.nameCard == "Supérette")
             {
                 owner.money += 3;
             }
@@ -59,7 +58,7 @@ public class GreenCard : Card
         }
         else if (type == typeCard.fruits)
         {
-            if ( (data.dice.diceThrow == 11 || data.dice.diceThrow == 12) && data.nameCard == "March� de fruits et l�gumes")
+            if ( (data.dice.diceThrow == 11 || data.dice.diceThrow == 12) && data.nameCard == "Marché de fruits et légumes")
             {
                 foreach (Card card in owner.cardObtained)
                 {

@@ -5,17 +5,14 @@ using UnityEngine.UIElements;
 
 public class Card
     {
-    public Card(CardData pData, typeCard pType, bool pBuyable)
+    public Card(CardData pData, typeCard pType)
     {
         data = pData;
         type = pType;
-        buyable = pBuyable;
     }
 
     public CardData data;
     public Player owner;
-
-    public bool buyable;
 
     public typeCard type;
 
@@ -61,14 +58,14 @@ public class Card
             {
                 if (monument.owner.money >= monument.data.valueMoney)
                 {
-                    monument.buyable = true;
+                    monument.data.buyable = true;
                 }
             }
             foreach (Card card in player.cardObtained)
             {
                 if (card.owner.money >= card.data.valueMoney)
                 {
-                    card.buyable = true;
+                    card.data.buyable = true;
                 }
             }
         }
