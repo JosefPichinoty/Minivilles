@@ -60,26 +60,26 @@ public class CardLibrary : MonoBehaviour
 
     void Init()
     {
-        champsDeBle = new BlueCard(GetInstance().cards[0], Card.typeCard.wheat, false);
-        ferme = new BlueCard(GetInstance().cards[1], Card.typeCard.animal, false);
-        boulangerie = new GreenCard(GetInstance().cards[2], Card.typeCard.shop, false);
-        cafe = new RedCard(GetInstance().cards[3], Card.typeCard.coffee, false);
-        superette = new GreenCard(GetInstance().cards[4], Card.typeCard.shop, false);
-        foret = new BlueCard(GetInstance().cards[5], Card.typeCard.industry, false);
-        stade = new PurpleCard(GetInstance().cards[6], Card.typeCard.business, false);
-        centreDAffaire = new PurpleCard(GetInstance().cards[7], Card.typeCard.business, false);
-        chaineDeTelevision = new PurpleCard(GetInstance().cards[8], Card.typeCard.business, false);
-        fromagerie = new GreenCard(GetInstance().cards[9], Card.typeCard.factory, false);
-        fabriqueDeMeubles = new GreenCard(GetInstance().cards[10], Card.typeCard.factory, false);
-        mine = new BlueCard(GetInstance().cards[11], Card.typeCard.industry, false);
-        restaurant = new RedCard(GetInstance().cards[12], Card.typeCard.coffee, false);
-        verger = new BlueCard(GetInstance().cards[13], Card.typeCard.wheat, false);
-        marcheDeFruitsEtLegumes = new GreenCard(GetInstance().cards[14], Card.typeCard.wheat, false);
+        champsDeBle = new BlueCard(GetInstance().cards[0], Card.typeCard.wheat);
+        ferme = new BlueCard(GetInstance().cards[1], Card.typeCard.animal);
+        boulangerie = new GreenCard(GetInstance().cards[2], Card.typeCard.shop);
+        cafe = new RedCard(GetInstance().cards[3], Card.typeCard.coffee);
+        superette = new GreenCard(GetInstance().cards[4], Card.typeCard.shop);
+        foret = new BlueCard(GetInstance().cards[5], Card.typeCard.industry);
+        stade = new PurpleCard(GetInstance().cards[6], Card.typeCard.business);
+        centreDAffaire = new PurpleCard(GetInstance().cards[7], Card.typeCard.business);
+        chaineDeTelevision = new PurpleCard(GetInstance().cards[8], Card.typeCard.business);
+        fromagerie = new GreenCard(GetInstance().cards[9], Card.typeCard.factory);
+        fabriqueDeMeubles = new GreenCard(GetInstance().cards[10], Card.typeCard.factory);
+        mine = new BlueCard(GetInstance().cards[11], Card.typeCard.industry);
+        restaurant = new RedCard(GetInstance().cards[12], Card.typeCard.coffee);
+        verger = new BlueCard(GetInstance().cards[13], Card.typeCard.wheat);
+        marcheDeFruitsEtLegumes = new GreenCard(GetInstance().cards[14], Card.typeCard.wheat);
 
-        gare = new OrangeCard(GetInstance().monuments[0], Card.typeCard.business, false);
-        centreCommercial = new OrangeCard(GetInstance().monuments[1], Card.typeCard.business, false);
-        parcDAttraction = new OrangeCard(GetInstance().monuments[2], Card.typeCard.business, false);
-        tourRadio = new OrangeCard(GetInstance().monuments[3], Card.typeCard.business, false);
+        gare = new OrangeCard(GetInstance().monuments[0], Card.typeCard.business);
+        centreCommercial = new OrangeCard(GetInstance().monuments[1], Card.typeCard.business);
+        parcDAttraction = new OrangeCard(GetInstance().monuments[2], Card.typeCard.business);
+        tourRadio = new OrangeCard(GetInstance().monuments[3], Card.typeCard.business);
 
         brutCardContainer.Add(champsDeBle);
         brutCardContainer.Add(ferme);

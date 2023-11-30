@@ -5,17 +5,16 @@ using UnityEngine.UIElements;
 
 public class Card
     {
-    public Card(CardData pData, typeCard pType, bool pBuyable)
+    public Card(CardData pData, typeCard pType)
     {
         data = pData;
         type = pType;
-        buyable = pBuyable;
     }
 
     public CardData data;
     public Player owner;
 
-    public bool buyable;
+    public bool buyable = false;
 
     public typeCard type;
 

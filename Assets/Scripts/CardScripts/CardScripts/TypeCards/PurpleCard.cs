@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class PurpleCard : Card
 {
-    public PurpleCard(CardData pData, typeCard pType, bool pBuyable) : base(pData, pType, pBuyable)
+    public PurpleCard(CardData pData, typeCard pType) : base(pData, pType)
     {
         data = pData;
         type = pType;
-        buyable = pBuyable;
     }
 
     Player playerTarget;

@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class BlueCard : Card
 {
-    public BlueCard(CardData pData, typeCard pType, bool pBuyable) : base(pData, pType, pBuyable)
+    public BlueCard(CardData pData, typeCard pType) : base(pData, pType)
     {
         data = pData;
         type = pType;
-        buyable = pBuyable;
     }
 
     // Update is called once per frame

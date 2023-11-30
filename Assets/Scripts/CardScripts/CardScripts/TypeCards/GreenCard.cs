@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class GreenCard : Card
 {
-    public GreenCard(CardData pData, typeCard pType, bool pBuyable) : base(pData, pType, pBuyable)
+    public GreenCard(CardData pData, typeCard pType) : base(pData, pType)
     {
         data = pData;
         type = pType;
-        buyable = pBuyable;
     }
     void Start()
     {
