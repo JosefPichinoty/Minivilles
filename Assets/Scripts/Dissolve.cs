@@ -7,9 +7,7 @@ public class Dissolve : MonoBehaviour
 {
     public Material material;
 
-    public bool disolve = false;
     public bool canDissolve = false;
-    public bool isDissolving = false;
     float fade = 0f;
 
     void Start()
@@ -22,32 +20,24 @@ public class Dissolve : MonoBehaviour
     {
         if (canDissolve)
         {
-            if (disolve)
+            GameManager.GetInstance().isDissolving = true;
+            foreach (GameObject go in GameManager.GetInstance().allCards)
             {
-                //isDissolving = true;
-                fade = Mathf.Clamp01(fade - Time.deltaTime);
-                material.SetFloat("_Fade", fade);
-                material.SetColor("_Color", Color.red);
-
-                if (fade <= 0f)
-                {
-                    //isDissolving = false;
-                    canDissolve = false;
-                }
+                go.GetComponent<Button>().interactable = false;
             }
-            else
-            {
-                //isDissolving = true;
-                material.SetColor("_Color", Color.blue);
-                material.SetFloat("_Fade", fade);
-                fade = Mathf.Clamp01(fade + Time.deltaTime);
 
-                if (fade >= 1f)
+            material.SetColor("_Color", Color.white);
+            material.SetFloat("_Fade", fade);
+            fade = Mathf.Clamp01(fade + Time.deltaTime);
+
+            if (fade >= 1f)
+            {
+                foreach (GameObject go in GameManager.GetInstance().allCards)
                 {
-                    fade = 0f;
-                    //isDissolving = false;
-                    canDissolve = false;
+                    go.GetComponent<Button>().interactable = true;
                 }
+                fade = 0f;
+                canDissolve = false;
             }
         }
     }
@@ -56,13 +46,6 @@ public class Dissolve : MonoBehaviour
     public void ActiveShader()
     {
         canDissolve = true;
-        GetComponent<UnityEngine.UI.Image>().material.SetFloat("_Fade", 0);
-        disolve = false;
     }
-
-   /* IEnumerator WaitForDisolve()
-    {
-
-    }*/
 
 }

@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d9270aa9e1f26274396426b3d4ebba13, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a596bc8457c3c1448a7784215fe962f3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -117,8 +117,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 0}
-  isDissolving: 0
+  disolve: 0
   canDissolve: 0
+  isDissolving: 0
 --- !u!114 &6773915649554591555
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 406303583082686295}
   - component: {fileID: 1669181921349161083}
   - component: {fileID: 2012881549150741519}
-  - component: {fileID: 829617251240090444}
   m_Layer: 5
   m_Name: Parc d'attraction
   m_TagString: Card
@@ -67,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f092d614ec934044a842bb0b0c0bf322, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a02fda4ed29b16f47b9b2f54e5901139, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -103,15 +102,3 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &829617251240090444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7066318275581547428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd79ee862f6ddbd489d42c44c74d6926, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -9,6 +9,9 @@ public class PurpleCard : Card
         data = pData;
         type = pType;
     }
+
+    Player playerTarget;
+
     void Start()
     {
         
@@ -44,5 +47,10 @@ public class PurpleCard : Card
         {
             /*owner.GetMoney();*/
         }
+    }
+
+    public void GetTarget()
+    {
+        //Quand on va cliquer sur le joueur a target, le joueur sera stocké dans une variable (pour l'effet de la chaine de télévision).
     }
 }

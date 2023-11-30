@@ -23,6 +23,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject selectedCard;
 
+    public GameObject[] allCards;
+
+    public bool isDissolving ;
+
     public int turn;
 
     void Start()
