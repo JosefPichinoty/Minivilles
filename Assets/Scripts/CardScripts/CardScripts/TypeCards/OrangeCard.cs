@@ -5,10 +5,11 @@ using UnityEngine.PlayerLoop;
 
 public class OrangeCard : Card
 {
-    public OrangeCard(CardData pData, typeCard pType) : base(pData, pType)
+    public OrangeCard(CardData pData, typeCard pType, bool pBuyable) : base(pData, pType, pBuyable)
     {
         data = pData;
         type = pType;
+        buyable = pBuyable;
     }
 
     bool obtained;
