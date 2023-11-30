@@ -3,19 +3,19 @@ using UnityEngine;
 public class Shop2OpenClose : MonoBehaviour
 {
     [SerializeField] private Animator sAnimator;
-    private bool isOpen;
+    private bool isOpen = false;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isOpen == false)
+        if (Input.GetKeyDown(KeyCode.Tab) && isOpen == false)
         {
-            sAnimator.SetTrigger("TrOpen");
+            sAnimator.SetTrigger("OpenTrigger");
             isOpen = true;
         }
 
-        else if (Input.GetKeyDown(KeyCode.Space) && isOpen)
+        else if (Input.GetKeyDown(KeyCode.Tab) && isOpen == true)
         {
-            sAnimator.SetTrigger("TrClose");
+            sAnimator.SetTrigger("CloseTrigger");
             isOpen = false;
         }
     }
