@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] allCards;
 
+    public GameObject[] Monuments;
+
     public bool isDissolving ;
 
     public int turn;
