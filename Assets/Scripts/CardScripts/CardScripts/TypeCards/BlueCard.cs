@@ -20,7 +20,7 @@ public class BlueCard : Card
     {
         if (type == typeCard.wheat)
         {
-            if (data.dice.diceThrow == 1 && data.nameCard == "Champs de bl�")
+            if (data.dice.diceThrow == 1 && data.nameCard == "Champs de blé")
             {
                 owner.money++;
             }
@@ -38,7 +38,7 @@ public class BlueCard : Card
         }
         else if (type == typeCard.industry)
         {
-            if (data.dice.diceThrow == 5 && data.nameCard == "For�t")
+            if (data.dice.diceThrow == 5 && data.nameCard == "Forêt")
             {
                 owner.money++;
             }

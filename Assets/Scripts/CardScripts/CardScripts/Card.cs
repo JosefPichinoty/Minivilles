@@ -14,8 +14,6 @@ public class Card
     public CardData data;
     public Player owner;
 
-    public bool buyable = false;
-
     public typeCard type;
 
     public enum typeCard
@@ -60,14 +58,14 @@ public class Card
             {
                 if (monument.owner.money >= monument.data.valueMoney)
                 {
-                    monument.buyable = true;
+                    monument.data.buyable = true;
                 }
             }
             foreach (Card card in player.cardObtained)
             {
                 if (card.owner.money >= card.data.valueMoney)
                 {
-                    card.buyable = true;
+                    card.data.buyable = true;
                 }
             }
         }

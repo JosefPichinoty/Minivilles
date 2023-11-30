@@ -43,7 +43,7 @@ public class PurpleCard : Card
         {
             /*owner.TradeCard();*/
         }
-        if (data.dice.diceThrow == 6 && data.nameCard == "Chaine de t�l�vision")
+        if (data.dice.diceThrow == 6 && data.nameCard == "Chaine de télévision")
         {
             /*owner.GetMoney();*/
         }
