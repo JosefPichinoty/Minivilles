@@ -61,8 +61,12 @@ public class Player : ScriptableObject
     public void ChangeStateMonument()
     {
         foreach (OrangeCard monument in monumentList)
+        {
             if (GameManager.GetInstance().activePlayer.money >= monument.data.valueMoney)
+            {
                 monument.buyable = true;
+            }
+        }
     }
 
     public void Turn()
