@@ -117,9 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 0}
-  disolve: 0
   canDissolve: 0
-  isDissolving: 0
 --- !u!114 &6773915649554591555
 MonoBehaviour:
   m_ObjectHideFlags: 0

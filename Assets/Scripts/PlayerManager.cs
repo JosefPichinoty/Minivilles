@@ -71,6 +71,7 @@ public class PlayerManager : MonoBehaviour
         }
 
         GameManager.GetInstance().activePlayer = playerList[0];
+        playerList[0].canThrow = true;
     }
 
     void RefreshListPlayers()
@@ -91,8 +92,10 @@ public class PlayerManager : MonoBehaviour
     {
         RefreshListPlayers();
         playerList[0].BecomeActivePlayer();
+        playerList[0].canThrow = true;
         Debug.Log(playerList[0].playerName);
         MoneyText.GetInstance().ChangeText();
         GameManager.GetInstance().activePlayer.Turn();
+        DiceThrow.GetInstance().resetDice();
     }
 }

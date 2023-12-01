@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class RedCard : Card
 {
-    public RedCard(CardData pData, typeCard pType, bool pBuyable) : base(pData, pType, pBuyable)
+    public RedCard(CardData pData, typeCard pType) : base(pData, pType)
     {
         data = pData;
         type = pType;
-        buyable = pBuyable;
     }
     void Start()
     {
@@ -41,5 +40,6 @@ public class RedCard : Card
                 owner.money++;
             }
         }
+        base.Effect();
     }
 }
