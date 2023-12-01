@@ -6451,6 +6451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cartes: []
+  monuments: []
 --- !u!1001 &1734667470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7780,6 +7781,11 @@ MonoBehaviour:
   activePlayer: {fileID: 0}
   selectedCard: {fileID: 0}
   allCards: []
+  monumentsGameObjects:
+  - {fileID: 261824333}
+  - {fileID: 1735401664}
+  - {fileID: 956069535}
+  - {fileID: 1833447396}
   isDissolving: 0
   turn: 0
 --- !u!1 &1918901603 stripped
@@ -8553,7 +8559,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 408dd72d5a71b45ef937576746a68dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialAnim: {fileID: 0}
   animations:
   - {fileID: 0}
   - {fileID: 0}
@@ -8562,6 +8567,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   animator: {fileID: 2006615137}
+  btn: {fileID: 0}
 --- !u!95 &2006615137
 Animator:
   serializedVersion: 5

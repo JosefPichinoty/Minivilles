@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] allCards;
 
-    public GameObject[] monuments;
+    public GameObject[] monumentsGameObjects;
 
     public bool isDissolving ;
 
@@ -56,12 +56,12 @@ public class GameManager : MonoBehaviour
             {
                 if (monument.owner.money >= monument.data.valueMoney)
                 {
-                    Debug.Log("la carte" + monument + " est bien");
+                    //Debug.Log("la carte" + monument + " est bien");
                     monument.buyable = true;
                 }
                 else
                 {
-                    Debug.Log("la carte" + monument + " est mal");
+                    //Debug.Log("la carte" + monument + " est mal");
                     monument.buyable = false;
                 }
             }
@@ -72,11 +72,11 @@ public class GameManager : MonoBehaviour
         {
             for (int i = 0; i < player.monumentList.Count; i++)
             {
-                Debug.Log("la carte" + monuments[i] + " est achetable");
+;               //Debug.Log("la carte" + monumentsGameObjects[i] + " est achetable");
                 if (player.monumentList[i].buyable)
                 {
-                    monuments[i].GetComponent<Button>().interactable = true;
-                    Debug.Log("la carte" + monuments[i] + " est achetable");
+                    monumentsGameObjects[i].GetComponent<Button>().interactable = true;
+                    //Debug.Log("la carte" + monumentsGameObjects[i] + " est achetable");
                 }
             }
         }
