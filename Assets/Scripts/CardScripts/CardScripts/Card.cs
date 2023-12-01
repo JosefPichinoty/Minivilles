@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Card : MonoBehaviour 
+public class Card
     {
     public Card(CardData pData, typeCard pType)
     {
@@ -13,8 +13,6 @@ public class Card : MonoBehaviour
 
     public CardData data;
     public Player owner;
-
-    public bool buyable = false;
 
     public typeCard type;
 
@@ -52,4 +50,24 @@ public class Card : MonoBehaviour
 
     }
 
+    public void ChangeStateCard()
+    {
+        foreach (Player player in PlayerManager.GetInstance().playerList)
+        {
+            foreach (OrangeCard monument in player.monumentList)
+            {
+                if (monument.owner.money >= monument.data.valueMoney)
+                {
+                    monument.data.buyable = true;
+                }
+            }
+            foreach (Card card in player.cardObtained)
+            {
+                if (card.owner.money >= card.data.valueMoney)
+                {
+                    card.data.buyable = true;
+                }
+            }
+        }
+    }
 }

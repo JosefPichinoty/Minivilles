@@ -1,9 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class CardLibrary : MonoBehaviour
+public class CardLibrary : MonoBehaviour 
 {
     #region SINGLETON INSTANCE
     static private CardLibrary instance;
@@ -18,6 +19,10 @@ public class CardLibrary : MonoBehaviour
     #endregion
 
     public List<CardData> cards = new List<CardData>();
+    public List<CardData> monuments = new List<CardData>();
+
+    public List<Card> brutCardContainer = new List<Card>();
+    public List<Card> brutMonumentContainer = new List<Card>();
 
     public Card champsDeBle;
     public Card ferme;
@@ -35,9 +40,22 @@ public class CardLibrary : MonoBehaviour
     public Card verger;
     public Card marcheDeFruitsEtLegumes;
 
+    public Card gare;
+    public Card centreCommercial;
+    public Card parcDAttraction;
+    public Card tourRadio;
+
     private void Start()
     {
-       // Init();
+        if (instance != null)
+        {
+            Destroy(instance);
+            return;
+        }
+
+        instance = this;
+
+        Init();
     }
 
     void Init()
@@ -57,25 +75,42 @@ public class CardLibrary : MonoBehaviour
         restaurant = new RedCard(GetInstance().cards[12], Card.typeCard.coffee);
         verger = new BlueCard(GetInstance().cards[13], Card.typeCard.wheat);
         marcheDeFruitsEtLegumes = new GreenCard(GetInstance().cards[14], Card.typeCard.wheat);
-        
+
+        gare = new OrangeCard(GetInstance().monuments[0], Card.typeCard.business);
+        centreCommercial = new OrangeCard(GetInstance().monuments[1], Card.typeCard.business);
+        parcDAttraction = new OrangeCard(GetInstance().monuments[2], Card.typeCard.business);
+        tourRadio = new OrangeCard(GetInstance().monuments[3], Card.typeCard.business);
+
+        brutCardContainer.Add(champsDeBle);
+        brutCardContainer.Add(ferme);
+        brutCardContainer.Add(boulangerie);
+        brutCardContainer.Add(cafe);
+        brutCardContainer.Add(superette);
+        brutCardContainer.Add(foret);
+        brutCardContainer.Add(stade);
+        brutCardContainer.Add(centreDAffaire);
+        brutCardContainer.Add(chaineDeTelevision);
+        brutCardContainer.Add(fromagerie);
+        brutCardContainer.Add(fabriqueDeMeubles);
+        brutCardContainer.Add(mine);
+        brutCardContainer.Add(restaurant);
+        brutCardContainer.Add(verger);
+        brutCardContainer.Add(marcheDeFruitsEtLegumes);
+
+        brutMonumentContainer.Add(gare);
+        brutMonumentContainer.Add(centreCommercial);
+        brutMonumentContainer.Add(parcDAttraction);
+        brutMonumentContainer.Add(tourRadio);
+
+        foreach (Player player in PlayerManager.GetInstance().playerList)
+        {
+            player.monumentList.Add((OrangeCard)gare);
+            player.monumentList.Add((OrangeCard)centreCommercial);
+            player.monumentList.Add((OrangeCard)parcDAttraction);
+            player.monumentList.Add((OrangeCard)tourRadio);
+        }
     }
     
-
-    /*cards.Add(Instantiate(new BlueCard("Champs de blé", 1, 1, 0, false, Card.typeCard.wheat)));
-    cards.Add(Instantiate(ferme));
-    cards.Add(Instantiate(boulangerie));
-    cards.Add(Instantiate(cafe));
-    cards.Add(Instantiate(superette));
-    cards.Add(Instantiate(foret));
-    cards.Add(Instantiate(stade));
-    cards.Add(Instantiate(centreDAffaire));
-    cards.Add(Instantiate(chaineDeTelevision));
-    cards.Add(Instantiate(fromagerie));
-    cards.Add(Instantiate(fabriqueDeMeubles));
-    cards.Add(Instantiate(mine));
-    cards.Add(Instantiate(restaurant));
-    cards.Add(Instantiate(verger));
-    cards.Add(Instantiate(marcheDeFruitsEtLegumes));*/
 
 
     //cards.Add(new BlueCard("Champs de blé", 1, 1, 0, false, Card.typeCard.wheat));

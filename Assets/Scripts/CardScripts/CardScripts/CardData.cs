@@ -12,5 +12,6 @@ public class CardData : ScriptableObject
     public int maxNumCard;
     public int numCard;
     public bool onlyCard;
+    public bool buyable;
     public int cardIndex;
 }

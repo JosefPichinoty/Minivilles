@@ -22,7 +22,7 @@ public class RedCard : Card
 
     public override void Effect()
     {
-        if (data.nameCard == "Caf�" && data.dice.diceThrow == 3)
+        if (data.nameCard == "Café" && data.dice.diceThrow == 3)
         {
             GameManager.GetInstance().activePlayer.money--;
             owner.money++;

@@ -9,6 +9,9 @@ public class PurpleCard : Card
         data = pData;
         type = pType;
     }
+
+    Player playerTarget;
+
     void Start()
     {
         
@@ -40,9 +43,14 @@ public class PurpleCard : Card
         {
             /*owner.TradeCard();*/
         }
-        if (data.dice.diceThrow == 6 && data.nameCard == "Chaine de t�l�vision")
+        if (data.dice.diceThrow == 6 && data.nameCard == "Chaine de télévision")
         {
             /*owner.GetMoney();*/
         }
+    }
+
+    public void GetTarget()
+    {
+        //Quand on va cliquer sur le joueur a target, le joueur sera stocké dans une variable (pour l'effet de la chaine de télévision).
     }
 }

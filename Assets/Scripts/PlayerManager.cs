@@ -68,7 +68,6 @@ public class PlayerManager : MonoBehaviour
             playerList.Add(player2);
             playerList.Add(player3);
             playerList.Add(player4);
-            Debug.Log("4");
         }
 
         GameManager.GetInstance().activePlayer = playerList[0];
