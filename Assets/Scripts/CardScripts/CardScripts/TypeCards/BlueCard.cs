@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class BlueCard : Card
 {
-    public BlueCard(CardData pData, typeCard pType, bool pBuyable) : base(pData, pType, pBuyable)
+    public BlueCard(CardData pData, typeCard pType) : base(pData, pType)
     {
         data = pData;
         type = pType;
-        buyable = pBuyable;
     }
 
     // Update is called once per frame
@@ -21,7 +20,7 @@ public class BlueCard : Card
     {
         if (type == typeCard.wheat)
         {
-            if (data.dice.diceThrow == 1 && data.nameCard == "Champs de bl�")
+            if (data.dice.diceThrow == 1 && data.nameCard == "Champs de blé")
             {
                 owner.money++;
             }
@@ -39,7 +38,7 @@ public class BlueCard : Card
         }
         else if (type == typeCard.industry)
         {
-            if (data.dice.diceThrow == 5 && data.nameCard == "For�t")
+            if (data.dice.diceThrow == 5 && data.nameCard == "Forêt")
             {
                 owner.money++;
             }
