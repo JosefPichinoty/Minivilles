@@ -8567,7 +8567,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   animator: {fileID: 2006615137}
-  btn: {fileID: 0}
+  btn: {fileID: 1429987149}
 --- !u!95 &2006615137
 Animator:
   serializedVersion: 5

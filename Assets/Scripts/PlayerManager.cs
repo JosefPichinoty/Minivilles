@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -72,6 +73,7 @@ public class PlayerManager : MonoBehaviour
 
         GameManager.GetInstance().activePlayer = playerList[0];
         playerList[0].canThrow = true;
+        playerList[0].playerTurn = true;
     }
 
     void RefreshListPlayers()
@@ -90,12 +92,53 @@ public class PlayerManager : MonoBehaviour
 
     public void ChangeTurn()
     {
+        playerList[0].playerTurn = false;
         RefreshListPlayers();
         playerList[0].BecomeActivePlayer();
         playerList[0].canThrow = true;
+        playerList[0].playerTurn = true;
         Debug.Log(playerList[0].playerName);
         MoneyText.GetInstance().ChangeText();
         GameManager.GetInstance().activePlayer.Turn();
         DiceThrow.GetInstance().resetDice();
+    }
+
+    public void CheckCardEffect()
+    {
+        foreach (Player player in playerList)
+        {
+            if (player.playerTurn)
+            {
+                foreach (GreenCard greenCard in player.cardObtained)
+                {
+                    greenCard.Effect();
+                }
+
+                foreach (PurpleCard purpleCard in player.cardObtained)
+                {
+                    purpleCard.Effect();
+                }
+            }
+            else if (!player.playerTurn)
+            {
+                Debug.Log(player.cardObtained.Any(c => c.data.nameCard == "Café" || c.data.nameCard == "Restaurant"));
+                for (int i = 0; i < player.cardObtained.Count; i++)
+                {
+                    if (player.cardObtained[i].data.nameCard == "Café" || player.cardObtained[i].data.nameCard == "Restaurant")
+                    {
+                        Debug.Log("pussy");
+                    }
+                }
+                //foreach (RedCard redCard in player.cardObtained)
+                //{
+                //    redCard.Effect();
+                //}
+            }
+
+            foreach (BlueCard blueCard in player.cardObtained)
+            {
+                blueCard.Effect();
+            }
+        }
     }
 }

@@ -50,6 +50,7 @@ public class Card
 
     public virtual void Effect()
     {
+        MoneyText.GetInstance().ChangeText();
         ChangeStateCard();
     }
 

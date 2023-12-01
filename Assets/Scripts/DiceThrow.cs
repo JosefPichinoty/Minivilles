@@ -109,7 +109,7 @@ public class DiceThrow : MonoBehaviour
         nombre = randomNombre.Next(1, 7);
         animator.SetInteger("valeurDe", nombre);
         Debug.Log(nombre);
-
+        PlayerManager.GetInstance().CheckCardEffect();
 
 
         //Invoke("resetDice", 6f);

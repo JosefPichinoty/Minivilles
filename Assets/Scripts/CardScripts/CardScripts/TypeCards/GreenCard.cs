@@ -27,6 +27,7 @@ public class GreenCard : Card
             if ( (data.dice.diceThrow == 2 || data.dice.diceThrow == 3) && data.nameCard == "Boulangerie")
             {
                 owner.money++;
+                Debug.Log("OUIIIIIIIIIIIIIIIIIIIIIIIIIII");
             }
             if (data.nameCard == "Supérette")
             {

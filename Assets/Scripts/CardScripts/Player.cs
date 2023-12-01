@@ -36,34 +36,6 @@ public class Player : ScriptableObject
 
     }
 
-    public void CheckCardEffect()
-    {
-        if (playerTurn)
-        {
-            foreach (GreenCard greenCard in cardObtained)
-            {
-                greenCard.Effect();
-            }
-
-            foreach (PurpleCard purpleCard in cardObtained)
-            {
-                purpleCard.Effect();
-            }
-        }
-        else if (!playerTurn)
-        {
-            foreach (RedCard redCard in cardObtained)
-            {
-                redCard.Effect();
-            }
-        }
-
-        foreach (BlueCard blueCard in cardObtained)
-        {
-            blueCard.Effect();
-        }
-    }
-
     public void BecomeActivePlayer()
     {
         GameManager.GetInstance().activePlayer = this;
