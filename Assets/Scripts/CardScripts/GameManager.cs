@@ -65,7 +65,6 @@ public class GameManager : MonoBehaviour
                     monument.buyable = false;
                 }
             }
-
         }
         
         foreach (Player player in PlayerManager.GetInstance().playerList)

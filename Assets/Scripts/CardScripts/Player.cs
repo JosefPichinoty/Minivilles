@@ -14,6 +14,7 @@ public class Player : ScriptableObject
     public List<OrangeCard> monumentList = new List<OrangeCard>();
     public List<GameObject> monumentAcquired = new List<GameObject>();
 
+    public bool canThrow = false;
     public bool bothDice = false;
     public bool bonusMoney = false;
     public bool playerTurn = false;
@@ -47,6 +48,13 @@ public class Player : ScriptableObject
             foreach (PurpleCard purpleCard in cardObtained)
             {
                 purpleCard.Effect();
+            }
+        }
+        else if (!playerTurn)
+        {
+            foreach (RedCard redCard in cardObtained)
+            {
+                redCard.Effect();
             }
         }
 
