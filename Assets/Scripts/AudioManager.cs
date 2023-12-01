@@ -7,9 +7,12 @@ public class AudioManager : MonoBehaviour
 {
 
     public static AudioManager instance;
-    public AudioClip btnSound;
+    
+    public AudioClip btnHover;
+    public AudioClip btnClick;
 
-    private AudioSource audioSource;
+
+    public AudioSource[] audioSource;
 
     [SerializeField]
     private AudioClip music;
@@ -30,19 +33,22 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
 
 
     }
 
-    public void playBtnSound()
+    public void playHover()
     {
-        audioSource.clip = btnSound;
-        audioSource.PlayOneShot(btnSound);
+        audioSource[0].PlayOneShot(btnHover);
+    }
+
+    public void playClick()
+    {
+        audioSource[0].PlayOneShot(btnClick);
     }
 
     public void PlayMusic()
     {
-        audioSource.PlayOneShot(music);
+        audioSource[1].PlayOneShot(music);
     }
 }

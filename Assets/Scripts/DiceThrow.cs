@@ -1,33 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DiceThrow : MonoBehaviour
 {
 
     private System.Random random;
-    [SerializeField]
-    private AnimationClip initialAnim;
+
     [SerializeField]
     private AnimationClip[] animations = new AnimationClip[6];
-    private int num = -1;
+    private int nombre;
+    [SerializeField]
     private Animator animator;
+    private bool finishedThrow = false;
+    System.Random randomNombre;
     private int animValue = -1;
+    [SerializeField]
+    private Button btn;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
+        randomNombre = new System.Random();
+
         if (animator == null)
         {
             Debug.LogError("Animator not found.");
         }
         random = new System.Random();
-        num = random.Next(1, 7);
+        //num = random.Next(1, 7);
         //animator.SetInteger("valeurDe", num);
-        StartCoroutine(PlayFirstAnimationAndWait());
-        Debug.Log(num);
     }
 
     // Update is called once per frame
@@ -37,12 +41,30 @@ public class DiceThrow : MonoBehaviour
     }
 
 
+    private void resetDice()
+    {
+        gameObject.SetActive(false);
+        nombre = 0;
+        btn.interactable = true;
 
+    }
 
 
     public void LancerDe()
     {
-        num = random.Next(1, 7);
+        gameObject.SetActive(true);
+        StartCoroutine(PlayFirstAnimationAndWait());
+        //finishedThrow = true;
+        //StartCoroutine(BlockButton());
+
+        /*
+        if (finishedThrow)
+        {
+            
+        }
+        */
+
+
         //animator.SetInteger("valeurDe", num);
 
     }
@@ -51,20 +73,28 @@ public class DiceThrow : MonoBehaviour
     {
         // Reproduce la primera animación
         //animator.Play("still");
+        btn.interactable = false;
+        
 
         // Espera a que la primera animación termine
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length);
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length * 3f);
         animator.SetTrigger("finished");
-        animator.SetInteger("valeurDe", num);
 
-        /*
-        if (num == 1 || num == 2 || num == 3 || num == 4 || num == 5 || num ==6)
-        {
-            // Inicia la segunda animación
-            animator.Play("4");
-        }
-        */
+
+        nombre = randomNombre.Next(1, 7);
+        animator.SetInteger("valeurDe", nombre);
+        Debug.Log(nombre);
+
+
+
+        Invoke("resetDice", 6f);
+
+
+
+
+
     }
+
 
 
 }
