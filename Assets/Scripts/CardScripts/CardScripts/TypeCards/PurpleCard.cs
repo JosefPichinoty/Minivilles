@@ -47,6 +47,7 @@ public class PurpleCard : Card
         {
             /*owner.GetMoney();*/
         }
+        base.Effect();
     }
 
     public void GetTarget()

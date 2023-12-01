@@ -47,6 +47,7 @@ public class CardLibrary : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("Je commence");
         if (instance != null)
         {
             Destroy(instance);
@@ -104,9 +105,13 @@ public class CardLibrary : MonoBehaviour
 
         foreach (Player player in PlayerManager.GetInstance().playerList)
         {
+            gare.owner = player;
             player.monumentList.Add((OrangeCard)gare);
+            centreCommercial.owner = player;
             player.monumentList.Add((OrangeCard)centreCommercial);
+            parcDAttraction.owner = player;
             player.monumentList.Add((OrangeCard)parcDAttraction);
+            tourRadio.owner = player;
             player.monumentList.Add((OrangeCard)tourRadio);
         }
     }

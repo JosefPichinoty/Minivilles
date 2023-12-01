@@ -48,5 +48,6 @@ public class OrangeCard : Card
                 owner.rethrowDice = true;
             }
         }
+        base.Effect();
     }
 }

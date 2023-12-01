@@ -22,17 +22,20 @@ public class Player : ScriptableObject
     public string playerName;
     public int money = 3;
 
-    void Start()
+    public void Start()
     {
-        
+        foreach (OrangeCard card in monumentList)
+        {
+            Debug.Log(card);
+        }
     }
 
     void Update()
     {
-        
+
     }
 
-    void CheckCardEffect()
+    public void CheckCardEffect()
     {
         if (playerTurn)
         {
@@ -56,6 +59,10 @@ public class Player : ScriptableObject
     public void BecomeActivePlayer()
     {
         GameManager.GetInstance().activePlayer = this;
+        foreach (OrangeCard monument in monumentList)
+        {
+            Debug.Log(monument.data.name);
+        }
     }
 
     public void Turn()

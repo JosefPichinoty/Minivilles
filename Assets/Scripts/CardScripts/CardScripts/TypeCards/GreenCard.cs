@@ -17,7 +17,7 @@ public class GreenCard : Card
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public override void Effect()
@@ -69,5 +69,6 @@ public class GreenCard : Card
                 }
             }
         }
+        base.Effect();
     }
 }

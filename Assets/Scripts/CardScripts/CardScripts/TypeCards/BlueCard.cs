@@ -47,5 +47,6 @@ public class BlueCard : Card
                 owner.money += 5;
             }
         }
+        base.Effect();
     }
 }

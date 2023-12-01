@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour 
 {
@@ -25,6 +26,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] allCards;
 
+    public GameObject[] monuments;
+
     public bool isDissolving ;
 
     public int turn;
@@ -45,9 +48,46 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
+    public void CheckMonuments()
+    {
+        foreach (Player player in PlayerManager.GetInstance().playerList)
+        {
+            foreach (OrangeCard monument in player.monumentList)
+            {
+                if (monument.owner.money >= monument.data.valueMoney)
+                {
+                    Debug.Log("la carte" + monument + " est bien");
+                    monument.buyable = true;
+                }
+                else
+                {
+                    Debug.Log("la carte" + monument + " est mal");
+                    monument.buyable = false;
+                }
+            }
+
+        }
+        
+        foreach (Player player in PlayerManager.GetInstance().playerList)
+        {
+            for (int i = 0; i < player.monumentList.Count; i++)
+            {
+                Debug.Log("la carte" + monuments[i] + " est achetable");
+                if (player.monumentList[i].buyable)
+                {
+                    monuments[i].GetComponent<Button>().interactable = true;
+                    Debug.Log("la carte" + monuments[i] + " est achetable");
+                }
+            }
+        }
+
+        
+        //PlayerManager.GetInstance().player1.BecomeActivePlayer();
+    }
+
     void Update()
     {
-        
+        CheckMonuments();
     }
 
     public void SetSellectedCard() {

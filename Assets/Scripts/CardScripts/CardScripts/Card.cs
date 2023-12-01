@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.FullSerializer;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -11,6 +13,7 @@ public class Card
         type = pType;
     }
 
+    public bool buyable;
     public CardData data;
     public Player owner;
 
@@ -37,7 +40,7 @@ public class Card
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public virtual void CardBought(Player player)
@@ -47,27 +50,29 @@ public class Card
 
     public virtual void Effect()
     {
-
+        ChangeStateCard();
     }
 
     public void ChangeStateCard()
     {
+        Debug.Log("ça rentre");
         foreach (Player player in PlayerManager.GetInstance().playerList)
         {
             foreach (OrangeCard monument in player.monumentList)
             {
                 if (monument.owner.money >= monument.data.valueMoney)
                 {
-                    monument.data.buyable = true;
+                    monument.buyable = true;
+                    GameManager.GetInstance().CheckMonuments();
+                    Debug.Log("canBuy = " +  monument);
                 }
-            }
-            foreach (Card card in player.cardObtained)
-            {
-                if (card.owner.money >= card.data.valueMoney)
+                else
                 {
-                    card.data.buyable = true;
+                    monument.buyable = false;
+                    Debug.Log("cantBuy = " + monument);
                 }
             }
+
         }
     }
 }
