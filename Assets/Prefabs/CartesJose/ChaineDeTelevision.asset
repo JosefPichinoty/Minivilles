@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameCard: "Chaine de t\xE9l\xE9vision"
   dice: {fileID: 0}
-  valueMoney: 8
+  valueMoney: 7
   valueDice: 6
   secondValueDice: 0
   maxNumCard: 4
   numCard: 0
   onlyCard: 1
+  buyable: 0
   cardIndex: 8

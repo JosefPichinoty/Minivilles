@@ -40,5 +40,6 @@ public class RedCard : Card
                 owner.money++;
             }
         }
+        base.Effect();
     }
 }
