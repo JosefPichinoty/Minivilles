@@ -3,10 +3,13 @@ using UnityEngine;
 public class UiAnim : MonoBehaviour
 {
     [SerializeField] private Animator sAnimator;
+    [SerializeField] private Animator p1Animator;
     [SerializeField] private Animator p2Animator;
     [SerializeField] private Animator p3Animator;
     [SerializeField] private Animator p4Animator;
+    
     private bool sIsOpen;
+    private bool p1IsOpen;
     private bool p2IsOpen;
     private bool p3IsOpen;
     private bool p4IsOpen;
@@ -18,7 +21,7 @@ public class UiAnim : MonoBehaviour
         {
             sAnimator.SetTrigger("sOpenTrigger"); 
             sIsOpen = true;
-            lockUi = 1;
+            lockUi = 5;
             closeOther();
         }
 
@@ -27,6 +30,23 @@ public class UiAnim : MonoBehaviour
             sAnimator.SetTrigger("sCloseTrigger");
             sIsOpen = false;
         }  
+        
+    }
+    public void p1Open()
+    {
+        if (p2IsOpen == false)
+        {
+            p1Animator.SetTrigger("p1OpenTrigger");
+            p1IsOpen = true;
+            lockUi = 1;
+            closeOther();
+        }
+
+        else if (p1IsOpen)
+        {
+            p1Animator.SetTrigger("p1CloseTrigger");
+            p1IsOpen = false;
+        }
         
     }
 
@@ -85,7 +105,12 @@ public class UiAnim : MonoBehaviour
 
   private void closeOther()
     {
-        if (p2IsOpen == true && lockUi != 2)
+        if (p1IsOpen == true && lockUi != 1)
+        {
+            p1Animator.SetTrigger("p1CloseTrigger");
+            p1IsOpen = false;
+        }
+        else if (p2IsOpen == true && lockUi != 2)
         {
             p2Animator.SetTrigger("p2CloseTrigger");
             p2IsOpen = false;
@@ -103,7 +128,7 @@ public class UiAnim : MonoBehaviour
             p4IsOpen = false;
             
         }
-        else if (sIsOpen == true && lockUi != 1)
+        else if (sIsOpen == true && lockUi != 5)
         {
             sAnimator.SetTrigger("sCloseTrigger");
         }
