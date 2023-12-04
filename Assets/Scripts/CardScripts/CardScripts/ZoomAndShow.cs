@@ -44,6 +44,7 @@ public class ZoomAndShow : MonoBehaviour
         //Instantiate(nuevoObjeto, thisCard.transform.position, thisCard.transform.rotation);
         nuevoObjeto.SetActive(true);
         nuevoObjeto.transform.localScale = thisCard.transform.localScale;
+        nuevoObjeto.transform.position = thisCard.transform.position;
         
         UnityEngine.UI.Image imagen = nuevoObjeto.GetComponent<UnityEngine.UI.Image>();
 
