@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
 
     void CheckMonumentsToBeBuy()
     {
-        foreach(GameObject monument in monuments)
+        foreach(GameObject monument in monumentsGameObjects)
         {
             if (monument.GetComponent<CardContainer>().cardData.valueMoney > activePlayer.money && monument.GetComponent<CardContainer>().monumentOwned == false)
             {

@@ -103,7 +103,7 @@ public class PlayerManager : MonoBehaviour
         DiceThrow.GetInstance().resetDice();
     }
 
-    public void CheckCardEffect()
+    /*public void CheckCardEffect()
     {
         foreach (Player player in playerList)
         {
@@ -138,6 +138,38 @@ public class PlayerManager : MonoBehaviour
             foreach (BlueCard blueCard in player.cardObtained)
             {
                 blueCard.Effect();
+            }
+        }
+    }*/
+
+    public void CheckCardEffect()
+    {
+        foreach (Player player in playerList)
+        {
+            foreach (Card card in player.cardObtained)
+            {
+                if (player.playerTurn)
+                {
+                    if (card is GreenCard)
+                    {
+                        card.Effect();
+                    }
+                    if (card is PurpleCard)
+                    {
+                        card.Effect();
+                    }
+                }
+                else if (!player.playerTurn)
+                {
+                    if (card is RedCard)
+                    {
+                        card.Effect();
+                    }
+                }
+                if (card is BlueCard)
+                {
+                    card.Effect();
+                }
             }
         }
     }

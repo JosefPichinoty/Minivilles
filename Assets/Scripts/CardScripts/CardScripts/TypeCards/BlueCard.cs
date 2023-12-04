@@ -20,29 +20,30 @@ public class BlueCard : Card
     {
         if (type == typeCard.wheat)
         {
-            if (data.dice.diceThrow == 1 && data.nameCard == "Champs de blé")
+            if (DiceThrow.GetInstance().nombre == 1 && data.nameCard == "Champs de blé")
             {
+                Debug.Log("NOOOOOOOOOOOOOOOOOOOOON");
                 owner.money++;
             }
-            if (data.dice.diceThrow == 10 && data.nameCard == "Verger")
+            if (DiceThrow.GetInstance().nombre == 10 && data.nameCard == "Verger")
             {
                 owner.money += 3;
             }
         }
         else if (type == typeCard.animal)
         {
-            if (data.dice.diceThrow == 2 && data.nameCard == "Ferme")
+            if (DiceThrow.GetInstance().nombre == 2 && data.nameCard == "Ferme")
             {
                 owner.money++;
             }
         }
         else if (type == typeCard.industry)
         {
-            if (data.dice.diceThrow == 5 && data.nameCard == "Forêt")
+            if (DiceThrow.GetInstance().nombre == 5 && data.nameCard == "Forêt")
             {
                 owner.money++;
             }
-            if (data.dice.diceThrow == 9 && data.nameCard == "Mine")
+            if (DiceThrow.GetInstance().nombre == 9 && data.nameCard == "Mine")
             {
                 owner.money += 5;
             }
