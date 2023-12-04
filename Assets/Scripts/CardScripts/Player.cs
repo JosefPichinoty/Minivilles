@@ -14,6 +14,7 @@ public class Player : ScriptableObject
     public List<OrangeCard> monumentList = new List<OrangeCard>();
     public List<CardData> monumentAcquired = new List<CardData>();
 
+    public bool canBuy = false;
     public bool canThrow = false;
     public bool bothDice = false;
     public bool bonusMoney = false;

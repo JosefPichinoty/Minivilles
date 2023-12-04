@@ -56,7 +56,6 @@ public class Card
 
     public void ChangeStateCard()
     {
-        Debug.Log("ça rentre");
         foreach (Player player in PlayerManager.GetInstance().playerList)
         {
             foreach (OrangeCard monument in player.monumentList)
@@ -65,12 +64,10 @@ public class Card
                 {
                     monument.buyable = true;
                     GameManager.GetInstance().CheckMonuments();
-                    Debug.Log("canBuy = " +  monument);
                 }
                 else
                 {
                     monument.buyable = false;
-                    Debug.Log("cantBuy = " + monument);
                 }
             }
 

@@ -74,6 +74,7 @@ public class PlayerManager : MonoBehaviour
         GameManager.GetInstance().activePlayer = playerList[0];
         playerList[0].canThrow = true;
         playerList[0].playerTurn = true;
+        playerList[0].canBuy = true;
     }
 
     void RefreshListPlayers()
@@ -97,6 +98,7 @@ public class PlayerManager : MonoBehaviour
         playerList[0].BecomeActivePlayer();
         playerList[0].canThrow = true;
         playerList[0].playerTurn = true;
+        playerList[0].canBuy = true;
         Debug.Log(playerList[0].playerName);
         MoneyText.GetInstance().ChangeText();
         GameManager.GetInstance().activePlayer.Turn();

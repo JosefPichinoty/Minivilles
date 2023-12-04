@@ -35,7 +35,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         InitGame();
-        CheckMonumentsToBeBuy();
     }
 
     private void InitGame()
