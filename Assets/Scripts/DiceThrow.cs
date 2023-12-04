@@ -5,12 +5,24 @@ using UnityEngine.UI;
 
 public class DiceThrow : MonoBehaviour
 {
+    #region SINGLETON INSTANCE
+    static private DiceThrow instance;
+
+    static public DiceThrow GetInstance()
+    {
+        if (instance == null) instance = new DiceThrow();
+        return instance;
+    }
+
+    private DiceThrow() : base() { }
+    #endregion
+
 
     private System.Random random;
 
     [SerializeField]
     private AnimationClip[] animations = new AnimationClip[6];
-    private int nombre;
+    public int nombre;
     [SerializeField]
     private Animator animator;
     private bool finishedThrow = false;
@@ -23,6 +35,14 @@ public class DiceThrow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (instance != null)
+        {
+            Destroy(instance);
+            return;
+        }
+
+        instance = this;
+
         randomNombre = new System.Random();
 
         if (animator == null)
@@ -41,7 +61,7 @@ public class DiceThrow : MonoBehaviour
     }
 
 
-    private void resetDice()
+    public void resetDice()
     {
         gameObject.SetActive(false);
         nombre = 0;
@@ -52,8 +72,13 @@ public class DiceThrow : MonoBehaviour
 
     public void LancerDe()
     {
-        gameObject.SetActive(true);
-        StartCoroutine(PlayFirstAnimationAndWait());
+        if (GameManager.GetInstance().activePlayer.canThrow == true)
+        {
+            GameManager.GetInstance().activePlayer.canThrow = false;
+            gameObject.SetActive(true);
+            StartCoroutine(PlayFirstAnimationAndWait());
+        }
+        
         //finishedThrow = true;
         //StartCoroutine(BlockButton());
 
@@ -84,10 +109,10 @@ public class DiceThrow : MonoBehaviour
         nombre = randomNombre.Next(1, 7);
         animator.SetInteger("valeurDe", nombre);
         Debug.Log(nombre);
+        PlayerManager.GetInstance().CheckCardEffect();
 
 
-
-        Invoke("resetDice", 6f);
+        //Invoke("resetDice", 6f);
 
 
 

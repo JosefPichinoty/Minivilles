@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: Player1
   m_EditorClassIdentifier: 
   color: {r: 0, g: 0, b: 1, a: 0}
-  cardObtained: []
-  monumentList: []
+  cardObtainedScrptable: []
   monumentAcquired: []
+  canThrow: 1
   bothDice: 0
   bonusMoney: 0
-  playerTurn: 0
+  playerTurn: 1
   rethrowDice: 0
+  doubleTurn: 0
   playerName: Joueur 1
   money: 3

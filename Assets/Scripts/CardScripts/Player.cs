@@ -12,8 +12,10 @@ public class Player : ScriptableObject
     public List<Card> cardObtained = new List<Card>();
     public List<GameObject> cardObtainedScrptable = new List<GameObject>();
     public List<OrangeCard> monumentList = new List<OrangeCard>();
-    public List<GameObject> monumentAcquired = new List<GameObject>();
+    public List<CardData> monumentAcquired = new List<CardData>();
 
+    public bool canBuy = false;
+    public bool canThrow = false;
     public bool bothDice = false;
     public bool bonusMoney = false;
     public bool playerTurn = false;
@@ -33,27 +35,6 @@ public class Player : ScriptableObject
     void Update()
     {
 
-    }
-
-    public void CheckCardEffect()
-    {
-        if (playerTurn)
-        {
-            foreach (GreenCard greenCard in cardObtained)
-            {
-                greenCard.Effect();
-            }
-
-            foreach (PurpleCard purpleCard in cardObtained)
-            {
-                purpleCard.Effect();
-            }
-        }
-
-        foreach (BlueCard blueCard in cardObtained)
-        {
-            blueCard.Effect();
-        }
     }
 
     public void BecomeActivePlayer()
