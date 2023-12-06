@@ -93,16 +93,28 @@ public class PlayerManager : MonoBehaviour
 
     public void ChangeTurn()
     {
-        playerList[0].playerTurn = false;
-        RefreshListPlayers();
-        playerList[0].BecomeActivePlayer();
-        playerList[0].canThrow = true;
-        playerList[0].playerTurn = true;
-        playerList[0].canBuy = true;
-        Debug.Log(playerList[0].playerName);
-        MoneyText.GetInstance().ChangeText();
-        GameManager.GetInstance().activePlayer.Turn();
-        DiceThrow.GetInstance().resetDice();
+        if (GameManager.GetInstance().activePlayer.rePlay)
+        {
+            playerList[0].BecomeActivePlayer();
+            playerList[0].canThrow = true;
+            playerList[0].playerTurn = true;
+            playerList[0].canBuy = true;
+            MoneyText.GetInstance().ChangeText();
+            DiceThrow.GetInstance().resetDice();
+        }
+        else
+        {
+            playerList[0].playerTurn = false;
+            RefreshListPlayers();
+            playerList[0].BecomeActivePlayer();
+            playerList[0].canThrow = true;
+            playerList[0].playerTurn = true;
+            playerList[0].canBuy = true;
+            Debug.Log(playerList[0].playerName);
+            MoneyText.GetInstance().ChangeText();
+            GameManager.GetInstance().activePlayer.Turn();
+            DiceThrow.GetInstance().resetDice();
+        }
     }
 
     /*public void CheckCardEffect()
