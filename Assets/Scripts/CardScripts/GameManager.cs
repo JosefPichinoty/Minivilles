@@ -86,7 +86,23 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        CheckMonuments();
+        //CheckMonuments();
+        CheckMonumentsToBeBuy();
+    }
+
+    void CheckMonumentsToBeBuy()
+    {
+        foreach(GameObject monument in monumentsGameObjects)
+        {
+            if (monument.GetComponent<CardContainer>().cardData.valueMoney > activePlayer.money && monument.GetComponent<CardContainer>().monumentOwned == false)
+            {
+                monument.GetComponent<Button>().interactable = false;
+            }
+            else
+            {
+                monument.GetComponent<Button>().interactable = true;
+            }
+        }
     }
 
     public void SetSellectedCard() {

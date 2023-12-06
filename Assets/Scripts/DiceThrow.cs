@@ -22,7 +22,7 @@ public class DiceThrow : MonoBehaviour
 
     [SerializeField]
     private AnimationClip[] animations = new AnimationClip[6];
-    private int nombre;
+    public int nombre;
     [SerializeField]
     private Animator animator;
     private bool finishedThrow = false;
@@ -109,7 +109,7 @@ public class DiceThrow : MonoBehaviour
         nombre = randomNombre.Next(1, 7);
         animator.SetInteger("valeurDe", nombre);
         Debug.Log(nombre);
-
+        PlayerManager.GetInstance().CheckCardEffect();
 
 
         //Invoke("resetDice", 6f);
