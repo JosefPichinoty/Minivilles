@@ -27,11 +27,12 @@ public class GreenCard : Card
             if ( (DiceThrow.GetInstance().nombre == 2 || DiceThrow.GetInstance().nombre == 3) && data.nameCard == "Boulangerie")
             {
                 owner.money++;
-                Debug.Log("OUIIIIIIIIIIIIIIIIIIIIIIIIIII");
+                CommercialCenterEffect();
             }
             if (data.nameCard == "Supérette")
             {
                 owner.money += 3;
+                CommercialCenterEffect();
             }
         }
         else if (type == typeCard.factory)

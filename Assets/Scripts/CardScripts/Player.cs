@@ -20,6 +20,7 @@ public class Player : ScriptableObject
     public bool bothDice = false;
     public bool bonusMoney = false;
     public bool playAgainAbility = false;
+    public bool rePlay = false;
     public bool playerTurn = false;
     public bool rethrowDice = false;
     public bool doubleTurn = false;
@@ -66,5 +67,13 @@ public class Player : ScriptableObject
     public void AddBoughtCardToList()
     {
         
+    }
+
+    public void PlayAgain()
+    {
+        if (playAgainAbility/* && diceResult1 == diceResult2*/)
+        {
+            rePlay = true;
+        }
     }
 }
