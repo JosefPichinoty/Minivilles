@@ -7,34 +7,34 @@ public class UiAnim : MonoBehaviour
     [SerializeField] private Animator p2Animator;
     [SerializeField] private Animator p3Animator;
     [SerializeField] private Animator p4Animator;
-    
+
     private bool sIsOpen;
     private bool p1IsOpen;
     private bool p2IsOpen;
     private bool p3IsOpen;
     private bool p4IsOpen;
-    private int lockUi = 0;
+    private int lockUi;
 
     public void shopOpen()
     {
         if (sIsOpen == false)
         {
-            sAnimator.SetTrigger("sOpenTrigger"); 
+            sAnimator.SetTrigger("sOpenTrigger");
             sIsOpen = true;
             lockUi = 5;
             closeOther();
         }
 
-        else if (sIsOpen) 
+        else if (sIsOpen)
         {
             sAnimator.SetTrigger("sCloseTrigger");
             sIsOpen = false;
-        }  
-        
+        }
     }
+
     public void p1Open()
     {
-        if (p2IsOpen == false)
+        if (p1IsOpen == false)
         {
             p1Animator.SetTrigger("p1OpenTrigger");
             p1IsOpen = true;
@@ -47,7 +47,6 @@ public class UiAnim : MonoBehaviour
             p1Animator.SetTrigger("p1CloseTrigger");
             p1IsOpen = false;
         }
-        
     }
 
     public void p2Open()
@@ -65,7 +64,6 @@ public class UiAnim : MonoBehaviour
             p2Animator.SetTrigger("p2CloseTrigger");
             p2IsOpen = false;
         }
-        
     }
 
     public void p3Open()
@@ -83,7 +81,6 @@ public class UiAnim : MonoBehaviour
             p3Animator.SetTrigger("p3CloseTrigger");
             p3IsOpen = false;
         }
-        
     }
 
     public void p4Open()
@@ -103,37 +100,33 @@ public class UiAnim : MonoBehaviour
         }
     }
 
-  private void closeOther()
+    private void closeOther()
     {
-        if (p1IsOpen == true && lockUi != 1)
+        if (p1IsOpen && lockUi != 1)
         {
             p1Animator.SetTrigger("p1CloseTrigger");
             p1IsOpen = false;
         }
-        else if (p2IsOpen == true && lockUi != 2)
+        else if (p2IsOpen && lockUi != 2)
         {
             p2Animator.SetTrigger("p2CloseTrigger");
             p2IsOpen = false;
         }
-    
-        else if (p3IsOpen == true && lockUi != 3)
+
+        else if (p3IsOpen && lockUi != 3)
         {
             p3Animator.SetTrigger("p3CloseTrigger");
             p3IsOpen = false;
         }
-    
-        else if (p4IsOpen == true && lockUi != 4)
+
+        else if (p4IsOpen && lockUi != 4)
         {
             p4Animator.SetTrigger("p4CloseTrigger");
             p4IsOpen = false;
-            
         }
-        else if (sIsOpen == true && lockUi != 5)
+        else if (sIsOpen && lockUi != 5)
         {
             sAnimator.SetTrigger("sCloseTrigger");
         }
-        
-        
     }
-   
 }
