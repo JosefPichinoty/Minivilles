@@ -27,6 +27,7 @@ public class PlayerManager : MonoBehaviour
     public Player player2;
     public Player player3;
     public Player player4;
+    private DiceThrow dice;
 
     [SerializeField]
     private GameObject playerShow;
@@ -41,6 +42,11 @@ public class PlayerManager : MonoBehaviour
         {
             Destroy(instance);
             return;
+        }
+        dice = GameObject.Find("Dice").GetComponent<DiceThrow>();
+        if(dice != null)
+        {
+            Debug.Log("Dice not found");
         }
 
         instance = this;
@@ -119,7 +125,7 @@ public class PlayerManager : MonoBehaviour
             playerList[0].playerTurn = true;
             playerList[0].canBuy = true;
             MoneyText.GetInstance().ChangeText();
-            //DiceThrow.GetInstance().resetDice();
+            dice.resetDice();
         }
         else
         {
@@ -143,7 +149,7 @@ public class PlayerManager : MonoBehaviour
             Debug.Log(playerList[0].playerName);
             MoneyText.GetInstance().ChangeText();
             GameManager.GetInstance().activePlayer.Turn();
-            //DiceThrow.GetInstance().resetDice();
+            dice.resetDice();
         }
     }
 
