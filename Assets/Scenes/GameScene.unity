@@ -18610,7 +18610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e7fc6b686028e64fbbbc53a6bfbc09f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BuyUI: {fileID: 0}
+  BuyUI: {fileID: 468948634}
   activePlayer: {fileID: 0}
   selectedCard: {fileID: 0}
   allCards: []
