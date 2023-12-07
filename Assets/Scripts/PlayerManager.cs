@@ -27,6 +27,11 @@ public class PlayerManager : MonoBehaviour
     public Player player3;
     public Player player4;
 
+    string player1TurnText = "Joueur 1, C'est à vous !";
+    string player2TurnText = "Joueur 2, C'est à vous !";
+    string player3TurnText = "Joueur 3, C'est à vous !";
+    string player4TurnText = "Joueur 4, C'est à vous !";
+
     void Start()
     {
         if (instance != null)
