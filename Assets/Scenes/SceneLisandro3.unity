@@ -435,7 +435,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138261058}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 408dd72d5a71b45ef937576746a68dec, type: 3}
   m_Name: 
@@ -1352,12 +1352,7 @@ MonoBehaviour:
   player2: {fileID: 11400000, guid: 9c3d9fc6b334a8040a17d4eb3c44b4cf, type: 2}
   player3: {fileID: 11400000, guid: 6a13062efce4283458e32e3f8b0a4379, type: 2}
   player4: {fileID: 11400000, guid: be966c1d4d2033345ad43b73c7adc14f, type: 2}
-  playerShow: {fileID: 1588250963}
-  playerPanels:
-  - {fileID: 21300000, guid: 8534522d4953a4c9982cb457a236885c, type: 3}
-  - {fileID: 21300000, guid: 5cd356bb6de214b148a479e63fb09c49, type: 3}
-  - {fileID: 21300000, guid: f577d7305d28b4f4ebfd5249310fadd1, type: 3}
-  - {fileID: 21300000, guid: b861aef01ac5647a090cf9a39a6110ba, type: 3}
+  dice: {fileID: 2006615140}
 --- !u!4 &354147631
 Transform:
   m_ObjectHideFlags: 0

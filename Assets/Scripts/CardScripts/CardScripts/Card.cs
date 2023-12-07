@@ -16,6 +16,8 @@ public class Card
     public bool buyable;
     public CardData data;
     public Player owner;
+    public DiceThrow dice;
+    public GameManager _gm;
 
     public typeCard type;
 
@@ -34,7 +36,7 @@ public class Card
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -48,7 +50,7 @@ public class Card
         owner = player;
     }
 
-    public virtual void Effect()
+    public virtual void Effect(int nombre, bool didEffect)
     {
         MoneyText.GetInstance().ChangeText();
         ChangeStateCard();

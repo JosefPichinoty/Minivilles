@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject BuyUI;
 
+    [SerializeField]
+    public DiceThrow dice;
+
     public Player activePlayer;
 
     public GameObject selectedCard;

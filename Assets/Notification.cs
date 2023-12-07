@@ -24,7 +24,7 @@ public class Notification : MonoBehaviour
         text = this.GetComponent<TextMeshProUGUI>();
         panelNotif = this.GetComponent<UnityEngine.UI.Image>();
         fadeAwayPerSecond = 1 / fadeTime;
-        alphaValue = text.color.a;
+        //alphaValue = text.color.a;
     }
 
     void Update()

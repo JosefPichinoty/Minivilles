@@ -7,6 +7,7 @@ public class CardContainer : MonoBehaviour
 {
     public CardData cardData;
     public bool monumentOwned = false;
+    private int trash = 0;
 
     public void BuyMonument()
     {
@@ -20,7 +21,7 @@ public class CardContainer : MonoBehaviour
                 if (CardLibrary.GetInstance().brutMonumentContainer[i].data.name == cardData.name)
                 {
                     GameManager.GetInstance().activePlayer.monumentObtained.Add((OrangeCard)CardLibrary.GetInstance().brutMonumentContainer[i]);
-                    GameManager.GetInstance().activePlayer.monumentObtained.Last().Effect();
+                    GameManager.GetInstance().activePlayer.monumentObtained.Last().Effect(trash);
                 }
             }
         }

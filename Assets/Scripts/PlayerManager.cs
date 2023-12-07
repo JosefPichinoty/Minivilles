@@ -27,7 +27,13 @@ public class PlayerManager : MonoBehaviour
     public Player player3;
     public Player player4;
 
+    [SerializeField]
+    private GameObject NotifPanel;
+
+    [SerializeField]
     private DiceThrow dice;
+
+    bool didEffect = false;
 
     void Start()
     {
@@ -38,7 +44,6 @@ public class PlayerManager : MonoBehaviour
         }
 
         instance = this;
-        dice = GameObject.Find("Dice").GetComponent<DiceThrow>();
 
         CreationPlayers();
     }
@@ -159,8 +164,9 @@ public class PlayerManager : MonoBehaviour
         }
     }*/
 
-    public void CheckCardEffect()
+    public void CheckCardEffect(int nombre)
     {
+        bool didEffect = false;
         foreach (Player player in playerList)
         {
             foreach (Card card in player.cardObtained)
@@ -169,25 +175,29 @@ public class PlayerManager : MonoBehaviour
                 {
                     if (card is GreenCard)
                     {
-                        card.Effect();
+                        card.Effect(nombre, didEffect);
                     }
                     if (card is PurpleCard)
                     {
-                        card.Effect();
+                        card.Effect(nombre, didEffect);
                     }
                 }
                 else if (!player.playerTurn)
                 {
                     if (card is RedCard)
                     {
-                        card.Effect();
+                        card.Effect(nombre, didEffect);
                     }
                 }
                 if (card is BlueCard)
                 {
-                    card.Effect();
+                    card.Effect(nombre, didEffect);
                 }
             }
+        }
+        if (didEffect)
+        {
+            NotifPanel.GetComponent<Notification>().showNotif();
         }
     }
 }

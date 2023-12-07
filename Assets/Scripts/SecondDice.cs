@@ -9,14 +9,10 @@ public class SecondDice : MonoBehaviour
     [SerializeField]
     private DiceThrow dice1;
 
-    [SerializeField]
-    private AnimationClip[] animations = new AnimationClip[6];
-    public int nombre;
+    public int nombre2;
     [SerializeField]
     private Animator animator;
-    private bool finishedThrow = false;
     System.Random randomNombre;
-    private int animValue = -1;
     [SerializeField]
     private Button btn;
 
@@ -44,14 +40,6 @@ public class SecondDice : MonoBehaviour
     }
 
 
-    public void resetDice()
-    {
-        gameObject.SetActive(false);
-        nombre = 0;
-        btn.interactable = true;
-
-    }
-
 
     public void LancerDe()
     {
@@ -71,12 +59,9 @@ public class SecondDice : MonoBehaviour
         animator.SetTrigger("finished");
 
 
-        nombre = randomNombre.Next(1, 7);
-        animator.SetInteger("valeurDe", nombre);
-        Debug.Log(nombre);
-        nombre = dice1.nombre + nombre;
-        Debug.Log(nombre);
-        PlayerManager.GetInstance().CheckCardEffect();
+        nombre2 = randomNombre.Next(1, 7);
+        animator.SetInteger("valeurDe", nombre2);
+        Debug.Log(nombre2);
 
 
         //Invoke("resetDice", 6f);

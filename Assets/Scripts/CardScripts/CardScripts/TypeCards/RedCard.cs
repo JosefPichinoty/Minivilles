@@ -20,23 +20,26 @@ public class RedCard : Card
 
     }
 
-    /*
-    public override void Effect()
+    
+    public override void Effect(int nombre, bool didEffect)
     {
-        if (DiceThrow.GetInstance().nombre == 3 && data.nameCard == "Café")
+        if (nombre == 3  && data.nameCard == "Café")
         {
             GameManager.GetInstance().activePlayer.money--;
             owner.money++;
+            didEffect = true;
             CommercialCenterEffect();
         }
-        if ((DiceThrow.GetInstance().nombre == 9 || DiceThrow.GetInstance().nombre == 10) && data.nameCard == "Restaurant")
+        if ((nombre == 9 || nombre == 10) && data.nameCard == "Restaurant")
         {
             GameManager.GetInstance().activePlayer.money -= 2;
             owner.money += 2;
+            didEffect = true;
+
             CommercialCenterEffect();
         }
-        base.Effect();
+        base.Effect(nombre, didEffect);
 
     }
-    */
+    
 }

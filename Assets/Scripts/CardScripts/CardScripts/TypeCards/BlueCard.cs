@@ -16,44 +16,52 @@ public class BlueCard : Card
 
     }
 
-    /*
-    public override void Effect()
+    
+    public override void Effect(int nombre, bool didEffect)
     {
         if (type == typeCard.wheat)
         {
-            if (DiceThrow.GetInstance().nombre == 1 && data.nameCard == "Champs de blé")
+            if (dice.nombre1 == 1 && data.nameCard == "Champs de blé")
             {
                 Debug.Log("NOOOOOOOOOOOOOOOOOOOOON");
                 owner.money++;
+                didEffect = true;
             }
-            if (DiceThrow.GetInstance().nombre == 10 && data.nameCard == "Verger")
+            if (nombre == 10 && data.nameCard == "Verger")
             {
+                didEffect = true;
                 owner.money += 3;
             }
         }
         else if (type == typeCard.animal)
         {
-            if (DiceThrow.GetInstance().nombre == 2 && data.nameCard == "Ferme")
+            if ( (dice.total == 2) && data.nameCard == "Ferme")
             {
+                didEffect = true;
+
                 owner.money++;
             }
         }
         else if (type == typeCard.industry)
         {
-            if (DiceThrow.GetInstance().nombre == 5 && data.nameCard == "Forêt")
+            if (nombre == 5 && data.nameCard == "Forêt")
             {
+                didEffect = true;
+
                 owner.money++;
             }
-            if (DiceThrow.GetInstance().nombre == 9 && data.nameCard == "Mine")
+            if (nombre == 9 && data.nameCard == "Mine")
             {
+                didEffect = true;
+
                 owner.money += 5;
             }
         }
-        base.Effect();
+        base.Effect(nombre, didEffect);
 
     
     }
-    */
+    
 }
 
     
