@@ -26,27 +26,29 @@ public class OrangeCard : Card
 
     public override void Effect()
     {
-        if (obtained)
+        if (data.nameCard == "Gare")
         {
-            if (data.nameCard == "Gare")
+            owner.bothDice = true;
+            Debug.Log("Gare HAAA");
+        }
+        if (data.nameCard == "Centre Commercial")
+        {
+            owner.bonusMoney = true;
+            Debug.Log("Centre Commercial HAAA");
+        }
+        if (data.nameCard == "Parc d'attractions")
+        {
+            owner.playAgainAbility = true;
+            Debug.Log("Parc HAAA");
+            /*if(diceResult1 == diceResult2)
             {
-                owner.bothDice = true;
-            }
-            if (data.nameCard == "Centre Commercial")
-            {
-                owner.bonusMoney = true;
-            }
-            if (data.nameCard == "Parc d'attractions")
-            {
-                /*if(diceResult1 == diceResult2)
-                {
-                    owner.doubleTurn = true
-                }*/
-            }
-            if (data.nameCard == "Tour radio")
-            {
-                owner.rethrowDice = true;
-            }
+                owner.doubleTurn = true
+            }*/
+        }
+        if (data.nameCard == "Tour radio")
+        {
+            owner.rethrowDice = true;
+            Debug.Log("Tour radio HAAA");
         }
         base.Effect();
     }

@@ -22,23 +22,17 @@ public class RedCard : Card
 
     public override void Effect()
     {
-        if (data.nameCard == "Café" && data.dice.diceThrow == 3)
+        if (DiceThrow.GetInstance().nombre == 3 && data.nameCard == "Café")
         {
             GameManager.GetInstance().activePlayer.money--;
             owner.money++;
-            if (owner.bonusMoney == true)
-            {
-                owner.money++;
-            }
+            CommercialCenterEffect();
         }
-        if (data.nameCard == "Restaurant" && (data.dice.diceThrow == 9 || data.dice.diceThrow == 10) )
+        if ((DiceThrow.GetInstance().nombre == 9 || DiceThrow.GetInstance().nombre == 10) && data.nameCard == "Restaurant")
         {
             GameManager.GetInstance().activePlayer.money -= 2;
             owner.money += 2;
-            if (owner.bonusMoney == true)
-            {
-                owner.money++;
-            }
+            CommercialCenterEffect();
         }
         base.Effect();
     }
