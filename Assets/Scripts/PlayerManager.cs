@@ -22,34 +22,23 @@ public class PlayerManager : MonoBehaviour
     [HideInInspector] int numPlayers = 4;
     public List<Player> playerList = new List<Player>();
 
-    int playerCounter = 0;
     public Player player1;
     public Player player2;
     public Player player3;
     public Player player4;
+
     private DiceThrow dice;
-
-    [SerializeField]
-    private GameObject playerShow;
-
-    public Sprite[] playerPanels;
 
     void Start()
     {
-        playerShow.SetActive(false);
-
         if (instance != null)
         {
             Destroy(instance);
             return;
         }
-        dice = GameObject.Find("Dice").GetComponent<DiceThrow>();
-        if(dice != null)
-        {
-            Debug.Log("Dice not found");
-        }
 
         instance = this;
+        dice = GameObject.Find("Dice").GetComponent<DiceThrow>();
 
         CreationPlayers();
     }
@@ -109,17 +98,6 @@ public class PlayerManager : MonoBehaviour
     {
         if (GameManager.GetInstance().activePlayer.rePlay)
         {
-            playerShow.SetActive(true);
-            Invoke("endAnim", 2.75f);
-            if (playerCounter == 3)
-            {
-                playerCounter = 0;
-            }
-            else
-            {
-                playerCounter++;
-            }
-            playerShow.GetComponent<UnityEngine.UI.Image>().sprite = playerPanels[playerCounter];
             playerList[0].BecomeActivePlayer();
             playerList[0].canThrow = true;
             playerList[0].playerTurn = true;
@@ -129,17 +107,6 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            playerShow.SetActive(true);
-            Invoke("endAnim", 2.75f);
-            if (playerCounter == 3)
-            {
-                playerCounter = 0;
-            }
-            else
-            {
-                playerCounter++;
-            }
-            playerShow.GetComponent<UnityEngine.UI.Image>().sprite = playerPanels[playerCounter];
             playerList[0].playerTurn = false;
             RefreshListPlayers();
             playerList[0].BecomeActivePlayer();
@@ -151,17 +118,6 @@ public class PlayerManager : MonoBehaviour
             GameManager.GetInstance().activePlayer.Turn();
             dice.resetDice();
         }
-    }
-
-    private void endAnim()
-    {
-        playerShow.GetComponent<Animator>().SetTrigger("endAnim");
-        Invoke("disablePanel", 1f);
-    }
-
-    private void disablePanel()
-    {
-        playerShow.SetActive(false);
     }
 
     /*public void CheckCardEffect()
