@@ -12,12 +12,15 @@ public class Player : ScriptableObject
     public List<Card> cardObtained = new List<Card>();
     public List<GameObject> cardObtainedScrptable = new List<GameObject>();
     public List<OrangeCard> monumentList = new List<OrangeCard>();
+    public List<OrangeCard> monumentObtained = new List<OrangeCard>();
     public List<CardData> monumentAcquired = new List<CardData>();
 
     public bool canBuy = false;
     public bool canThrow = false;
     public bool bothDice = false;
     public bool bonusMoney = false;
+    public bool playAgainAbility = false;
+    public bool rePlay = false;
     public bool playerTurn = false;
     public bool rethrowDice = false;
     public bool doubleTurn = false;
@@ -64,5 +67,13 @@ public class Player : ScriptableObject
     public void AddBoughtCardToList()
     {
         
+    }
+
+    public void PlayAgain()
+    {
+        if (playAgainAbility/* && diceResult1 == diceResult2*/)
+        {
+            rePlay = true;
+        }
     }
 }

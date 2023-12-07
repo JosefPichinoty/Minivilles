@@ -117,9 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 0}
-  disolve: 0
-  canDissolve: 1
-  isDissolving: 0
+  canDissolve: 0
 --- !u!114 &1198232996746248509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,3 +131,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardData: {fileID: 11400000, guid: df28363a302dfe54cbb6d801ff8f44d1, type: 2}
+  monumentOwned: 0

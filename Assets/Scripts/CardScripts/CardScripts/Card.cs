@@ -54,6 +54,14 @@ public class Card
         ChangeStateCard();
     }
 
+    public virtual void CommercialCenterEffect()
+    {
+        if (owner.bonusMoney == true)
+        {
+            owner.money++;
+        }
+    }
+
     public void ChangeStateCard()
     {
         foreach (Player player in PlayerManager.GetInstance().playerList)

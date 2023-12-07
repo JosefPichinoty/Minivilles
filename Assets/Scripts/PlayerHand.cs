@@ -40,7 +40,6 @@ public class PlayerHand : MonoBehaviour
                 print("avant = " + GameManager.GetInstance().activePlayer.money);
                 if (GameManager.GetInstance().activePlayer.money >= GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney)
                 {
-                    GameManager.GetInstance().activePlayer.canBuy = false;
                     AddCardBasic(cartes[i], GameManager.GetInstance().selectedCard);
                     GameManager.GetInstance().activePlayer.money -= GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney;
                     print("après = " + GameManager.GetInstance().activePlayer.money);
@@ -53,7 +52,6 @@ public class PlayerHand : MonoBehaviour
                     print("avant = " + GameManager.GetInstance().activePlayer.money);
                     if (GameManager.GetInstance().activePlayer.money >= GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney)
                     {
-                        GameManager.GetInstance().activePlayer.canBuy = false;
                         AddCardUpper(cartes[i], GameManager.GetInstance().selectedCard);
                         GameManager.GetInstance().activePlayer.money -= GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney;
                         print("après = " + GameManager.GetInstance().activePlayer.money);
