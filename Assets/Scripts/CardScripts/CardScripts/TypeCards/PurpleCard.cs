@@ -23,6 +23,7 @@ public class PurpleCard : Card
         
     }
 
+    /*
     public override void Effect()
     {
         if (DiceThrow.GetInstance().nombre == 6 && data.nameCard == "Stade")
@@ -41,14 +42,16 @@ public class PurpleCard : Card
         }
         if (DiceThrow.GetInstance().nombre == 6 && data.nameCard == "Centre d'affaires")
         {
-            /*owner.TradeCard();*/
+            //owner.TradeCard();
         }
         if (DiceThrow.GetInstance().nombre == 6 && data.nameCard == "Chaine de télévision")
         {
-            /*owner.GetMoney();*/
+            //owner.GetMoney();
         }
         base.Effect();
     }
+    */
+
 
     public void GetTarget()
     {

@@ -120,7 +120,7 @@ public class PlayerManager : MonoBehaviour
         Debug.Log(playerList[0].playerName);
         MoneyText.GetInstance().ChangeText();
         GameManager.GetInstance().activePlayer.Turn();
-        DiceThrow.GetInstance().resetDice();
+        //DiceThrow.GetInstance().resetDice();
     }
 
     private void endAnim()

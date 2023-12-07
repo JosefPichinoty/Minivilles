@@ -16,6 +16,7 @@ public class BlueCard : Card
 
     }
 
+    /*
     public override void Effect()
     {
         if (type == typeCard.wheat)
@@ -49,5 +50,10 @@ public class BlueCard : Card
             }
         }
         base.Effect();
+
+    
     }
+    */
 }
+
+    

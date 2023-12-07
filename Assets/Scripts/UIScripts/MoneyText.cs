@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MoneyText : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class MoneyText : MonoBehaviour
     public TMP_Text textMoney;
     void Start()
     {
+
         if (instance != null)
         {
             Destroy(instance);
@@ -26,11 +28,14 @@ public class MoneyText : MonoBehaviour
         instance = this;
 
         textMoney = GetComponent<TMP_Text>();
+
         ChangeText();
     }
 
     public void ChangeText()
     {
-        textMoney.text = "Player Money: " + Convert.ToString(GameManager.GetInstance().activePlayer.money);
+
+        textMoney.text = Convert.ToString(GameManager.GetInstance().activePlayer.money);
+
     }
 }

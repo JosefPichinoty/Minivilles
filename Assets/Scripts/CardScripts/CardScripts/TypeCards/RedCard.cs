@@ -20,6 +20,7 @@ public class RedCard : Card
 
     }
 
+    /*
     public override void Effect()
     {
         if (DiceThrow.GetInstance().nombre == 3 && data.nameCard == "Café")
@@ -41,5 +42,7 @@ public class RedCard : Card
             }
         }
         base.Effect();
+
     }
+    */
 }

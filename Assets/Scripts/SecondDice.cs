@@ -1,15 +1,13 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine;
 
-public class DiceThrow : MonoBehaviour
+public class SecondDice : MonoBehaviour
 {
-
-
-
     private System.Random random;
+    [SerializeField]
+    private DiceThrow dice1;
 
     [SerializeField]
     private AnimationClip[] animations = new AnimationClip[6];
@@ -57,26 +55,8 @@ public class DiceThrow : MonoBehaviour
 
     public void LancerDe()
     {
-        if (GameManager.GetInstance().activePlayer.canThrow == true)
-        {
-            GameManager.GetInstance().activePlayer.canThrow = false;
-            gameObject.SetActive(true);
-            StartCoroutine(PlayFirstAnimationAndWait());
-        }
-        
-        //finishedThrow = true;
-        //StartCoroutine(BlockButton());
-
-        /*
-        if (finishedThrow)
-        {
-            
-        }
-        */
-
-
-        //animator.SetInteger("valeurDe", num);
-
+        gameObject.SetActive(true);
+        StartCoroutine(PlayFirstAnimationAndWait());
     }
 
     IEnumerator PlayFirstAnimationAndWait()
@@ -84,7 +64,7 @@ public class DiceThrow : MonoBehaviour
         // Reproduce la primera animación
         //animator.Play("still");
         btn.interactable = false;
-        
+
 
         // Espera a que la primera animación termine
         yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length * 3f);
@@ -93,6 +73,8 @@ public class DiceThrow : MonoBehaviour
 
         nombre = randomNombre.Next(1, 7);
         animator.SetInteger("valeurDe", nombre);
+        Debug.Log(nombre);
+        nombre = dice1.nombre + nombre;
         Debug.Log(nombre);
         PlayerManager.GetInstance().CheckCardEffect();
 
@@ -104,7 +86,4 @@ public class DiceThrow : MonoBehaviour
 
 
     }
-
- 
 }
-

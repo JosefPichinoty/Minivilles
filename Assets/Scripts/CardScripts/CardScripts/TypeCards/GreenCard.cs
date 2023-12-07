@@ -19,7 +19,7 @@ public class GreenCard : Card
     {
 
     }
-
+    /*
     public override void Effect()
     {
         if (type == typeCard.shop)
@@ -72,4 +72,5 @@ public class GreenCard : Card
         }
         base.Effect();
     }
+    */
 }
