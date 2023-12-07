@@ -131,3 +131,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardData: {fileID: 11400000, guid: 46a3016cb01469f498870d0b63b4915a, type: 2}
+  monumentOwned: 0

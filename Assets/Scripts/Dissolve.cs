@@ -12,9 +12,9 @@ public class Dissolve : MonoBehaviour
 
     void Start()
     {
+        gameObject.GetComponent<UnityEngine.UI.Image>().material = Object.Instantiate(gameObject.GetComponent<UnityEngine.UI.Image>().material);
         material = gameObject.GetComponent<UnityEngine.UI.Image>().material;
     }
-
     // Update is called once per frame
     void Update()
     {
