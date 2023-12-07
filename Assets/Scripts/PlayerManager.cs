@@ -22,13 +22,21 @@ public class PlayerManager : MonoBehaviour
     [HideInInspector] int numPlayers = 4;
     public List<Player> playerList = new List<Player>();
 
+    int playerCounter = 0;
     public Player player1;
     public Player player2;
     public Player player3;
     public Player player4;
 
+    [SerializeField]
+    private GameObject playerShow;
+
+    public Sprite[] playerPanels;
+
     void Start()
     {
+        playerShow.SetActive(false);
+
         if (instance != null)
         {
             Destroy(instance);
@@ -95,15 +103,37 @@ public class PlayerManager : MonoBehaviour
     {
         if (GameManager.GetInstance().activePlayer.rePlay)
         {
+            playerShow.SetActive(true);
+            Invoke("endAnim", 2.75f);
+            if (playerCounter == 3)
+            {
+                playerCounter = 0;
+            }
+            else
+            {
+                playerCounter++;
+            }
+            playerShow.GetComponent<UnityEngine.UI.Image>().sprite = playerPanels[playerCounter];
             playerList[0].BecomeActivePlayer();
             playerList[0].canThrow = true;
             playerList[0].playerTurn = true;
             playerList[0].canBuy = true;
             MoneyText.GetInstance().ChangeText();
-            DiceThrow.GetInstance().resetDice();
+            //DiceThrow.GetInstance().resetDice();
         }
         else
         {
+            playerShow.SetActive(true);
+            Invoke("endAnim", 2.75f);
+            if (playerCounter == 3)
+            {
+                playerCounter = 0;
+            }
+            else
+            {
+                playerCounter++;
+            }
+            playerShow.GetComponent<UnityEngine.UI.Image>().sprite = playerPanels[playerCounter];
             playerList[0].playerTurn = false;
             RefreshListPlayers();
             playerList[0].BecomeActivePlayer();
@@ -113,8 +143,19 @@ public class PlayerManager : MonoBehaviour
             Debug.Log(playerList[0].playerName);
             MoneyText.GetInstance().ChangeText();
             GameManager.GetInstance().activePlayer.Turn();
-            DiceThrow.GetInstance().resetDice();
+            //DiceThrow.GetInstance().resetDice();
         }
+    }
+
+    private void endAnim()
+    {
+        playerShow.GetComponent<Animator>().SetTrigger("endAnim");
+        Invoke("disablePanel", 1f);
+    }
+
+    private void disablePanel()
+    {
+        playerShow.SetActive(false);
     }
 
     /*public void CheckCardEffect()
@@ -135,10 +176,10 @@ public class PlayerManager : MonoBehaviour
             }
             else if (!player.playerTurn)
             {
-                Debug.Log(player.cardObtained.Any(c => c.data.nameCard == "Café" || c.data.nameCard == "Restaurant"));
+                Debug.Log(player.cardObtained.Any(c => c.data.nameCard == "Cafï¿½" || c.data.nameCard == "Restaurant"));
                 for (int i = 0; i < player.cardObtained.Count; i++)
                 {
-                    if (player.cardObtained[i].data.nameCard == "Café" || player.cardObtained[i].data.nameCard == "Restaurant")
+                    if (player.cardObtained[i].data.nameCard == "Cafï¿½" || player.cardObtained[i].data.nameCard == "Restaurant")
                     {
                         Debug.Log("pussy");
                     }
