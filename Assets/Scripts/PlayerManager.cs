@@ -31,6 +31,12 @@ public class PlayerManager : MonoBehaviour
     public Player player4;
 
     [SerializeField]
+    GameObject playerIndicator;
+    [SerializeField]
+    private Sprite[] playerImages;
+    int playerCounter = 0;
+
+    [SerializeField]
     public GameObject NotifPanel;
 
     public Notification notif;
@@ -111,6 +117,20 @@ public class PlayerManager : MonoBehaviour
     {
         if (GameManager.GetInstance().activePlayer.rePlay)
         {
+            playerIndicator.SetActive(true);
+            playerCounter++;
+            playerIndicator.GetComponent<UnityEngine.UI.Image>().sprite = playerImages[playerCounter];
+            if(playerCounter == 3)
+            {
+                playerCounter = 0;
+            }
+            if (playerIndicator.GetComponent<Animator>().GetBool("endAnim"))
+            {
+                playerIndicator.SetActive(false);
+
+            }
+
+
             playerList[0].BecomeActivePlayer();
             playerList[0].canThrow = true;
             playerList[0].playerTurn = true;
@@ -120,6 +140,16 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
+            playerIndicator.SetActive(true);
+            playerCounter++;
+            playerIndicator.GetComponent<UnityEngine.UI.Image>().sprite = playerImages[playerCounter];
+            if (playerCounter == 3)
+            {
+                playerCounter = 0;
+            }
+
+
+
             playerList[0].playerTurn = false;
             RefreshListPlayers();
             playerList[0].BecomeActivePlayer();
@@ -132,6 +162,8 @@ public class PlayerManager : MonoBehaviour
             dice.resetDice();
         }
     }
+
+
 
     /*public void CheckCardEffect()
     {
