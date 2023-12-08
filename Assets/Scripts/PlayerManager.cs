@@ -12,7 +12,10 @@ public class PlayerManager : MonoBehaviour
 
     static public PlayerManager GetInstance()
     {
-        if (instance == null) instance = new PlayerManager();
+        if (instance == null)
+        {
+            instance = new PlayerManager();
+        }
         return instance;
     }
 
@@ -30,6 +33,8 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     public GameObject NotifPanel;
 
+    public Notification notif;
+
 
     [SerializeField]
     public DiceThrow dice;
@@ -43,8 +48,11 @@ public class PlayerManager : MonoBehaviour
             return;
         }
 
-        NotifPanel.SetActive(false);
+        //NotifPanel.SetActive(false);
+        
         instance = this;
+
+        notif = NotifPanel.GetComponent<Notification>();
 
         CreationPlayers();
     }

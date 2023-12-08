@@ -151,16 +151,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81487733}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.004363274, w: 0.9999905}
   m_LocalPosition: {x: 0, y: 0, z: 0.018181944}
-  m_LocalScale: {x: 3.5464714, y: 3.1031578, z: 0}
+  m_LocalScale: {x: 1.72, y: 1.75, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2010407384}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -36.5}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1485.159, y: 1331.2041}
+  m_AnchoredPosition: {x: 446, y: 265}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &81487735
@@ -1181,6 +1181,7 @@ MonoBehaviour:
   player3: {fileID: 11400000, guid: 6a13062efce4283458e32e3f8b0a4379, type: 2}
   player4: {fileID: 11400000, guid: be966c1d4d2033345ad43b73c7adc14f, type: 2}
   NotifPanel: {fileID: 1010638364}
+  notif: {fileID: 1010638365}
   dice: {fileID: 2006615136}
 --- !u!4 &354147631
 Transform:
@@ -4161,10 +4162,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 328700141}
-  fadeTime: 5
   goodNotif: {fileID: 21300000, guid: 925d7298dab6f4659a59180a63913b80, type: 3}
   badNotif: {fileID: 21300000, guid: 2d0c3977f04d2445d937bbeb57137bb3, type: 3}
   moneyGained: 0
+  img: {fileID: 1010638366}
 --- !u!114 &1010638366
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,7 +9,6 @@ public class Notification : MonoBehaviour
 {
     [SerializeField]
     private TextMeshProUGUI text;
-    public float fadeTime = 5;
     private Animator anim;
 
     [SerializeField]
@@ -19,8 +18,11 @@ public class Notification : MonoBehaviour
 
     public int moneyGained;
 
+    [SerializeField]
+    private UnityEngine.UI.Image img;
 
-    private UnityEngine.UI.Image panelNotif;
+    private Color transp;
+    private Color solid;
 
     static private Notification instance;
 
@@ -32,28 +34,37 @@ public class Notification : MonoBehaviour
 
     private void Start()
     {
+        solid = new Color(img.color.r, img.color.g, img.color.b, 255);
+        transp = new Color(img.color.r, img.color.g, img.color.b, 0);
+        img.color = new Color(img.color.r, img.color.g, img.color.b, 0);
+        text.color = new Color(text.color.r, text.color.g, text.color.b, 0);
         anim = gameObject.GetComponent<Animator>();
         anim.enabled = false;
-        text = this.GetComponent<TextMeshProUGUI>();
-        panelNotif = this.GetComponent<UnityEngine.UI.Image>();
     }
 
     void Update()
     {
-
-        /*
-        if(fadeTime > 0)
+        if (anim != null && !anim.GetCurrentAnimatorStateInfo(0).IsName("Notificacion"))
         {
-            alphaValue -= fadeAwayPerSecond * Time.deltaTime;
-            text.color = new Color(text.color.r, text.color.g, text.color.b, alphaValue);
-            panelNotif.color = new Color(panelNotif.color.r, panelNotif.color.g, panelNotif.color.b, alphaValue);
+            // Desactivar el componente Animator
+            anim.enabled = false;
+            /*
+            if(fadeTime > 0)
+            {
+                alphaValue -= fadeAwayPerSecond * Time.deltaTime;
+                text.color = new Color(text.color.r, text.color.g, text.color.b, alphaValue);
+                panelNotif.color = new Color(panelNotif.color.r, panelNotif.color.g, panelNotif.color.b, alphaValue);
+            }
+            */
         }
-        */
     }
 
     public void showMoneyNotif()
     {
-        gameObject.SetActive(true);
+        img.sprite = goodNotif;
+
+        img.color = solid;
+        text.color = solid;
         if(moneyGained == 1) {
             text.text = "Vous avez gagné " + moneyGained + " piece !";
 
@@ -63,7 +74,7 @@ public class Notification : MonoBehaviour
             text.text = "Vous avez gagné " + moneyGained + " pieces !";
 
         }
-        Invoke("fadeOut", 3f);
+        Invoke("fadeOut", 2f);
 
     }
 
@@ -71,21 +82,31 @@ public class Notification : MonoBehaviour
     {
         gameObject.GetComponent<UnityEngine.UI.Image>().sprite = goodNotif;
 
-        gameObject.SetActive(true);
+        Invoke("fadeOut", 2f);
+
 
     }
 
     public void showBadNotif()
     {
+
+        img.color = solid;
+        text.color = solid;
+
+        
         gameObject.GetComponent<UnityEngine.UI.Image>().sprite = badNotif;
 
-        gameObject.SetActive(true);
+        Invoke("fadeOut", 2f);
 
     }
 
 
     public void changeText(string textShow)
     {
+        if(text == null)
+        {
+            Debug.Log("NULL");
+        }
         text.text = textShow;
     }
 
@@ -93,13 +114,8 @@ public class Notification : MonoBehaviour
     {
         anim.enabled = true;
         anim.Play("Notificacion");
-        Invoke("disable", 2f);
     }
 
-    public void disable()
-    {
-        gameObject.SetActive(false);
-    }
 
 
 

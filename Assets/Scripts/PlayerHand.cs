@@ -48,9 +48,9 @@ public class PlayerHand : MonoBehaviour
                 {
                     if(GameManager.GetInstance().activePlayer.money < GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney)
                     {
-                        PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().changeText("Vous n'avez pas assez d'argent !");
+                        PlayerManager.GetInstance().notif.changeText("Vous n'avez pas assez d'argent !");
 
-                        PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().showBadNotif();
+                        PlayerManager.GetInstance().notif.showBadNotif();
                     }
                 }
             }
@@ -70,11 +70,12 @@ public class PlayerHand : MonoBehaviour
                 {
                     if (GameManager.GetInstance().activePlayer.money < GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney)
                     {
-                        PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().changeText("Vous n'avez pas assez d'argent !");
+                        PlayerManager.GetInstance().notif.changeText("Vous n'avez pas assez d'argent !");
 
-                        PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().showBadNotif();
+                        PlayerManager.GetInstance().notif.showBadNotif();
                     }
                 }
+                
             }
         }
     }
