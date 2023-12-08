@@ -36,7 +36,7 @@ public class Card
 
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -50,7 +50,7 @@ public class Card
         owner = player;
     }
 
-    public virtual void Effect(int nombre, bool didEffect)
+    public virtual void Effect(int nombre, ref bool didEffect)
     {
         MoneyText.GetInstance().ChangeText();
         ChangeStateCard();

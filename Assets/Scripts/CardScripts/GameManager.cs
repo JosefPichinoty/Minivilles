@@ -29,6 +29,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] allCards;
 
+    public int moneyGained;
+
+
     public GameObject[] monumentsGameObjects;
 
     public bool isDissolving ;
@@ -91,6 +94,7 @@ public class GameManager : MonoBehaviour
     {
         //CheckMonuments();
         CheckMonumentsToBeBuy();
+        Notification.GetInstance().moneyGained = moneyGained;
     }
 
     void CheckMonumentsToBeBuy()

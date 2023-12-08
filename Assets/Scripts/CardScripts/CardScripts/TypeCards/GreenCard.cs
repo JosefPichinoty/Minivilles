@@ -20,7 +20,7 @@ public class GreenCard : Card
 
     }
     
-    public override void Effect(int nombre, bool didEffect)
+    public override void Effect(int nombre, ref bool didEffect)
     {
         if (type == typeCard.shop)
         {
@@ -28,11 +28,15 @@ public class GreenCard : Card
             {
                 owner.money++;
                 didEffect = true;
+                PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().moneyGained = 2;
+
                 CommercialCenterEffect();
             }
-            if (data.nameCard == "Supérette")
+            if ( nombre == 4 && data.nameCard == "Supérette")
             {
                 owner.money += 3;
+                PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().moneyGained = 3;
+
                 didEffect = true;
 
                 CommercialCenterEffect();
@@ -47,6 +51,7 @@ public class GreenCard : Card
                     if (type == typeCard.animal)
                     {
                         didEffect = true;
+                        PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().moneyGained = 3;
 
                         owner.money += 3;
                     }
@@ -59,6 +64,7 @@ public class GreenCard : Card
                     if (type == typeCard.industry)
                     {
                         didEffect = true;
+                        PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().moneyGained = 1;
 
                         owner.money += 3;
                     }
@@ -74,13 +80,14 @@ public class GreenCard : Card
                     if (type == typeCard.wheat)
                     {
                         didEffect = true;
+                        PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().moneyGained = 2;
 
                         owner.money += 2;
                     }
                 }
             }
         }
-        base.Effect(nombre, didEffect);
+        base.Effect(nombre, ref didEffect);
     }
     
 }

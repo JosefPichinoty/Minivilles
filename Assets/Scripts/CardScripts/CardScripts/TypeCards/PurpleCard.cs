@@ -24,7 +24,7 @@ public class PurpleCard : Card
     }
 
     
-    public override void Effect(int nombre, bool didEffect)
+    public override void Effect(int nombre, ref bool didEffect)
     {
         if (nombre == 6 && data.nameCard == "Stade")
         {
@@ -35,6 +35,8 @@ public class PurpleCard : Card
                 if (player != GameManager.GetInstance().activePlayer)
                 {
                     gainedMoney += 2;
+                    PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().moneyGained = 2;
+
                     player.money -= 2;
                     didEffect = true;
 
@@ -51,7 +53,7 @@ public class PurpleCard : Card
         {
             //owner.GetMoney();
         }
-        base.Effect(nombre, didEffect);
+        base.Effect(nombre, ref didEffect);
     }
     
 

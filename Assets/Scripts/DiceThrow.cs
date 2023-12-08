@@ -25,11 +25,13 @@ public class DiceThrow : MonoBehaviour
     [SerializeField]
     GameObject dice2;
 
+    public bool gare = false;
+
 
     // Start is called before the first frame update
     void Start()
     {
-
+        dice2.SetActive(false);
 
         randomNombre = new System.Random();
 
@@ -50,8 +52,13 @@ public class DiceThrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!gare)
+        {
+            dice2.SetActive(false);
+        }
 
     }
+
 
 
     public void resetDice()
@@ -101,7 +108,7 @@ public class DiceThrow : MonoBehaviour
         animator.SetTrigger("finished");
 
 
-        nombre1 = randomNombre.Next(5, 6);
+        nombre1 = randomNombre.Next(4, 5);
         animator.SetInteger("valeurDe", nombre1);
         Debug.Log(nombre1);
 

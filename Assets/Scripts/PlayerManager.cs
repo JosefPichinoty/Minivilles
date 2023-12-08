@@ -28,12 +28,12 @@ public class PlayerManager : MonoBehaviour
     public Player player4;
 
     [SerializeField]
-    private GameObject NotifPanel;
+    public GameObject NotifPanel;
+
 
     [SerializeField]
-    private DiceThrow dice;
+    public DiceThrow dice;
 
-    bool didEffect = false;
 
     void Start()
     {
@@ -43,6 +43,7 @@ public class PlayerManager : MonoBehaviour
             return;
         }
 
+        NotifPanel.SetActive(false);
         instance = this;
 
         CreationPlayers();
@@ -51,7 +52,6 @@ public class PlayerManager : MonoBehaviour
 
     void Update()
     {
-        
     }
 
     void CreationPlayers()
@@ -175,29 +175,31 @@ public class PlayerManager : MonoBehaviour
                 {
                     if (card is GreenCard)
                     {
-                        card.Effect(nombre, didEffect);
+                        card.Effect(nombre,  ref didEffect);
                     }
                     if (card is PurpleCard)
                     {
-                        card.Effect(nombre, didEffect);
+                        card.Effect(nombre, ref didEffect);
                     }
                 }
                 else if (!player.playerTurn)
                 {
                     if (card is RedCard)
                     {
-                        card.Effect(nombre, didEffect);
+                        card.Effect(nombre, ref didEffect);
                     }
                 }
                 if (card is BlueCard)
                 {
-                    card.Effect(nombre, didEffect);
+                    card.Effect(nombre, ref didEffect);
                 }
             }
+            if (didEffect)
+            {
+                NotifPanel.GetComponent<Notification>().showNotif();
+            }
+
         }
-        if (didEffect)
-        {
-            NotifPanel.GetComponent<Notification>().showNotif();
-        }
+
     }
 }

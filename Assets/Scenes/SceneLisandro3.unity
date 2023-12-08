@@ -447,9 +447,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  nombre: 0
+  nombre1: 0
+  nombre2: 0
+  total: 0
   animator: {fileID: 138261063}
   btn: {fileID: 1429987149}
+  dice2: {fileID: 0}
 --- !u!95 &138261063
 Animator:
   serializedVersion: 5
@@ -484,14 +487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dice1: {fileID: 2006615140}
-  animations:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  nombre: 0
+  nombre2: 0
   animator: {fileID: 138261063}
   btn: {fileID: 1429987149}
 --- !u!1 &141953475 stripped
@@ -1352,6 +1348,7 @@ MonoBehaviour:
   player2: {fileID: 11400000, guid: 9c3d9fc6b334a8040a17d4eb3c44b4cf, type: 2}
   player3: {fileID: 11400000, guid: 6a13062efce4283458e32e3f8b0a4379, type: 2}
   player4: {fileID: 11400000, guid: be966c1d4d2033345ad43b73c7adc14f, type: 2}
+  NotifPanel: {fileID: 1109880434}
   dice: {fileID: 2006615140}
 --- !u!4 &354147631
 Transform:
@@ -8307,6 +8304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BuyUI: {fileID: 887768458}
+  dice: {fileID: 0}
   activePlayer: {fileID: 0}
   selectedCard: {fileID: 0}
   allCards: []
@@ -9260,9 +9258,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  nombre: 0
+  nombre1: 0
+  nombre2: 0
+  total: 0
   animator: {fileID: 2006615137}
   btn: {fileID: 1429987149}
+  dice2: {fileID: 138261058}
 --- !u!1 &2010407380
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,14 +17,15 @@ public class BlueCard : Card
     }
 
     
-    public override void Effect(int nombre, bool didEffect)
+    public override void Effect(int nombre, ref bool didEffect)
     {
         if (type == typeCard.wheat)
         {
-            if (dice.nombre1 == 1 && data.nameCard == "Champs de blé")
+            if (nombre == 1 && data.nameCard == "Champs de blé")
             {
                 Debug.Log("NOOOOOOOOOOOOOOOOOOOOON");
                 owner.money++;
+                PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().moneyGained = 1;
                 didEffect = true;
             }
             if (nombre == 10 && data.nameCard == "Verger")
@@ -38,7 +39,7 @@ public class BlueCard : Card
             if ( (dice.total == 2) && data.nameCard == "Ferme")
             {
                 didEffect = true;
-
+                PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().moneyGained = 1;
                 owner.money++;
             }
         }
@@ -46,18 +47,22 @@ public class BlueCard : Card
         {
             if (nombre == 5 && data.nameCard == "Forêt")
             {
+                //didEffect = true;
                 didEffect = true;
+                PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().moneyGained = 1;
 
                 owner.money++;
             }
             if (nombre == 9 && data.nameCard == "Mine")
             {
                 didEffect = true;
+                PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().moneyGained = 5;
 
                 owner.money += 5;
             }
         }
-        base.Effect(nombre, didEffect);
+        base.Effect(nombre, ref didEffect);
+        
 
     
     }
