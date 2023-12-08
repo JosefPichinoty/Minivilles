@@ -42,7 +42,16 @@ public class PlayerHand : MonoBehaviour
                 {
                     AddCardBasic(cartes[i], GameManager.GetInstance().selectedCard);
                     GameManager.GetInstance().activePlayer.money -= GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney;
-                    print("après = " + GameManager.GetInstance().activePlayer.money);
+                    print("aprï¿½s = " + GameManager.GetInstance().activePlayer.money);
+                }
+                else
+                {
+                    if(GameManager.GetInstance().activePlayer.money < GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney)
+                    {
+                        PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().changeText("Vous n'avez pas assez d'argent !");
+
+                        PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().showBadNotif();
+                    }
                 }
             }
             else if(cartes[i].currentAmount > 0 && cartes[i].cardIndex == GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.cardIndex && GameManager.GetInstance().activePlayer.canBuy)
@@ -54,7 +63,16 @@ public class PlayerHand : MonoBehaviour
                     {
                         AddCardUpper(cartes[i], GameManager.GetInstance().selectedCard);
                         GameManager.GetInstance().activePlayer.money -= GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney;
-                        print("après = " + GameManager.GetInstance().activePlayer.money);
+                        print("aprï¿½s = " + GameManager.GetInstance().activePlayer.money);
+                    }
+                }
+                else
+                {
+                    if (GameManager.GetInstance().activePlayer.money < GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney)
+                    {
+                        PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().changeText("Vous n'avez pas assez d'argent !");
+
+                        PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().showBadNotif();
                     }
                 }
             }

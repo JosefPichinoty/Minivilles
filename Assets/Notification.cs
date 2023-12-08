@@ -12,6 +12,11 @@ public class Notification : MonoBehaviour
     public float fadeTime = 5;
     private Animator anim;
 
+    [SerializeField]
+    Sprite goodNotif;
+    [SerializeField]
+    Sprite badNotif;
+
     public int moneyGained;
 
 
@@ -46,7 +51,7 @@ public class Notification : MonoBehaviour
         */
     }
 
-    public void showNotif()
+    public void showMoneyNotif()
     {
         gameObject.SetActive(true);
         if(moneyGained == 1) {
@@ -60,6 +65,28 @@ public class Notification : MonoBehaviour
         }
         Invoke("fadeOut", 3f);
 
+    }
+
+    public void showGoodNotif()
+    {
+        gameObject.GetComponent<UnityEngine.UI.Image>().sprite = goodNotif;
+
+        gameObject.SetActive(true);
+
+    }
+
+    public void showBadNotif()
+    {
+        gameObject.GetComponent<UnityEngine.UI.Image>().sprite = badNotif;
+
+        gameObject.SetActive(true);
+
+    }
+
+
+    public void changeText(string textShow)
+    {
+        text.text = textShow;
     }
 
     public void fadeOut()

@@ -196,7 +196,7 @@ public class PlayerManager : MonoBehaviour
             }
             if (didEffect)
             {
-                NotifPanel.GetComponent<Notification>().showNotif();
+                NotifPanel.GetComponent<Notification>().showMoneyNotif();
             }
 
         }

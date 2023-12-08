@@ -225,6 +225,7 @@ MonoBehaviour:
   animator: {fileID: 81487736}
   btn: {fileID: 1429987149}
   dice2: {fileID: 0}
+  gare: 0
 --- !u!114 &81487738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1107,7 +1108,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 19.106049, y: 20.061401, z: 19.106094, w: 18.15076}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4141,7 +4142,7 @@ GameObject:
   - component: {fileID: 1010638365}
   - component: {fileID: 1010638369}
   m_Layer: 5
-  m_Name: NotificacionArgent
+  m_Name: Notificacion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4161,6 +4162,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 328700141}
   fadeTime: 5
+  goodNotif: {fileID: 21300000, guid: 925d7298dab6f4659a59180a63913b80, type: 3}
+  badNotif: {fileID: 21300000, guid: 2d0c3977f04d2445d937bbeb57137bb3, type: 3}
+  moneyGained: 0
 --- !u!114 &1010638366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8275,6 +8279,7 @@ MonoBehaviour:
   activePlayer: {fileID: 0}
   selectedCard: {fileID: 0}
   allCards: []
+  moneyGained: 0
   monumentsGameObjects:
   - {fileID: 378326234}
   - {fileID: 1516199775}
@@ -9066,6 +9071,7 @@ MonoBehaviour:
   animator: {fileID: 2006615137}
   btn: {fileID: 1429987149}
   dice2: {fileID: 81487733}
+  gare: 0
 --- !u!95 &2006615137
 Animator:
   serializedVersion: 5
