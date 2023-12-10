@@ -23,9 +23,10 @@ public class PurpleCard : Card
         
     }
 
-    public override void Effect()
+    
+    public override void Effect(int nombre, ref bool didEffect)
     {
-        if (DiceThrow.GetInstance().nombre == 6 && data.nameCard == "Stade")
+        if (nombre == 6 && data.nameCard == "Stade")
         {
             int gainedMoney = 0;
 
@@ -34,21 +35,28 @@ public class PurpleCard : Card
                 if (player != GameManager.GetInstance().activePlayer)
                 {
                     gainedMoney += 2;
+                    PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().moneyGained = 2;
+
                     player.money -= 2;
+                    didEffect = true;
+
                 }
             }
             owner.money += gainedMoney;
         }
-        if (DiceThrow.GetInstance().nombre == 6 && data.nameCard == "Centre d'affaires")
+        if (nombre == 6 && data.nameCard == "Centre d'affaires")
         {
-            /*owner.TradeCard();*/
+            //owner.TradeCard();
+
         }
-        if (DiceThrow.GetInstance().nombre == 6 && data.nameCard == "Chaine de télévision")
+        if (nombre == 6 && data.nameCard == "Chaine de télévision")
         {
-            /*owner.GetMoney();*/
+            //owner.GetMoney();
         }
-        base.Effect();
+        base.Effect(nombre, ref didEffect);
     }
+    
+
 
     public void GetTarget()
     {

@@ -6,12 +6,9 @@ using UnityEngine.UI;
 
 public class ZoomAndShow : MonoBehaviour
 {
-
-    [SerializeField]
     private GameObject thisCard;
-    [SerializeField]
-    private CardData data;
 
+    private GameObject BuyUI;
 
     private GameObject bg;
     private Animator anim;
@@ -23,6 +20,10 @@ public class ZoomAndShow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        thisCard = gameObject;
+
+        BuyUI = GameObject.Find("PanelBuy");
+        //nuevoObjeto = BuyUI.transform.Find("Carte").gameObject;
         nuevoObjeto.SetActive(false);
         bg = GameObject.Find("GameCanvas");
         anim = GetComponent<Animator>();
@@ -42,9 +43,11 @@ public class ZoomAndShow : MonoBehaviour
     public void showCard()
     {
         //Instantiate(nuevoObjeto, thisCard.transform.position, thisCard.transform.rotation);
-        nuevoObjeto.SetActive(true);
         nuevoObjeto.transform.localScale = thisCard.transform.localScale;
-        nuevoObjeto.transform.position = thisCard.transform.position;
+        nuevoObjeto.transform.position = thisCard.GetComponent<RectTransform>().position;
+        nuevoObjeto.transform.rotation = thisCard.transform.rotation;
+        nuevoObjeto.SetActive(true);
+        
         
         UnityEngine.UI.Image imagen = nuevoObjeto.GetComponent<UnityEngine.UI.Image>();
 

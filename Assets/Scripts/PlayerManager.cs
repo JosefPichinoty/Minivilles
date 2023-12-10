@@ -55,7 +55,7 @@ public class PlayerManager : MonoBehaviour
         }
 
         //NotifPanel.SetActive(false);
-
+        
         instance = this;
 
         notif = NotifPanel.GetComponent<Notification>();
@@ -120,7 +120,7 @@ public class PlayerManager : MonoBehaviour
             playerIndicator.SetActive(true);
             playerCounter++;
             playerIndicator.GetComponent<UnityEngine.UI.Image>().sprite = playerImages[playerCounter];
-            if (playerCounter == 3)
+            if(playerCounter == 3)
             {
                 playerCounter = 0;
             }
@@ -181,10 +181,10 @@ public class PlayerManager : MonoBehaviour
             }
             else if (!player.playerTurn)
             {
-                Debug.Log(player.cardObtained.Any(c => c.data.nameCard == "Caf?" || c.data.nameCard == "Restaurant"));
+                Debug.Log(player.cardObtained.Any(c => c.data.nameCard == "Caf�" || c.data.nameCard == "Restaurant"));
                 for (int i = 0; i < player.cardObtained.Count; i++)
                 {
-                    if (player.cardObtained[i].data.nameCard == "Caf?" || player.cardObtained[i].data.nameCard == "Restaurant")
+                    if (player.cardObtained[i].data.nameCard == "Caf�" || player.cardObtained[i].data.nameCard == "Restaurant")
                     {
                         Debug.Log("pussy");
                     }
@@ -213,7 +213,7 @@ public class PlayerManager : MonoBehaviour
                 {
                     if (card is GreenCard)
                     {
-                        card.Effect(nombre, ref didEffect);
+                        card.Effect(nombre,  ref didEffect);
                     }
                     if (card is PurpleCard)
                     {
