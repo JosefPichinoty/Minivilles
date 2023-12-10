@@ -16,6 +16,8 @@ public class Card
     public bool buyable;
     public CardData data;
     public Player owner;
+    public DiceThrow dice;
+    public GameManager _gm;
 
     public typeCard type;
 
@@ -48,9 +50,8 @@ public class Card
         owner = player;
     }
 
-    public virtual void Effect()
+    public virtual void Effect(int nombre, ref bool didEffect)
     {
-        MoneyText.GetInstance().ChangeText();
         ChangeStateCard();
     }
 

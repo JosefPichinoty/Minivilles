@@ -20,11 +20,17 @@ public class GameManager : MonoBehaviour
 
     public GameObject BuyUI;
 
+    [SerializeField]
+    public DiceThrow dice;
+
     public Player activePlayer;
 
     public GameObject selectedCard;
 
     public GameObject[] allCards;
+
+    public int moneyGained;
+
 
     public GameObject[] monumentsGameObjects;
 
@@ -88,6 +94,7 @@ public class GameManager : MonoBehaviour
     {
         //CheckMonuments();
         CheckMonumentsToBeBuy();
+        Notification.GetInstance().moneyGained = moneyGained;
     }
 
     void CheckMonumentsToBeBuy()

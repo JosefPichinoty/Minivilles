@@ -19,40 +19,53 @@ public class GreenCard : Card
     {
 
     }
-
-    public override void Effect()
+    
+    public override void Effect(int nombre, ref bool didEffect)
     {
         if (type == typeCard.shop)
         {
-            if ( (DiceThrow.GetInstance().nombre == 2 || DiceThrow.GetInstance().nombre == 3) && data.nameCard == "Boulangerie")
+            if ((nombre == 2 || nombre == 3 ) && data.nameCard == "Boulangerie")
             {
                 owner.money++;
+                didEffect = true;
+                PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().moneyGained = 2;
+
                 CommercialCenterEffect();
             }
-            if (data.nameCard == "Supérette")
+            if ( nombre == 4 && data.nameCard == "Supérette")
             {
                 owner.money += 3;
+                PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().moneyGained = 3;
+
+                didEffect = true;
+
                 CommercialCenterEffect();
             }
         }
         else if (type == typeCard.factory)
         {
-            if (DiceThrow.GetInstance().nombre == 7 && data.nameCard == "Fromagerie")
+            if (nombre == 7 && data.nameCard == "Fromagerie")
             {
                 foreach (Card card in owner.cardObtained)
                 {
                     if (type == typeCard.animal)
                     {
+                        didEffect = true;
+                        PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().moneyGained = 3;
+
                         owner.money += 3;
                     }
                 }
             }
-            if (DiceThrow.GetInstance().nombre == 8 && data.nameCard == "Fabrique de meubles")
+            if (nombre == 8 && data.nameCard == "Fabrique de meubles")
             {
                 foreach (Card card in owner.cardObtained)
                 {
                     if (type == typeCard.industry)
                     {
+                        didEffect = true;
+                        PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().moneyGained = 1;
+
                         owner.money += 3;
                     }
                 }
@@ -60,17 +73,21 @@ public class GreenCard : Card
         }
         else if (type == typeCard.fruits)
         {
-            if ( (DiceThrow.GetInstance().nombre == 11 || DiceThrow.GetInstance().nombre == 12) && data.nameCard == "Marché de fruits et légumes")
+            if ( (nombre == 11 || nombre == 12) && data.nameCard == "Marché de fruits et légumes")
             {
                 foreach (Card card in owner.cardObtained)
                 {
                     if (type == typeCard.wheat)
                     {
+                        didEffect = true;
+                        PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().moneyGained = 2;
+
                         owner.money += 2;
                     }
                 }
             }
         }
-        base.Effect();
+        base.Effect(nombre, ref didEffect);
     }
+    
 }

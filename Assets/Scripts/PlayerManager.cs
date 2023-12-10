@@ -12,7 +12,10 @@ public class PlayerManager : MonoBehaviour
 
     static public PlayerManager GetInstance()
     {
-        if (instance == null) instance = new PlayerManager();
+        if (instance == null)
+        {
+            instance = new PlayerManager();
+        }
         return instance;
     }
 
@@ -27,6 +30,22 @@ public class PlayerManager : MonoBehaviour
     public Player player3;
     public Player player4;
 
+    [SerializeField]
+    GameObject playerIndicator;
+    [SerializeField]
+    private Sprite[] playerImages;
+    int playerCounter = 0;
+
+    [SerializeField]
+    public GameObject NotifPanel;
+
+    public Notification notif;
+
+
+    [SerializeField]
+    public DiceThrow dice;
+
+
     void Start()
     {
         if (instance != null)
@@ -35,7 +54,11 @@ public class PlayerManager : MonoBehaviour
             return;
         }
 
+        //NotifPanel.SetActive(false);
+        
         instance = this;
+
+        notif = NotifPanel.GetComponent<Notification>();
 
         CreationPlayers();
     }
@@ -43,7 +66,6 @@ public class PlayerManager : MonoBehaviour
 
     void Update()
     {
-        
     }
 
     void CreationPlayers()
@@ -95,15 +117,38 @@ public class PlayerManager : MonoBehaviour
     {
         if (GameManager.GetInstance().activePlayer.rePlay)
         {
+            playerIndicator.SetActive(true);
+            playerCounter++;
+            playerIndicator.GetComponent<UnityEngine.UI.Image>().sprite = playerImages[playerCounter];
+            if(playerCounter == 3)
+            {
+                playerCounter = 0;
+            }
+            if (playerIndicator.GetComponent<Animator>().GetBool("endAnim"))
+            {
+                playerIndicator.SetActive(false);
+
+            }
+
+
             playerList[0].BecomeActivePlayer();
             playerList[0].canThrow = true;
             playerList[0].playerTurn = true;
             playerList[0].canBuy = true;
-            MoneyText.GetInstance().ChangeText();
-            DiceThrow.GetInstance().resetDice();
+            dice.resetDice();
         }
         else
         {
+            playerIndicator.SetActive(true);
+            playerCounter++;
+            playerIndicator.GetComponent<UnityEngine.UI.Image>().sprite = playerImages[playerCounter];
+            if (playerCounter == 3)
+            {
+                playerCounter = 0;
+            }
+
+
+
             playerList[0].playerTurn = false;
             RefreshListPlayers();
             playerList[0].BecomeActivePlayer();
@@ -111,11 +156,12 @@ public class PlayerManager : MonoBehaviour
             playerList[0].playerTurn = true;
             playerList[0].canBuy = true;
             Debug.Log(playerList[0].playerName);
-            MoneyText.GetInstance().ChangeText();
             GameManager.GetInstance().activePlayer.Turn();
-            DiceThrow.GetInstance().resetDice();
+            dice.resetDice();
         }
     }
+
+
 
     /*public void CheckCardEffect()
     {
@@ -135,10 +181,10 @@ public class PlayerManager : MonoBehaviour
             }
             else if (!player.playerTurn)
             {
-                Debug.Log(player.cardObtained.Any(c => c.data.nameCard == "Café" || c.data.nameCard == "Restaurant"));
+                Debug.Log(player.cardObtained.Any(c => c.data.nameCard == "Cafï¿½" || c.data.nameCard == "Restaurant"));
                 for (int i = 0; i < player.cardObtained.Count; i++)
                 {
-                    if (player.cardObtained[i].data.nameCard == "Café" || player.cardObtained[i].data.nameCard == "Restaurant")
+                    if (player.cardObtained[i].data.nameCard == "Cafï¿½" || player.cardObtained[i].data.nameCard == "Restaurant")
                     {
                         Debug.Log("pussy");
                     }
@@ -156,8 +202,9 @@ public class PlayerManager : MonoBehaviour
         }
     }*/
 
-    public void CheckCardEffect()
+    public void CheckCardEffect(int nombre)
     {
+        bool didEffect = false;
         foreach (Player player in playerList)
         {
             foreach (Card card in player.cardObtained)
@@ -166,25 +213,31 @@ public class PlayerManager : MonoBehaviour
                 {
                     if (card is GreenCard)
                     {
-                        card.Effect();
+                        card.Effect(nombre,  ref didEffect);
                     }
                     if (card is PurpleCard)
                     {
-                        card.Effect();
+                        card.Effect(nombre, ref didEffect);
                     }
                 }
                 else if (!player.playerTurn)
                 {
                     if (card is RedCard)
                     {
-                        card.Effect();
+                        card.Effect(nombre, ref didEffect);
                     }
                 }
                 if (card is BlueCard)
                 {
-                    card.Effect();
+                    card.Effect(nombre, ref didEffect);
                 }
             }
+            if (didEffect)
+            {
+                NotifPanel.GetComponent<Notification>().showMoneyNotif();
+            }
+
         }
+
     }
 }

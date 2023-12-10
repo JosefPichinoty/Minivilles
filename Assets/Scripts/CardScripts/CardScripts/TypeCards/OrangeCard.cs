@@ -12,6 +12,8 @@ public class OrangeCard : Card
     }
 
     bool obtained;
+    int trash = 0;
+    bool trash2;
 
     void Start()
     {
@@ -21,14 +23,15 @@ public class OrangeCard : Card
     // Update is called once per frame
     void Update()
     {
-        Effect();
+        Effect(trash, ref trash2);
     }
 
-    public override void Effect()
+    public override void Effect(int nombre, ref bool didEffect)
     {
         if (data.nameCard == "Gare")
         {
             owner.bothDice = true;
+            PlayerManager.GetInstance().dice.gare = true;
             Debug.Log("Gare HAAA");
         }
         if (data.nameCard == "Centre Commercial")
@@ -50,6 +53,6 @@ public class OrangeCard : Card
             owner.rethrowDice = true;
             Debug.Log("Tour radio HAAA");
         }
-        base.Effect();
+        base.Effect(nombre, ref didEffect);
     }
 }
