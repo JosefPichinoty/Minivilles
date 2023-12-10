@@ -52,7 +52,6 @@ public class Card
 
     public virtual void Effect(int nombre, ref bool didEffect)
     {
-        MoneyText.GetInstance().ChangeText();
         ChangeStateCard();
     }
 

@@ -34,6 +34,13 @@ public class Notification : MonoBehaviour
 
     private void Start()
     {
+        if (instance != null)
+        {
+            Destroy(instance);
+            return;
+        }
+        instance = this;
+
         solid = new Color(img.color.r, img.color.g, img.color.b, 255);
         transp = new Color(img.color.r, img.color.g, img.color.b, 0);
         img.color = new Color(img.color.r, img.color.g, img.color.b, 0);
