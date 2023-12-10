@@ -31,6 +31,6 @@ public class MoneyText : MonoBehaviour
 
     public void ChangeText()
     {
-        textMoney.text = "Player Money : " + Convert.ToString(GameManager.GetInstance().activePlayer.money);
+        //textMoney.text = "Player Money : " + Convert.ToString(GameManager.GetInstance().activePlayer.money);
     }
 }
