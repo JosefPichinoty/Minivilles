@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2012881549150741519}
   - component: {fileID: 2490362802431860415}
   - component: {fileID: -5489905963664893923}
-  - component: {fileID: -7602105811925661079}
+  - component: {fileID: -7924495376372085421}
   m_Layer: 5
   m_Name: Champs de ble
   m_TagString: Card
@@ -134,7 +134,8 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: 6d4a6db23b0dd074786c3123a4f5a812, type: 2}
   monumentOwned: 0
   trash2: 0
---- !u!114 &-7602105811925661079
+  monu: {fileID: 0}
+--- !u!114 &-7924495376372085421
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,13 +179,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -1873187658700853276, guid: bb6f0f7c7d355ef44a346c1f82dc02cc, type: 3}
-        m_TargetAssemblyTypeName: CardContainer, Assembly-CSharp
-        m_MethodName: PrintTest
+      - m_Target: {fileID: -5489905963664893923}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

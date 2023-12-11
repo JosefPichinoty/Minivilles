@@ -134,6 +134,7 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: 0df9b4cc311dc09489acee86f0680648, type: 2}
   monumentOwned: 0
   trash2: 0
+  monu: {fileID: 0}
 --- !u!114 &2359813898538770699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,11 +181,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: -1873187658700853276}
         m_TargetAssemblyTypeName: CardContainer, Assembly-CSharp
-        m_MethodName: PrintTest
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
