@@ -2872,6 +2872,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: bb6f0f7c7d355ef44a346c1f82dc02cc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 526880269}
+    - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: bb6f0f7c7d355ef44a346c1f82dc02cc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 526880273}
   m_SourcePrefab: {fileID: 100100000, guid: bb6f0f7c7d355ef44a346c1f82dc02cc, type: 3}
 --- !u!1 &196150314
 GameObject:
@@ -3128,6 +3131,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: f9f2a046dfa15fc4992c5fc677084400, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1497995437}
+    - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: f9f2a046dfa15fc4992c5fc677084400, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1497995441}
   m_SourcePrefab: {fileID: 100100000, guid: f9f2a046dfa15fc4992c5fc677084400, type: 3}
 --- !u!1 &199806463
 GameObject:
@@ -3465,17 +3471,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 210525594}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -327.28723}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 652616628}
-  m_Father: {fileID: 1844526411}
+  m_Father: {fileID: 1110108576}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1125, y: 457.73}
+  m_AnchoredPosition: {x: 1130.5416, y: 453.43576}
   m_SizeDelta: {x: 327.5397, y: 164.5042}
   m_Pivot: {x: 0.5, y: 0.50000006}
 --- !u!95 &210525596
@@ -3563,18 +3569,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215993190}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.06, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -327.28723}
+  m_LocalScale: {x: 0.060000002, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1649486396}
   - {fileID: 1966961813}
-  m_Father: {fileID: 1844526411}
+  m_Father: {fileID: 1110108576}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 411, y: 84.551}
+  m_AnchoredPosition: {x: 336, y: 0.000022888}
   m_SizeDelta: {x: 1049.5242, y: 581.8543}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &215993192
@@ -4411,6 +4417,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 252849397}
+        m_TargetAssemblyTypeName: ZoomAndShow, Assembly-CSharp
+        m_MethodName: showCard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &252849396 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1669181921349161083, guid: 13c27b522b6b3a34c9aee505d6bf595e, type: 3}
@@ -4422,6 +4440,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &252849397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252849391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95f800f06a764fcbb44c14daf0af8a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nuevoObjeto: {fileID: 1061933215}
 --- !u!1001 &256746820
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6162,6 +6193,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: e862d4b6ae58049448df8f1dddef4a79, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1906891161}
+    - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: e862d4b6ae58049448df8f1dddef4a79, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1906891165}
   m_SourcePrefab: {fileID: 100100000, guid: e862d4b6ae58049448df8f1dddef4a79, type: 3}
 --- !u!1 &407042709
 GameObject:
@@ -6520,6 +6554,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: 51589b294d6354e498b1a9878ca24ac5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1011697696}
+    - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: 51589b294d6354e498b1a9878ca24ac5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1011697700}
   m_SourcePrefab: {fileID: 100100000, guid: 51589b294d6354e498b1a9878ca24ac5, type: 3}
 --- !u!224 &421563515 stripped
 RectTransform:
@@ -8161,6 +8198,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: e4f634bc8563a2f4bbf46f87211b1cbe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1601276971}
+    - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: e4f634bc8563a2f4bbf46f87211b1cbe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1601276975}
   m_SourcePrefab: {fileID: 100100000, guid: e4f634bc8563a2f4bbf46f87211b1cbe, type: 3}
 --- !u!224 &498456871 stripped
 RectTransform:
@@ -8608,6 +8648,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 526880273}
+        m_TargetAssemblyTypeName: ZoomAndShow, Assembly-CSharp
+        m_MethodName: showCard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &526880272 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1669181921349161083, guid: bb6f0f7c7d355ef44a346c1f82dc02cc, type: 3}
@@ -8619,6 +8671,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &526880273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526880267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95f800f06a764fcbb44c14daf0af8a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nuevoObjeto: {fileID: 1061933215}
 --- !u!1 &538242728
 GameObject:
   m_ObjectHideFlags: 0
@@ -11627,6 +11692,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 808328991}
+        m_TargetAssemblyTypeName: ZoomAndShow, Assembly-CSharp
+        m_MethodName: showCard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &808328990 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1669181921349161083, guid: 4fa7710c6070eed408251540e191f5fa, type: 3}
@@ -11638,6 +11715,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &808328991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808328985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95f800f06a764fcbb44c14daf0af8a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nuevoObjeto: {fileID: 1061933215}
 --- !u!1001 &809299308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12039,8 +12129,8 @@ RectTransform:
   - {fileID: 2143562446}
   - {fileID: 77000858}
   - {fileID: 426730990}
+  - {fileID: 1110108576}
   - {fileID: 468948635}
-  - {fileID: 1844526411}
   - {fileID: 1004201219}
   - {fileID: 1861564841}
   - {fileID: 949273748}
@@ -14503,7 +14593,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8391580647320020310, guid: 2d03ef34547becd43bae64f1fa8318fa, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -234.55673
+      value: -234.55672
       objectReference: {fileID: 0}
     - target: {fileID: 8391580647320020310, guid: 2d03ef34547becd43bae64f1fa8318fa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -15271,6 +15361,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: a44db35e65cd30f489f0cca0dde595d2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1085485327}
+    - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: a44db35e65cd30f489f0cca0dde595d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1085485331}
   m_SourcePrefab: {fileID: 100100000, guid: a44db35e65cd30f489f0cca0dde595d2, type: 3}
 --- !u!224 &982205075 stripped
 RectTransform:
@@ -15680,6 +15773,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1011697700}
+        m_TargetAssemblyTypeName: ZoomAndShow, Assembly-CSharp
+        m_MethodName: showCard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1011697699 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1669181921349161083, guid: 51589b294d6354e498b1a9878ca24ac5, type: 3}
@@ -15691,6 +15796,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1011697700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011697694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95f800f06a764fcbb44c14daf0af8a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nuevoObjeto: {fileID: 1061933215}
 --- !u!224 &1017357435 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8391580647320020310, guid: 97e0df8eff900db4392e5d279988da16, type: 3}
@@ -15982,16 +16100,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061933215}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -327.28723}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1844526411}
+  m_Father: {fileID: 1110108576}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -629, y: 199}
+  m_AnchoredPosition: {x: -623.4581, y: 194.70581}
   m_SizeDelta: {x: 358, y: 536}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1061933217
@@ -16747,6 +16865,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1085485331}
+        m_TargetAssemblyTypeName: ZoomAndShow, Assembly-CSharp
+        m_MethodName: showCard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1085485330 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1669181921349161083, guid: a44db35e65cd30f489f0cca0dde595d2, type: 3}
@@ -16758,6 +16888,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1085485331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085485325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95f800f06a764fcbb44c14daf0af8a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nuevoObjeto: {fileID: 1061933215}
 --- !u!1 &1087360522
 GameObject:
   m_ObjectHideFlags: 0
@@ -17236,6 +17379,84 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &1110108575
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1110108576}
+  - component: {fileID: 1110108578}
+  - component: {fileID: 1110108577}
+  m_Layer: 5
+  m_Name: PanelBuy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1110108576
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110108575}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 215993191}
+  - {fileID: 1061933216}
+  - {fileID: 210525595}
+  m_Father: {fileID: 854030573}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1110108577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110108575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.59607846}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1110108578
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110108575}
+  m_CullTransparentMesh: 1
 --- !u!1 &1115415895
 GameObject:
   m_ObjectHideFlags: 0
@@ -18142,6 +18363,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: 114c233b2fff79d4f9e60153a6b64d8b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1680968651}
+    - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: 114c233b2fff79d4f9e60153a6b64d8b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1680968655}
   m_SourcePrefab: {fileID: 100100000, guid: 114c233b2fff79d4f9e60153a6b64d8b, type: 3}
 --- !u!1 &1195812469
 GameObject:
@@ -19735,7 +19959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e7fc6b686028e64fbbbc53a6bfbc09f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BuyUI: {fileID: 468948634}
+  BuyUI: {fileID: 1110108575}
   dice: {fileID: 0}
   activePlayer: {fileID: 0}
   selectedCard: {fileID: 0}
@@ -20115,6 +20339,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: 4fa7710c6070eed408251540e191f5fa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 808328987}
+    - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: 4fa7710c6070eed408251540e191f5fa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 808328991}
   m_SourcePrefab: {fileID: 100100000, guid: 4fa7710c6070eed408251540e191f5fa, type: 3}
 --- !u!1001 &1369185812
 PrefabInstance:
@@ -20506,6 +20733,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: 2ce79fdeba9f213439f287a58337535c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2140827322}
+    - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: 2ce79fdeba9f213439f287a58337535c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2140827326}
   m_SourcePrefab: {fileID: 100100000, guid: 2ce79fdeba9f213439f287a58337535c, type: 3}
 --- !u!224 &1406274688 stripped
 RectTransform:
@@ -20755,6 +20985,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: 5cbf6a934be326d41898fd569ed0bd12, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2002791663}
+    - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: 5cbf6a934be326d41898fd569ed0bd12, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2002791667}
   m_SourcePrefab: {fileID: 100100000, guid: 5cbf6a934be326d41898fd569ed0bd12, type: 3}
 --- !u!1001 &1434812217
 PrefabInstance:
@@ -21800,6 +22033,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1493284241}
+        m_TargetAssemblyTypeName: ZoomAndShow, Assembly-CSharp
+        m_MethodName: showCard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1493284240 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1669181921349161083, guid: f59f2bb57056ed545b291bb010c8ac05, type: 3}
@@ -21811,6 +22056,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1493284241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493284235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95f800f06a764fcbb44c14daf0af8a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nuevoObjeto: {fileID: 1061933215}
 --- !u!1001 &1494503937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21919,6 +22177,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: 4681dd99e404de24087ab524c6faac9b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1533769702}
+    - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: 4681dd99e404de24087ab524c6faac9b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1533769706}
   m_SourcePrefab: {fileID: 100100000, guid: 4681dd99e404de24087ab524c6faac9b, type: 3}
 --- !u!1001 &1497420894
 PrefabInstance:
@@ -22028,6 +22289,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: 13c27b522b6b3a34c9aee505d6bf595e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 252849393}
+    - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: 13c27b522b6b3a34c9aee505d6bf595e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 252849397}
   m_SourcePrefab: {fileID: 100100000, guid: 13c27b522b6b3a34c9aee505d6bf595e, type: 3}
 --- !u!1 &1497995435 stripped
 GameObject:
@@ -22095,6 +22359,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1497995441}
+        m_TargetAssemblyTypeName: ZoomAndShow, Assembly-CSharp
+        m_MethodName: showCard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1497995440 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1669181921349161083, guid: f9f2a046dfa15fc4992c5fc677084400, type: 3}
@@ -22106,6 +22382,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1497995441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497995435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95f800f06a764fcbb44c14daf0af8a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nuevoObjeto: {fileID: 1061933215}
 --- !u!224 &1498719289 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8391580647320020310, guid: 97e0df8eff900db4392e5d279988da16, type: 3}
@@ -22432,6 +22721,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1533769706}
+        m_TargetAssemblyTypeName: ZoomAndShow, Assembly-CSharp
+        m_MethodName: showCard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1533769705 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1669181921349161083, guid: 4681dd99e404de24087ab524c6faac9b, type: 3}
@@ -22443,6 +22744,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1533769706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533769700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95f800f06a764fcbb44c14daf0af8a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nuevoObjeto: {fileID: 1061933215}
 --- !u!224 &1536946251 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8391580647320020310, guid: 97e0df8eff900db4392e5d279988da16, type: 3}
@@ -23539,6 +23853,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1601276975}
+        m_TargetAssemblyTypeName: ZoomAndShow, Assembly-CSharp
+        m_MethodName: showCard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1601276974 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1669181921349161083, guid: e4f634bc8563a2f4bbf46f87211b1cbe, type: 3}
@@ -23550,6 +23876,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1601276975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601276969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95f800f06a764fcbb44c14daf0af8a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nuevoObjeto: {fileID: 1061933215}
 --- !u!1 &1604012691
 GameObject:
   m_ObjectHideFlags: 0
@@ -24186,7 +24525,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1844526410}
+      - m_Target: {fileID: 1110108575}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -24349,6 +24688,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: c8cc703863bb23844a60a83a786d47e4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1863805847}
+    - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: c8cc703863bb23844a60a83a786d47e4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1863805851}
   m_SourcePrefab: {fileID: 100100000, guid: c8cc703863bb23844a60a83a786d47e4, type: 3}
 --- !u!1 &1680968649 stripped
 GameObject:
@@ -24416,6 +24758,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1680968655}
+        m_TargetAssemblyTypeName: ZoomAndShow, Assembly-CSharp
+        m_MethodName: showCard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1680968654 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1669181921349161083, guid: 114c233b2fff79d4f9e60153a6b64d8b, type: 3}
@@ -24427,6 +24781,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1680968655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680968649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95f800f06a764fcbb44c14daf0af8a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nuevoObjeto: {fileID: 1061933215}
 --- !u!1001 &1695734984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25085,6 +25452,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: 0770a08f3c5a2e943b6758680fdf8f8b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2007509001}
+    - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: 0770a08f3c5a2e943b6758680fdf8f8b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2007509005}
   m_SourcePrefab: {fileID: 100100000, guid: 0770a08f3c5a2e943b6758680fdf8f8b, type: 3}
 --- !u!224 &1743199650 stripped
 RectTransform:
@@ -25524,6 +25894,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: f59f2bb57056ed545b291bb010c8ac05, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1493284237}
+    - targetCorrespondingSourceObject: {fileID: 7066318275581547428, guid: f59f2bb57056ed545b291bb010c8ac05, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1493284241}
   m_SourcePrefab: {fileID: 100100000, guid: f59f2bb57056ed545b291bb010c8ac05, type: 3}
 --- !u!1001 &1801204023
 PrefabInstance:
@@ -26105,84 +26478,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1835270005}
   m_CullTransparentMesh: 1
---- !u!1 &1844526410
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1844526411}
-  - component: {fileID: 1844526413}
-  - component: {fileID: 1844526412}
-  m_Layer: 6
-  m_Name: PanelBuy
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1844526411
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1844526410}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -327.28723}
-  m_LocalScale: {x: 2.7125814, y: 2.7125814, z: 2.7125814}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 215993191}
-  - {fileID: 1061933216}
-  - {fileID: 210525595}
-  m_Father: {fileID: 854030573}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1642.0558, y: 924.8236}
-  m_SizeDelta: {x: -0.0690918, y: -0.033691406}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1844526412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1844526410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1844526413
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1844526410}
-  m_CullTransparentMesh: 1
 --- !u!224 &1846032763 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8391580647320020310, guid: 97e0df8eff900db4392e5d279988da16, type: 3}
@@ -26571,6 +26866,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1863805851}
+        m_TargetAssemblyTypeName: ZoomAndShow, Assembly-CSharp
+        m_MethodName: showCard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1863805850 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1669181921349161083, guid: c8cc703863bb23844a60a83a786d47e4, type: 3}
@@ -26582,6 +26889,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1863805851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863805845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95f800f06a764fcbb44c14daf0af8a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nuevoObjeto: {fileID: 1061933215}
 --- !u!224 &1863856273 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8391580647320020310, guid: 97e0df8eff900db4392e5d279988da16, type: 3}
@@ -27319,6 +27639,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1906891165}
+        m_TargetAssemblyTypeName: ZoomAndShow, Assembly-CSharp
+        m_MethodName: showCard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1906891164 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1669181921349161083, guid: e862d4b6ae58049448df8f1dddef4a79, type: 3}
@@ -27330,6 +27662,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1906891165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906891159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95f800f06a764fcbb44c14daf0af8a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nuevoObjeto: {fileID: 1061933215}
 --- !u!224 &1908436377 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8391580647320020310, guid: 97e0df8eff900db4392e5d279988da16, type: 3}
@@ -27836,9 +28181,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerHand, Assembly-CSharp
-        m_MethodName: Buy
+      - m_Target: {fileID: 723149270}
+        m_TargetAssemblyTypeName: BuyCard, Assembly-CSharp
+        m_MethodName: BuyEstablishmentCard
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -28195,6 +28540,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2002791667}
+        m_TargetAssemblyTypeName: ZoomAndShow, Assembly-CSharp
+        m_MethodName: showCard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2002791666 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1669181921349161083, guid: 5cbf6a934be326d41898fd569ed0bd12, type: 3}
@@ -28206,6 +28563,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2002791667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002791661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95f800f06a764fcbb44c14daf0af8a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nuevoObjeto: {fileID: 1061933215}
 --- !u!1 &2002884199
 GameObject:
   m_ObjectHideFlags: 0
@@ -28347,6 +28717,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2007509005}
+        m_TargetAssemblyTypeName: ZoomAndShow, Assembly-CSharp
+        m_MethodName: showCard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2007509004 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1669181921349161083, guid: 0770a08f3c5a2e943b6758680fdf8f8b, type: 3}
@@ -28358,6 +28740,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2007509005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007508999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95f800f06a764fcbb44c14daf0af8a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nuevoObjeto: {fileID: 1061933215}
 --- !u!1001 &2015463967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30382,6 +30777,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2140827326}
+        m_TargetAssemblyTypeName: ZoomAndShow, Assembly-CSharp
+        m_MethodName: showCard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2140827325 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1669181921349161083, guid: 2ce79fdeba9f213439f287a58337535c, type: 3}
@@ -30393,6 +30800,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2140827326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140827320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95f800f06a764fcbb44c14daf0af8a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nuevoObjeto: {fileID: 1061933215}
 --- !u!1 &2143562445
 GameObject:
   m_ObjectHideFlags: 0
