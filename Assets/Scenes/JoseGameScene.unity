@@ -8383,7 +8383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
-  baseHand: {fileID: 0}
+  baseHand: {fileID: 2121071390}
 --- !u!1 &546113353
 GameObject:
   m_ObjectHideFlags: 0
@@ -8642,7 +8642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
-  baseHand: {fileID: 0}
+  baseHand: {fileID: 1583947527}
 --- !u!1001 &561665442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24216,7 +24216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
-  baseHand: {fileID: 0}
+  baseHand: {fileID: 1447809163}
 --- !u!224 &1709909228 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8391580647320020310, guid: 97e0df8eff900db4392e5d279988da16, type: 3}

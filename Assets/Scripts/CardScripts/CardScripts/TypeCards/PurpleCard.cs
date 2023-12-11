@@ -80,8 +80,8 @@ public class PurpleCard : Card
                             {
                                 if (CardLibrary.GetInstance().brutCardContainer[j].data.nameCard == GameManager.GetInstance().firstSwitchCard.GetComponent<CardContainer>().cardData.nameCard)
                                 {
-                                    GameManager.GetInstance().activePlayer.cardObtained.Add(CardLibrary.GetInstance().brutCardContainer[j]);
-                                    GameManager.GetInstance().activePlayer.cardObtained.Last().owner = GameManager.GetInstance().activePlayer;
+                                    //GameManager.GetInstance().activePlayer.cardObtained.Add(CardLibrary.GetInstance().brutCardContainer[j]);
+                                    //GameManager.GetInstance().activePlayer.cardObtained.Last().owner = GameManager.GetInstance().activePlayer;
                                     Debug.Log(GameManager.GetInstance().activePlayer.name + "obtained " + player.cardObtained.Last());
                                 }
                             }
@@ -96,8 +96,8 @@ public class PurpleCard : Card
                             {
                                 if (CardLibrary.GetInstance().brutCardContainer[l].data.nameCard == GameManager.GetInstance().secondSwitchCard.GetComponent<CardContainer>().cardData.nameCard)
                                 {
-                                    player.cardObtained.Add(CardLibrary.GetInstance().brutCardContainer[l]);
-                                    player.cardObtained.Last().owner = player;
+                                    //player.cardObtained.Add(CardLibrary.GetInstance().brutCardContainer[l]);
+                                    //player.cardObtained.Last().owner = player;
                                     Debug.Log(player.name + "obtained " + player.cardObtained.Last());
                                     stopPlayerSearching = true;
                                 }

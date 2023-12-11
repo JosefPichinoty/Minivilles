@@ -77,7 +77,24 @@ public class PlayerHand : MonoBehaviour
                         PlayerManager.GetInstance().notif.showBadNotif();
                     }
                 }
-                
+            }
+        }
+    }
+
+    public void AddCardToScene(GameObject cardCompare)
+    {
+        for (int i = 0; i < 15; i++)
+        {
+            if (cartes[i].currentAmount == 0 && cartes[i].cardIndex == cardCompare.GetComponent<CardContainer>().cardData.cardIndex)
+            {
+                AddCardBasic(cartes[i], GameManager.GetInstance().selectedCard);
+            }
+            else if (cartes[i].currentAmount > 0 && cartes[i].cardIndex == cardCompare.GetComponent<CardContainer>().cardData.cardIndex && GameManager.GetInstance().activePlayer.canBuy)
+            {
+                if (cartes[i].currentAmount < GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.maxNumCard)
+                {
+                        AddCardUpper(cartes[i], GameManager.GetInstance().selectedCard);
+                }
             }
         }
     }
