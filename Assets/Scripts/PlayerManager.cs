@@ -54,7 +54,6 @@ public class PlayerManager : MonoBehaviour
             return;
         }
 
-        //NotifPanel.SetActive(false);
         
         instance = this;
 
@@ -62,6 +61,7 @@ public class PlayerManager : MonoBehaviour
         playerIndicator.SetActive(true);
 
         notif = NotifPanel.GetComponent<Notification>();
+
 
         CreationPlayers();
     }

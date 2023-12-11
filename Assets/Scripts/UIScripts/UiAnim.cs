@@ -133,6 +133,7 @@ public class UiAnim : MonoBehaviour
         else if (sIsOpen && lockUi != 5)
         {
             sAnimator.SetTrigger("sCloseTrigger");
+            sIsOpen = false;
         }
     }
 }

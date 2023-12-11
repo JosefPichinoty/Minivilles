@@ -20,10 +20,7 @@ public class SFXui : MonoBehaviour, IPointerEnterHandler
         _audio = GameObject.Find("AudioManager");
         audioManager = _audio.GetComponent<AudioManager>();
         thisBtn = GetComponent<Button>();
-        if(thisBtn == null)
-        {
-            Debug.Log("No buttonm");
-        }
+
         thisBtn.onClick.AddListener(playClickSFX);
 
 
