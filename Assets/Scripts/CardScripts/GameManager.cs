@@ -38,6 +38,9 @@ public class GameManager : MonoBehaviour
 
     public int turn;
 
+    public GameObject firstSwitchCard;
+    public GameObject secondSwitchCard;
+
     void Start()
     {
         InitGame();

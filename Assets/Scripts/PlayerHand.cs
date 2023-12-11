@@ -12,6 +12,8 @@ public class PlayerHand : MonoBehaviour
     [SerializeField] private List<CardStocker> cartes = new List<CardStocker>();
     [SerializeField] GameObject[] monuments;
 
+    [SerializeField] GameObject baseHand;
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +26,7 @@ public class PlayerHand : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKeyUp(KeyCode.K))
+        if(Input.GetKeyDown(KeyCode.K))
         {
             GameManager.GetInstance().activePlayer.money += 2;
             print(GameManager.GetInstance().activePlayer.money);
@@ -92,9 +94,11 @@ public class PlayerHand : MonoBehaviour
         }
         GameObject obj = Instantiate(prefab, cardStocker.carteStock[cardStocker.currentAmount - 1].transform);
         cardStocker.carteStock.Add(obj.gameObject);
+        GameObject baseObj = Instantiate(prefab, baseHand.transform);
         cartes[cardStocker.cardIndex].currentAmount++;
         GameManager.GetInstance().BuyUI.SetActive(false);
         obj.gameObject.GetComponent<Dissolve>().canDissolve = true;
+        baseObj.gameObject.GetComponent<Dissolve>().canDissolve = true;
     }
     private void AddCardBasic(CardStocker cardStocker, GameObject prefab)
     {
@@ -109,9 +113,11 @@ public class PlayerHand : MonoBehaviour
         }
         GameObject obj = Instantiate(prefab, handParent.transform);
         cardStocker.carteStock.Add(obj.gameObject);
+        GameObject baseObj = Instantiate(prefab, baseHand.transform);
         cartes[cardStocker.cardIndex].currentAmount++;
         GameManager.GetInstance().BuyUI.SetActive(false);
         obj.gameObject.GetComponent<Dissolve>().canDissolve = true;
+        baseObj.gameObject.GetComponent<Dissolve>().canDissolve = true;
     }
 
     public void OpenBuyUI(GameObject prefab)
