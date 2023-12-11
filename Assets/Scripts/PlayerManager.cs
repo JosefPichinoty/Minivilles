@@ -5,6 +5,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 
+
 public class PlayerManager : MonoBehaviour
 {
     #region SINGLETON INSTANCE
@@ -29,6 +30,8 @@ public class PlayerManager : MonoBehaviour
     public Player player2;
     public Player player3;
     public Player player4;
+
+    public baseActive baseActive;
 
     [SerializeField]
     GameObject playerIndicator;
@@ -159,6 +162,8 @@ public class PlayerManager : MonoBehaviour
             GameManager.GetInstance().activePlayer.Turn();
             dice.resetDice();
         }
+        baseActive.changeTurnUI();
+
     }
 
 
