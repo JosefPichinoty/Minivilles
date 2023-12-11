@@ -1453,6 +1453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
+  baseHand: {fileID: 0}
 --- !u!1001 &107063345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2263,6 +2264,7 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: b6c53a5f0d3f95648a00184f0c3f0bc0, type: 2}
   monumentOwned: 0
   trash2: 0
+  monu: {fileID: 0}
 --- !u!1 &173640326
 GameObject:
   m_ObjectHideFlags: 0
@@ -3553,6 +3555,7 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: 8e3c12aa2fb5bf34dab138b556979ceb, type: 2}
   monumentOwned: 0
   trash2: 0
+  monu: {fileID: 0}
 --- !u!1001 &228288271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6643,6 +6646,7 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: 9444927abccee35428e96ff3fdbee0ca, type: 2}
   monumentOwned: 0
   trash2: 0
+  monu: {fileID: 0}
 --- !u!1001 &432530977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8379,6 +8383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
+  baseHand: {fileID: 0}
 --- !u!1 &546113353
 GameObject:
   m_ObjectHideFlags: 0
@@ -8637,6 +8642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
+  baseHand: {fileID: 0}
 --- !u!1001 &561665442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8933,6 +8939,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
+  baseHand: {fileID: 0}
 --- !u!1001 &579974459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10501,13 +10508,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player1Hand: {fileID: 1611121729}
-  playerbase1: {fileID: 839440612}
   player2Hand: {fileID: 538242728}
-  playerbase2: {fileID: 103880985}
   player3Hand: {fileID: 555766998}
-  playerbase3: {fileID: 567535911}
   player4Hand: {fileID: 1706473320}
-  playerbase4: {fileID: 1115415895}
   player1Data: {fileID: 11400000, guid: e0322b36b7a58ad4092dbe86636d4642, type: 2}
   player2Data: {fileID: 11400000, guid: 9c3d9fc6b334a8040a17d4eb3c44b4cf, type: 2}
   player3Data: {fileID: 11400000, guid: 6a13062efce4283458e32e3f8b0a4379, type: 2}
@@ -11731,6 +11734,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
+  baseHand: {fileID: 0}
 --- !u!1 &854030569
 GameObject:
   m_ObjectHideFlags: 0
@@ -12864,6 +12868,7 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: 3a91722bfc3d86a4f82b957f42cbf782, type: 2}
   monumentOwned: 0
   trash2: 0
+  monu: {fileID: 0}
 --- !u!1 &897302421
 GameObject:
   m_ObjectHideFlags: 0
@@ -13060,6 +13065,7 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: 8e3c12aa2fb5bf34dab138b556979ceb, type: 2}
   monumentOwned: 0
   trash2: 0
+  monu: {fileID: 0}
 --- !u!95 &898868839
 Animator:
   serializedVersion: 5
@@ -13956,6 +13962,7 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: 3a91722bfc3d86a4f82b957f42cbf782, type: 2}
   monumentOwned: 0
   trash2: 0
+  monu: {fileID: 0}
 --- !u!114 &956784461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16338,6 +16345,7 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: b6c53a5f0d3f95648a00184f0c3f0bc0, type: 2}
   monumentOwned: 0
   trash2: 0
+  monu: {fileID: 0}
 --- !u!114 &1107906655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16469,6 +16477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
+  baseHand: {fileID: 0}
 --- !u!1 &1122687668
 GameObject:
   m_ObjectHideFlags: 0
@@ -18930,6 +18939,8 @@ MonoBehaviour:
   monumentsGameObjects: []
   isDissolving: 0
   turn: 0
+  firstSwitchCard: {fileID: 0}
+  secondSwitchCard: {fileID: 0}
 --- !u!4 &1335594748
 Transform:
   m_ObjectHideFlags: 0
@@ -22530,6 +22541,7 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: 9444927abccee35428e96ff3fdbee0ca, type: 2}
   monumentOwned: 0
   trash2: 0
+  monu: {fileID: 0}
 --- !u!114 &1593964615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23219,6 +23231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
+  baseHand: {fileID: 239590931}
 --- !u!224 &1611912003 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8391580647320020310, guid: 97e0df8eff900db4392e5d279988da16, type: 3}
@@ -24203,6 +24216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
+  baseHand: {fileID: 0}
 --- !u!224 &1709909228 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8391580647320020310, guid: 97e0df8eff900db4392e5d279988da16, type: 3}
@@ -27152,6 +27166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
+  baseHand: {fileID: 0}
 --- !u!1 &2002791661 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7066318275581547428, guid: 5cbf6a934be326d41898fd569ed0bd12, type: 3}

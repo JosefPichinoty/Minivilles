@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PurpleCard : Card
@@ -10,7 +11,7 @@ public class PurpleCard : Card
         type = pType;
     }
 
-    Player playerTarget;
+    bool wantSwitchCard;
 
     void Start()
     {
@@ -55,11 +56,59 @@ public class PurpleCard : Card
         }
         base.Effect(nombre, ref didEffect);
     }
-    
-
 
     public void GetTarget()
     {
         //Quand on va cliquer sur le joueur a target, le joueur sera stocké dans une variable (pour l'effet de la chaine de télévision).
+    }
+
+    public void SwitchCards()
+    {
+        bool stopPlayerSearching = false;
+        if (wantSwitchCard)
+        {
+            if (GameManager.GetInstance().firstSwitchCard != null && GameManager.GetInstance().secondSwitchCard != null)
+            {
+                foreach (Player player in PlayerManager.GetInstance().playerList)
+                {
+                    for (int i = 0; i < GameManager.GetInstance().activePlayer.cardObtained.Count; i++)
+                    {
+                        if (GameManager.GetInstance().activePlayer.cardObtained[i].data.nameCard == GameManager.GetInstance().firstSwitchCard.GetComponent<CardContainer>().cardData.nameCard && (player == GameManager.GetInstance().activePlayer))
+                        {
+                            GameManager.GetInstance().activePlayer.cardObtained.RemoveAt(i);
+                            for (int j = 0; j < CardLibrary.GetInstance().brutCardContainer.Count; j++)
+                            {
+                                if (CardLibrary.GetInstance().brutCardContainer[j].data.nameCard == GameManager.GetInstance().firstSwitchCard.GetComponent<CardContainer>().cardData.nameCard)
+                                {
+                                    GameManager.GetInstance().activePlayer.cardObtained.Add(CardLibrary.GetInstance().brutCardContainer[j]);
+                                    GameManager.GetInstance().activePlayer.cardObtained.Last().owner = GameManager.GetInstance().activePlayer;
+                                    Debug.Log(GameManager.GetInstance().activePlayer.name + "obtained " + player.cardObtained.Last());
+                                }
+                            }
+                        }
+                    }
+                    for (int k = 0; k < player.cardObtained.Count; k++)
+                    {
+                        if (player.cardObtained[k].data.nameCard == GameManager.GetInstance().secondSwitchCard.GetComponent<CardContainer>().cardData.nameCard && player != GameManager.GetInstance().activePlayer && !stopPlayerSearching)
+                        {
+                            player.cardObtained.RemoveAt(k);
+                            for (int l = 0; l < CardLibrary.GetInstance().brutCardContainer.Count; l++)
+                            {
+                                if (CardLibrary.GetInstance().brutCardContainer[l].data.nameCard == GameManager.GetInstance().secondSwitchCard.GetComponent<CardContainer>().cardData.nameCard)
+                                {
+                                    player.cardObtained.Add(CardLibrary.GetInstance().brutCardContainer[l]);
+                                    player.cardObtained.Last().owner = player;
+                                    Debug.Log(player.name + "obtained " + player.cardObtained.Last());
+                                    stopPlayerSearching = true;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            wantSwitchCard = false;
+            GameManager.GetInstance().firstSwitchCard = null;
+            GameManager.GetInstance().secondSwitchCard = null;
+        }
     }
 }

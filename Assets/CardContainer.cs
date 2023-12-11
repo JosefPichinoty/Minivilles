@@ -36,22 +36,26 @@ public class CardContainer : MonoBehaviour
 
     public void SelectCardSwitch(GameObject prefab)
     {
+        bool firstPlayerFound = false;
+        bool secondPlayerFound = false;
         foreach (Player player in PlayerManager.GetInstance().playerList)
         {
-            for (int i = 0; i < PlayerManager.GetInstance().player1.cardObtained.Count; i++)
+            for (int i = 0; i < GameManager.GetInstance().activePlayer.cardObtained.Count; i++)
             {
-                if (PlayerManager.GetInstance().player1.cardObtained[i].data.nameCard == prefab.GetComponent<CardContainer>().cardData.nameCard)
+                if (GameManager.GetInstance().activePlayer.cardObtained[i].data.nameCard == prefab.GetComponent<CardContainer>().cardData.nameCard && (player == GameManager.GetInstance().activePlayer) && (firstPlayerFound = false))
                 {
                     GameManager.GetInstance().firstSwitchCard = prefab;
-                    Debug.Log("firstCard = ", GameManager.GetInstance().firstSwitchCard);
+                    Debug.Log("firstCard = " + GameManager.GetInstance().firstSwitchCard);
+                    firstPlayerFound = true;
                 }
             }
             for (int j = 0; j < player.cardObtained.Count; j++)
             {
-                if (player.cardObtained[j].data.nameCard == prefab.GetComponent<CardContainer>().cardData.nameCard && player != PlayerManager.GetInstance().player1)
+                if (player.cardObtained[j].data.nameCard == prefab.GetComponent<CardContainer>().cardData.nameCard && player != GameManager.GetInstance().activePlayer && (secondPlayerFound = false))
                 {
                     GameManager.GetInstance().secondSwitchCard = prefab;
-                    Debug.Log("secondCard = ", GameManager.GetInstance().secondSwitchCard);
+                    Debug.Log("secondCard = " + GameManager.GetInstance().secondSwitchCard);
+                    secondPlayerFound = true;
                 }
             }
         }
