@@ -52,6 +52,7 @@ public class Notification : MonoBehaviour
 
     public void showMoneyNotif()
     {
+        anim.SetTrigger("badTrigger");
         img.sprite = goodNotif;
 
         if (moneyGained == 1) {
@@ -68,7 +69,7 @@ public class Notification : MonoBehaviour
 
     public void showGoodNotif()
     {
-        anim.SetTrigger("goodTrigger");
+        anim.SetTrigger("badTrigger");
         //gameObject.SetActive(true);
 
         gameObject.GetComponent<UnityEngine.UI.Image>().sprite = goodNotif;
