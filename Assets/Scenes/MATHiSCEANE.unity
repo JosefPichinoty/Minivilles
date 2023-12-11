@@ -1278,7 +1278,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 103880986}
-  - component: {fileID: 103880987}
   m_Layer: 5
   m_Name: Hand1 (2)
   m_TagString: Untagged
@@ -1306,20 +1305,6 @@ RectTransform:
   m_AnchoredPosition: {x: 57.081284, y: 47.380165}
   m_SizeDelta: {x: 1918.8, y: 1062.6731}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &103880987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 103880985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 781aeb99318d1b34bbd5275396059555, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cartes: []
-  monuments: []
 --- !u!1001 &107063345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8798,6 +8783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
+  baseHand: {fileID: 2121071390}
 --- !u!1 &546113353
 GameObject:
   m_ObjectHideFlags: 0
@@ -8922,6 +8908,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
+  baseHand: {fileID: 1583947527}
 --- !u!1001 &561665442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9176,7 +9163,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 567535912}
-  - component: {fileID: 567535913}
   m_Layer: 5
   m_Name: Hand1 (2)
   m_TagString: Untagged
@@ -9204,20 +9190,6 @@ RectTransform:
   m_AnchoredPosition: {x: 57.081284, y: 47.380165}
   m_SizeDelta: {x: 1918.8, y: 1062.6731}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &567535913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 567535911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 781aeb99318d1b34bbd5275396059555, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cartes: []
-  monuments: []
 --- !u!1001 &579974459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11864,7 +11836,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 839440613}
-  - component: {fileID: 839440614}
   m_Layer: 5
   m_Name: Hand1 (2)
   m_TagString: Untagged
@@ -11892,20 +11863,6 @@ RectTransform:
   m_AnchoredPosition: {x: 57.081284, y: 47.380165}
   m_SizeDelta: {x: 1918.8, y: 1062.6731}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &839440614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 839440612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 781aeb99318d1b34bbd5275396059555, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cartes: []
-  monuments: []
 --- !u!1 &854030569
 GameObject:
   m_ObjectHideFlags: 0
@@ -16845,7 +16802,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1115415896}
-  - component: {fileID: 1115415897}
   m_Layer: 5
   m_Name: Hand1 (2)
   m_TagString: Untagged
@@ -16873,20 +16829,6 @@ RectTransform:
   m_AnchoredPosition: {x: 57.081284, y: 47.380165}
   m_SizeDelta: {x: 1918.8, y: 1062.6731}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1115415897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1115415895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 781aeb99318d1b34bbd5275396059555, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cartes: []
-  monuments: []
 --- !u!1 &1122687668
 GameObject:
   m_ObjectHideFlags: 0
@@ -23454,6 +23396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
+  baseHand: {fileID: 239590931}
 --- !u!224 &1611912003 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8391580647320020310, guid: 97e0df8eff900db4392e5d279988da16, type: 3}
@@ -24209,6 +24152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
+  baseHand: {fileID: 1447809163}
 --- !u!224 &1709909228 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8391580647320020310, guid: 97e0df8eff900db4392e5d279988da16, type: 3}
@@ -27073,6 +27017,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
+  baseHand: {fileID: 0}
 --- !u!1 &2002791661 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7066318275581547428, guid: 5cbf6a934be326d41898fd569ed0bd12, type: 3}
