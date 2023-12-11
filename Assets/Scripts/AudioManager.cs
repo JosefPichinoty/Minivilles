@@ -6,11 +6,23 @@ using UnityEngine.UI;
 public class AudioManager : MonoBehaviour
 {
 
-    public static AudioManager instance;
-    
+
+    static private AudioManager instance;
+
+    static public AudioManager GetInstance()
+    {
+        if (instance == null)
+        {
+            instance = new AudioManager();
+        }
+        return instance;
+    }
+
+    private AudioManager() : base() { }
+
     public AudioClip btnHover;
     public AudioClip btnClick;
-
+    public AudioClip diceThrow;
 
     public AudioSource[] audioSource;
 
@@ -50,5 +62,10 @@ public class AudioManager : MonoBehaviour
     public void PlayMusic()
     {
         audioSource[1].PlayOneShot(music);
+    }
+
+    public void playDice()
+    {
+        audioSource[0].PlayOneShot(diceThrow);
     }
 }

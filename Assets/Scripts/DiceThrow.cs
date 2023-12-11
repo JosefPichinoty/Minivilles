@@ -12,6 +12,9 @@ public class DiceThrow : MonoBehaviour
     private System.Random random;
 
     [SerializeField]
+    private AudioManager audio;
+
+    [SerializeField]
     private AnimationClip[] animations = new AnimationClip[6];
     public int nombre1;
     public int nombre2;
@@ -76,6 +79,7 @@ public class DiceThrow : MonoBehaviour
     {
         if (GameManager.GetInstance().activePlayer.canThrow == true)
         {
+            audio.playDice();
             GameManager.GetInstance().activePlayer.canThrow = false;
             gameObject.SetActive(true);
             StartCoroutine(PlayFirstAnimationAndWait());

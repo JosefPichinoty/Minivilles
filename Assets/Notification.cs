@@ -54,6 +54,7 @@ public class Notification : MonoBehaviour
         if (anim != null && !anim.GetCurrentAnimatorStateInfo(0).IsName("Notificacion"))
         {
             // Desactivar el componente Animator
+            anim.enabled = false;
             /*
             if(fadeTime > 0)
             {
@@ -62,6 +63,10 @@ public class Notification : MonoBehaviour
                 panelNotif.color = new Color(panelNotif.color.r, panelNotif.color.g, panelNotif.color.b, alphaValue);
             }
             */
+        }
+        else
+        {
+            anim.enabled = true;
         }
     }
 
@@ -88,11 +93,12 @@ public class Notification : MonoBehaviour
     {
 
         gameObject.SetActive(true);
-
+        img.color = solid;
+        text.color = solid;
 
         gameObject.GetComponent<UnityEngine.UI.Image>().sprite = goodNotif;
 
-
+        Invoke("fadeOut", 2f);
     }
 
     public void showBadNotif()
@@ -104,6 +110,7 @@ public class Notification : MonoBehaviour
         
         gameObject.GetComponent<UnityEngine.UI.Image>().sprite = badNotif;
 
+        Invoke("fadeOut", 2f);
 
     }
 
@@ -119,6 +126,12 @@ public class Notification : MonoBehaviour
             Debug.Log("NULL");
         }
         text.text = textShow;
+    }
+
+    public void fadeOut()
+    {
+        anim.enabled = true;
+        anim.Play("Notificacion");
     }
 
  
