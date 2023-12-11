@@ -926,6 +926,7 @@ GameObject:
   - component: {fileID: 77000860}
   - component: {fileID: 77000859}
   - component: {fileID: 77000862}
+  - component: {fileID: 77000863}
   m_Layer: 5
   m_Name: SkipTurnButton
   m_TagString: Untagged
@@ -943,13 +944,13 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.2068965, y: 2.2068965, z: 2.2068965}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 854030573}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -473.69, y: -10}
+  m_AnchoredPosition: {x: -463.77, y: 0}
   m_SizeDelta: {x: 200, y: 84}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &77000859
@@ -1058,6 +1059,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91425941179df423687f12b5b69690e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &77000863
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77000857}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c737e0ab96a3d42378838542a5b30c0b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &78260507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1465,6 +1487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
+  baseHand: {fileID: 0}
 --- !u!1001 &107063345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2302,6 +2325,7 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: b6c53a5f0d3f95648a00184f0c3f0bc0, type: 2}
   monumentOwned: 0
   trash2: 0
+  monu: {fileID: 0}
 --- !u!114 &170419021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3823,6 +3847,7 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: 8e3c12aa2fb5bf34dab138b556979ceb, type: 2}
   monumentOwned: 0
   trash2: 0
+  monu: {fileID: 0}
 --- !u!114 &226245631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6607,9 +6632,10 @@ MonoBehaviour:
   nombre2: 0
   total: 0
   animator: {fileID: 426730987}
-  btn: {fileID: 2143562447}
+  btn1Dice: {fileID: 1315037617}
+  btn2Dice: {fileID: 2143562447}
   dice2: {fileID: 949273747}
-  gare: 0
+  gare: 1
 --- !u!95 &426730987
 Animator:
   serializedVersion: 5
@@ -6963,6 +6989,7 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: 9444927abccee35428e96ff3fdbee0ca, type: 2}
   monumentOwned: 0
   trash2: 0
+  monu: {fileID: 0}
 --- !u!114 &430987655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8735,6 +8762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
+  baseHand: {fileID: 0}
 --- !u!1 &546113353
 GameObject:
   m_ObjectHideFlags: 0
@@ -8859,6 +8887,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
+  baseHand: {fileID: 0}
 --- !u!1001 &561665442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9155,6 +9184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
+  baseHand: {fileID: 0}
 --- !u!1001 &579974459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10871,13 +10901,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player1Hand: {fileID: 1611121729}
-  playerbase1: {fileID: 839440612}
   player2Hand: {fileID: 538242728}
-  playerbase2: {fileID: 103880985}
   player3Hand: {fileID: 555766998}
-  playerbase3: {fileID: 567535911}
   player4Hand: {fileID: 1706473320}
-  playerbase4: {fileID: 1115415895}
   player1Data: {fileID: 11400000, guid: e0322b36b7a58ad4092dbe86636d4642, type: 2}
   player2Data: {fileID: 11400000, guid: 9c3d9fc6b334a8040a17d4eb3c44b4cf, type: 2}
   player3Data: {fileID: 11400000, guid: 6a13062efce4283458e32e3f8b0a4379, type: 2}
@@ -12016,6 +12042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
+  baseHand: {fileID: 0}
 --- !u!1 &854030569
 GameObject:
   m_ObjectHideFlags: 0
@@ -12127,6 +12154,7 @@ RectTransform:
   - {fileID: 175671293}
   - {fileID: 108173096}
   - {fileID: 2143562446}
+  - {fileID: 1315037615}
   - {fileID: 77000858}
   - {fileID: 426730990}
   - {fileID: 1110108576}
@@ -12158,6 +12186,8 @@ MonoBehaviour:
   p2Animator: {fileID: 437396633}
   p3Animator: {fileID: 720975432}
   p4Animator: {fileID: 1257772142}
+  SkipButtonAnimator: {fileID: 77000863}
+  DiceButtonAnimator: {fileID: 1315037620}
 --- !u!1001 &859794762
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13164,6 +13194,7 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: 3a91722bfc3d86a4f82b957f42cbf782, type: 2}
   monumentOwned: 0
   trash2: 0
+  monu: {fileID: 0}
 --- !u!114 &883696548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13372,6 +13403,7 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: 8e3c12aa2fb5bf34dab138b556979ceb, type: 2}
   monumentOwned: 0
   trash2: 0
+  monu: {fileID: 0}
 --- !u!95 &898868839
 Animator:
   serializedVersion: 5
@@ -14462,7 +14494,8 @@ MonoBehaviour:
   nombre2: 0
   total: 0
   animator: {fileID: 949273750}
-  btn: {fileID: 0}
+  btn1Dice: {fileID: 0}
+  btn2Dice: {fileID: 0}
   dice2: {fileID: 0}
   gare: 0
 --- !u!114 &949273752
@@ -14655,6 +14688,7 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: 3a91722bfc3d86a4f82b957f42cbf782, type: 2}
   monumentOwned: 0
   trash2: 0
+  monu: {fileID: 0}
 --- !u!114 &956784461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17299,6 +17333,7 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: b6c53a5f0d3f95648a00184f0c3f0bc0, type: 2}
   monumentOwned: 0
   trash2: 0
+  monu: {fileID: 0}
 --- !u!114 &1107906655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17508,6 +17543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
+  baseHand: {fileID: 0}
 --- !u!1 &1122687668
 GameObject:
   m_ObjectHideFlags: 0
@@ -19794,6 +19830,173 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8391580647320020310, guid: 97e0df8eff900db4392e5d279988da16, type: 3}
   m_PrefabInstance: {fileID: 731338256}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1315037614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1315037615}
+  - component: {fileID: 1315037619}
+  - component: {fileID: 1315037618}
+  - component: {fileID: 1315037617}
+  - component: {fileID: 1315037616}
+  - component: {fileID: 1315037620}
+  m_Layer: 5
+  m_Name: LancerDe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1315037615
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315037614}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 198.62068}
+  m_LocalScale: {x: 1.0001214, y: 1.0001214, z: 1.0001214}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 854030573}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -824, y: 0.000015259}
+  m_SizeDelta: {x: 227, y: 222}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1315037616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315037614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91425941179df423687f12b5b69690e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1315037617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315037614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1315037618}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 426730986}
+        m_TargetAssemblyTypeName: DiceThrow, Assembly-CSharp
+        m_MethodName: LancerDe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1315037618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315037614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 6a114405878e54765a1f4e3cb2fbbefc, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1315037619
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315037614}
+  m_CullTransparentMesh: 1
+--- !u!95 &1315037620
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315037614}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1e267213401b54652bf57acbe20512ad, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!224 &1321151116 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8391580647320020310, guid: 97e0df8eff900db4392e5d279988da16, type: 3}
@@ -19960,7 +20163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BuyUI: {fileID: 1110108575}
-  dice: {fileID: 0}
+  dice: {fileID: 426730986}
   activePlayer: {fileID: 0}
   selectedCard: {fileID: 0}
   allCards: []
@@ -19968,6 +20171,8 @@ MonoBehaviour:
   monumentsGameObjects: []
   isDissolving: 0
   turn: 0
+  firstSwitchCard: {fileID: 0}
+  secondSwitchCard: {fileID: 0}
 --- !u!4 &1335594748
 Transform:
   m_ObjectHideFlags: 0
@@ -23363,6 +23568,7 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: 9444927abccee35428e96ff3fdbee0ca, type: 2}
   monumentOwned: 0
   trash2: 0
+  monu: {fileID: 0}
 --- !u!114 &1593964615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24077,6 +24283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
+  baseHand: {fileID: 0}
 --- !u!224 &1611912003 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8391580647320020310, guid: 97e0df8eff900db4392e5d279988da16, type: 3}
@@ -25101,6 +25308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
+  baseHand: {fileID: 0}
 --- !u!224 &1709909228 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8391580647320020310, guid: 97e0df8eff900db4392e5d279988da16, type: 3}
@@ -28474,6 +28682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
+  baseHand: {fileID: 0}
 --- !u!1 &2002791661 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7066318275581547428, guid: 5cbf6a934be326d41898fd569ed0bd12, type: 3}
@@ -30826,13 +31035,14 @@ GameObject:
   - component: {fileID: 2143562448}
   - component: {fileID: 2143562447}
   - component: {fileID: 2143562450}
+  - component: {fileID: 2143562451}
   m_Layer: 5
-  m_Name: LancerDe
+  m_Name: Lancer2De
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2143562446
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30849,7 +31059,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -824, y: -10}
+  m_AnchoredPosition: {x: -824, y: 235}
   m_SizeDelta: {x: 227, y: 222}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2143562447
@@ -30896,9 +31106,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 426730986}
-        m_TargetAssemblyTypeName: DiceThrow, Assembly-CSharp
-        m_MethodName: LancerDe
+      - m_Target: {fileID: 2143562451}
+        m_TargetAssemblyTypeName: ButtonDices, Assembly-CSharp
+        m_MethodName: enableDice
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -30958,6 +31168,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91425941179df423687f12b5b69690e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2143562451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143562445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b33c46ef06c24734b5d55e527347f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dice1: {fileID: 426730985}
+  dice2: {fileID: 949273747}
+  btn: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
