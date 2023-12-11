@@ -124,7 +124,7 @@ public class PlayerManager : MonoBehaviour
             {
                 playerCounter = 0;
             }
-            if (playerIndicator.GetComponent<Animator>().GetBool("endAnim"))
+            if (playerIndicator.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Idle"))
             {
                 playerIndicator.SetActive(false);
 
@@ -145,6 +145,11 @@ public class PlayerManager : MonoBehaviour
             if (playerCounter == 3)
             {
                 playerCounter = 0;
+            }
+            if (playerIndicator.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+            {
+                playerIndicator.SetActive(false);
+
             }
 
 
