@@ -16,7 +16,7 @@ MonoBehaviour:
   cardObtainedScrptable: []
   monumentAcquired: []
   canBuy: 1
-  canThrow: 1
+  canThrow: 0
   bothDice: 0
   bonusMoney: 0
   playAgainAbility: 0

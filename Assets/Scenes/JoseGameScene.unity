@@ -2712,6 +2712,10 @@ PrefabInstance:
       propertyPath: cardData
       value: 
       objectReference: {fileID: 11400000, guid: 0df9b4cc311dc09489acee86f0680648, type: 2}
+    - target: {fileID: -1873187658700853276, guid: bb6f0f7c7d355ef44a346c1f82dc02cc, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 1669181921349161083, guid: bb6f0f7c7d355ef44a346c1f82dc02cc, type: 3}
       propertyPath: m_Material
       value: 
@@ -2959,6 +2963,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6773915649554591555, guid: f9f2a046dfa15fc4992c5fc677084400, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 7066318275581547428, guid: f9f2a046dfa15fc4992c5fc677084400, type: 3}
       propertyPath: m_Name
       value: Cafe
@@ -5782,6 +5790,10 @@ PrefabInstance:
       propertyPath: cardData
       value: 
       objectReference: {fileID: 11400000, guid: 1e830e198b43e054984a2c1ca9d54e46, type: 2}
+    - target: {fileID: -5749523203799147314, guid: e862d4b6ae58049448df8f1dddef4a79, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 1669181921349161083, guid: e862d4b6ae58049448df8f1dddef4a79, type: 3}
       propertyPath: m_Material
       value: 
@@ -6123,6 +6135,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1866724805}
     m_Modifications:
+    - target: {fileID: 1235460754159369820, guid: 51589b294d6354e498b1a9878ca24ac5, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 1669181921349161083, guid: 51589b294d6354e498b1a9878ca24ac5, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -7754,6 +7770,10 @@ PrefabInstance:
       propertyPath: cardData
       value: 
       objectReference: {fileID: 11400000, guid: 0252d96b6cbb552428c1d19bc98ac6b7, type: 2}
+    - target: {fileID: -4091006372398201175, guid: e4f634bc8563a2f4bbf46f87211b1cbe, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 1669181921349161083, guid: e4f634bc8563a2f4bbf46f87211b1cbe, type: 3}
       propertyPath: m_Material
       value: 
@@ -14542,6 +14562,10 @@ PrefabInstance:
       propertyPath: cardData
       value: 
       objectReference: {fileID: 11400000, guid: ad88040f6cd87504f91ae0a093974211, type: 2}
+    - target: {fileID: -1000800563915980527, guid: a44db35e65cd30f489f0cca0dde595d2, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 1669181921349161083, guid: a44db35e65cd30f489f0cca0dde595d2, type: 3}
       propertyPath: m_Material
       value: 
@@ -17204,6 +17228,10 @@ PrefabInstance:
       propertyPath: cardData
       value: 
       objectReference: {fileID: 11400000, guid: e0f25488168f26940aec4b62adedc236, type: 2}
+    - target: {fileID: -5985547406498030433, guid: 114c233b2fff79d4f9e60153a6b64d8b, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 1669181921349161083, guid: 114c233b2fff79d4f9e60153a6b64d8b, type: 3}
       propertyPath: m_Material
       value: 
@@ -19181,6 +19209,10 @@ PrefabInstance:
       propertyPath: cardData
       value: 
       objectReference: {fileID: 11400000, guid: c2c77da3eef9cb445a8de5e64b42dc7a, type: 2}
+    - target: {fileID: 2754050154496516278, guid: 4fa7710c6070eed408251540e191f5fa, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 7066318275581547428, guid: 4fa7710c6070eed408251540e191f5fa, type: 3}
       propertyPath: m_Name
       value: Stade
@@ -19572,6 +19604,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4701826516083663030, guid: 2ce79fdeba9f213439f287a58337535c, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 7066318275581547428, guid: 2ce79fdeba9f213439f287a58337535c, type: 3}
       propertyPath: m_Name
       value: Foret
@@ -19813,6 +19849,10 @@ PrefabInstance:
       propertyPath: cardData
       value: 
       objectReference: {fileID: 11400000, guid: df28363a302dfe54cbb6d801ff8f44d1, type: 2}
+    - target: {fileID: 1198232996746248509, guid: 5cbf6a934be326d41898fd569ed0bd12, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 1669181921349161083, guid: 5cbf6a934be326d41898fd569ed0bd12, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -21260,6 +21300,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1671677471925109863, guid: 4681dd99e404de24087ab524c6faac9b, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 7066318275581547428, guid: 4681dd99e404de24087ab524c6faac9b, type: 3}
       propertyPath: m_Name
       value: Chaine de tv
@@ -21361,6 +21405,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1866724805}
     m_Modifications:
+    - target: {fileID: -2020006143662457364, guid: 13c27b522b6b3a34c9aee505d6bf595e, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 1669181921349161083, guid: 13c27b522b6b3a34c9aee505d6bf595e, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -23666,6 +23714,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1866724805}
     m_Modifications:
+    - target: {fileID: 25171693254969479, guid: c8cc703863bb23844a60a83a786d47e4, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 1669181921349161083, guid: c8cc703863bb23844a60a83a786d47e4, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -24402,6 +24454,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1866724805}
     m_Modifications:
+    - target: {fileID: -5489905963664893923, guid: 0770a08f3c5a2e943b6758680fdf8f8b, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 1669181921349161083, guid: 0770a08f3c5a2e943b6758680fdf8f8b, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -24841,6 +24897,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1866724805}
     m_Modifications:
+    - target: {fileID: 261545585051096795, guid: f59f2bb57056ed545b291bb010c8ac05, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 1669181921349161083, guid: f59f2bb57056ed545b291bb010c8ac05, type: 3}
       propertyPath: m_Color.a
       value: 1

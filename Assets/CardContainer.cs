@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CardContainer : MonoBehaviour
 {
@@ -9,7 +10,6 @@ public class CardContainer : MonoBehaviour
     public bool monumentOwned = false;
     private int trash = 0;
     public bool trash2 = false;
-
 
     public void BuyMonument()
     {
@@ -26,6 +26,14 @@ public class CardContainer : MonoBehaviour
                     GameManager.GetInstance().activePlayer.monumentObtained.Last().Effect(trash, ref trash2);
                 }
             }
+        }
+    }
+
+    public void PrintTest()
+    {
+        if ()
+        {
+
         }
     }
 }

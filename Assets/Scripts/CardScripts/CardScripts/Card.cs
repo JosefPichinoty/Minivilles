@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using Unity.VisualScripting.FullSerializer;
 using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class Card
-    {
+{
     public Card(CardData pData, typeCard pType)
     {
         data = pData;
