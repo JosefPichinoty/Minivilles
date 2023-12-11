@@ -26,7 +26,7 @@ public class PlayerHand : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKeyUp(KeyCode.K))
+        if(Input.GetKeyDown(KeyCode.K))
         {
             GameManager.GetInstance().activePlayer.money += 2;
             print(GameManager.GetInstance().activePlayer.money);
