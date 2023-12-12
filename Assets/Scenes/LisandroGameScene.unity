@@ -14101,6 +14101,7 @@ MonoBehaviour:
   p4Animator: {fileID: 1257772142}
   SkipButtonAnimator: {fileID: 77000863}
   DiceButtonAnimator: {fileID: 1315037620}
+  DiceButton2Animator: {fileID: 2143562452}
 --- !u!1001 &859794762
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28184,6 +28185,7 @@ MonoBehaviour:
   NotifPanel: {fileID: 1004201218}
   notif: {fileID: 1004201220}
   dice: {fileID: 426730986}
+  btn2Dice: {fileID: 2143562445}
 --- !u!4 &1599929087
 Transform:
   m_ObjectHideFlags: 0
@@ -36575,13 +36577,14 @@ GameObject:
   - component: {fileID: 2143562447}
   - component: {fileID: 2143562450}
   - component: {fileID: 2143562451}
+  - component: {fileID: 2143562452}
   m_Layer: 5
   m_Name: Lancer2De
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2143562446
 RectTransform:
   m_ObjectHideFlags: 0
@@ -36722,6 +36725,27 @@ MonoBehaviour:
   dice1: {fileID: 426730985}
   dice2: {fileID: 949273747}
   btn: {fileID: 2143562447}
+--- !u!95 &2143562452
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143562445}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 99bb1bdc14fbd459991f5ed658f4b1f6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

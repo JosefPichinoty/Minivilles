@@ -28,9 +28,13 @@ public class BlueCard : Card
                 PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().moneyGained = 1;
                 didEffect = true;
             }
+            Debug.Log(nombre);
+
             if (nombre == 10 && data.nameCard == "Verger")
             {
                 didEffect = true;
+                PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().moneyGained = 3;
+
                 owner.money += 3;
             }
         }
