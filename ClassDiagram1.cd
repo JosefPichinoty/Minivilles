@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ButtonDices" Collapsed="true">
+    <Position X="15.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAIgAAAAAAA=</HashCode>
+      <FileName>Assets\ButtonDices.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BuyCard" Collapsed="true">
+    <Position X="12" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAQAAgQAAAEgAAAAAAAAAAAAAAAAAAAAAAACAQAI=</HashCode>
+      <FileName>Assets\BuyCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CardContainer" Collapsed="true">
+    <Position X="15.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAIAAAAiAAAgAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\CardContainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonumentManager" Collapsed="true">
+    <Position X="12" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>4BAAAAACAAAAAAAAAAkAAACAAAAAAAACAAAAAAAGEEA=</HashCode>
+      <FileName>Assets\MonumentManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Notification" Collapsed="true">
+    <Position X="15.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQAgAAAgCAAEAAAAAAAAAAAjApAAAAIAQAIEAIAAAA=</HashCode>
+      <FileName>Assets\Notification.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotificationError" Collapsed="true">
+    <Position X="17.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\NotificationError.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerIndicator" Collapsed="true">
+    <Position X="13.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\PlayerIndicator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="playerMoney" Collapsed="true">
+    <Position X="19" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAQAAAAAAAAAAAAAAAAAAAAAAAAAAIIAAAAAAAAAA=</HashCode>
+      <FileName>Assets\playerMoney.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AnimationCarte" Collapsed="true">
+    <Position X="12" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\AnimationCarte.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AudioManager" Collapsed="true">
+    <Position X="13.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAACABAAQAAAAAAAEAAABAEAAAAAAAAAAAJEA=</HashCode>
+      <FileName>Assets\Scripts\AudioManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ButtonSFX" Collapsed="true">
+    <Position X="19" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAABAAAAAAAAAAAAAABAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ButtonSFX.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CamPosition" Collapsed="true">
+    <Position X="13.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAQAAEAAABAAAAAAAAAABAAAAgACAAAAAgAAAAAE=</HashCode>
+      <FileName>Assets\Scripts\CamPosition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CardInfo" Collapsed="true">
+    <Position X="19" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Assets\Scripts\CardInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Card.typeCard" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\CardScripts\CardScripts\Card.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AQQACAAAACgCgAABAAAAABAAAAABAAAAAAAQAAgAAAA=</HashCode>
+      <FileName>Assets\Scripts\CardScripts\CardScripts\Card.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CardData" Collapsed="true">
+    <Position X="17.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAIBAAAAAgAAgAAAAACAAAAABAAAAAAAgAAIAAAA=</HashCode>
+      <FileName>Assets\Scripts\CardScripts\CardScripts\CardData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CardLibrary" Collapsed="true">
+    <Position X="12" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAATACgCAAAARBgCgAAAAgDABADAAIAAACIAAQIFA=</HashCode>
+      <FileName>Assets\Scripts\CardScripts\CardScripts\CardLibrary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlueCard">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\CardScripts\CardScripts\TypeCards\BlueCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GreenCard">
+    <Position X="2.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\CardScripts\CardScripts\TypeCards\GreenCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OrangeCard">
+    <Position X="5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAAAAAACgAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\CardScripts\CardScripts\TypeCards\OrangeCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PurpleCard">
+    <Position X="7.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAAAAAACgAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\CardScripts\CardScripts\TypeCards\PurpleCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RedCard">
+    <Position X="9.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\CardScripts\CardScripts\TypeCards\RedCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZoomAndShow" Collapsed="true">
+    <Position X="19" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAQAACAAAAIAACAAAAAAAAAAIAAAAQAAACAAAAA=</HashCode>
+      <FileName>Assets\Scripts\CardScripts\CardScripts\ZoomAndShow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameManager" Collapsed="true">
+    <Position X="20.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQiAAAAACAAAgIAAAAEQAEEBABAAAAEAAAABBIAAIA=</HashCode>
+      <FileName>Assets\Scripts\CardScripts\GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Player" Collapsed="true">
+    <Position X="19" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAgACJCAAAAAEAAECICCgCAABAACBAAJAABAAEGA=</HashCode>
+      <FileName>Assets\Scripts\CardScripts\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dice" Collapsed="true">
+    <Position X="15.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAIQAACAAAAAAAAAAAAAAgAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Dice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DiceThrow" Collapsed="true">
+    <Position X="17.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAQAACAAIAEAAAAAAAAAAAAAEAAJUEQIAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DiceThrow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dissolve" Collapsed="true">
+    <Position X="19" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAACAAAAAAAAAAAAQAAAAAAABAAABAAAA=</HashCode>
+      <FileName>Assets\Scripts\Dissolve.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FollowHand" Collapsed="true">
+    <Position X="20.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\FollowHand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Image" Collapsed="true">
+    <Position X="13.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Image.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerHand" Collapsed="true">
+    <Position X="12" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABcAEAAAACAAAAQAAAAAAAAAAAAAAAAAgAAAAIAAACA=</HashCode>
+      <FileName>Assets\Scripts\PlayerHand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CardStocker" Collapsed="true">
+    <Position X="13.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAABAAAAAAAAAAAAAAAAACAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PlayerHand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerManager" Collapsed="true">
+    <Position X="17.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>5RYAAAAAACAAAAAACAAAAAAgBALAQAgAQAAAQAAAQAA=</HashCode>
+      <FileName>Assets\Scripts\PlayerManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondDice" Collapsed="true">
+    <Position X="20.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAQAACAAIAAAAAAAAAAAAAAAAAABEAQoAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SecondDice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SFXui" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAIAgCAAAAAAAAAAAAAAAAAAAAAAAAAAAQIAAAA=</HashCode>
+      <FileName>Assets\Scripts\SFXui.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ShopPanel" Collapsed="true">
+    <Position X="12" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAEA=</HashCode>
+      <FileName>Assets\Scripts\ShopPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ButtonMethodSwitch" Collapsed="true">
+    <Position X="17.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UIScripts\ButtonMethodSwitch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BuyButtons" Collapsed="true">
+    <Position X="20.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAICBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UIScripts\BuyButtons.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoneyText" Collapsed="true">
+    <Position X="15.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAIAAAAAAAAAAABABAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\UIScripts\MoneyText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TextAnnoucement" Collapsed="true">
+    <Position X="13.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAACAQACCAAAAAAAAAAAEIBABAAACAAAAAAgAACAA=</HashCode>
+      <FileName>Assets\Scripts\UIScripts\TextAnnoucement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="textUi" Collapsed="true">
+    <Position X="15.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAAAAAAAAAhAAAAAAAAAAAAAAAAAIAAIAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UIScripts\textUi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UiAnim" Collapsed="true">
+    <Position X="17.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAhAAAAAAIhAAQAgAAAIAAgAKAgAAQAAAAAIAQCA=</HashCode>
+      <FileName>Assets\Scripts\UIScripts\UiAnim.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
