@@ -23,24 +23,20 @@ public class BuyCard : MonoBehaviour
         if (GameManager.GetInstance().activePlayer == player1Data)
         {
             player1Hand.GetComponent<PlayerHand>().Buy();
-            GameManager.GetInstance().activePlayer.canBuy = false;
         }
         else if(GameManager.GetInstance().activePlayer == player2Data)
         {
             player2Hand.GetComponent<PlayerHand>().Buy();
-            GameManager.GetInstance().activePlayer.canBuy = false;
 
         }
         else if(GameManager.GetInstance().activePlayer == player3Data)
         {
             player3Hand.GetComponent<PlayerHand>().Buy();
-            GameManager.GetInstance().activePlayer.canBuy = false;
 
         }
         else if(GameManager.GetInstance().activePlayer == player4Data)
         {
             player4Hand.GetComponent<PlayerHand>().Buy();
-            GameManager.GetInstance().activePlayer.canBuy = false;
 
         }
     }

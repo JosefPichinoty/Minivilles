@@ -57,11 +57,14 @@ public class PlayerManager : MonoBehaviour
             return;
         }
 
-        //NotifPanel.SetActive(false);
         
         instance = this;
 
+        playerIndicator.GetComponent<UnityEngine.UI.Image>().sprite = playerImages[0];
+        playerIndicator.SetActive(true);
+
         notif = NotifPanel.GetComponent<Notification>();
+
 
         CreationPlayers();
     }
@@ -120,14 +123,12 @@ public class PlayerManager : MonoBehaviour
     {
         if (GameManager.GetInstance().activePlayer.rePlay)
         {
-            playerIndicator.SetActive(true);
-            playerCounter++;
+            playerCounter = (playerCounter + 1) % playerImages.Length;
+
+            // Muestra la imagen del jugador actual
             playerIndicator.GetComponent<UnityEngine.UI.Image>().sprite = playerImages[playerCounter];
-            if(playerCounter == 3)
-            {
-                playerCounter = 0;
-            }
-            if (playerIndicator.GetComponent<Animator>().GetBool("endAnim"))
+            playerIndicator.SetActive(true);
+            if (playerIndicator.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Idle"))
             {
                 playerIndicator.SetActive(false);
 
@@ -142,12 +143,15 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            playerIndicator.SetActive(true);
-            playerCounter++;
+            playerCounter = (playerCounter + 1) % playerImages.Length;
+
+            // Muestra la imagen del jugador actual
             playerIndicator.GetComponent<UnityEngine.UI.Image>().sprite = playerImages[playerCounter];
-            if (playerCounter == 3)
+            playerIndicator.SetActive(true);
+            if (playerIndicator.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Idle"))
             {
-                playerCounter = 0;
+                playerIndicator.SetActive(false);
+
             }
 
 

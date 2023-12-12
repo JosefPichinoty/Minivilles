@@ -15,13 +15,13 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 1, a: 0}
   cardObtainedScrptable: []
   monumentAcquired: []
-  canBuy: 1
+  canBuy: 0
   canThrow: 1
   bothDice: 0
   bonusMoney: 0
   playAgainAbility: 0
   rePlay: 0
-  playerTurn: 1
+  playerTurn: 0
   rethrowDice: 0
   doubleTurn: 0
   playerName: Joueur 1

@@ -2712,6 +2712,10 @@ PrefabInstance:
       propertyPath: cardData
       value: 
       objectReference: {fileID: 11400000, guid: 0df9b4cc311dc09489acee86f0680648, type: 2}
+    - target: {fileID: -1873187658700853276, guid: bb6f0f7c7d355ef44a346c1f82dc02cc, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 1669181921349161083, guid: bb6f0f7c7d355ef44a346c1f82dc02cc, type: 3}
       propertyPath: m_Material
       value: 
@@ -2959,6 +2963,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6773915649554591555, guid: f9f2a046dfa15fc4992c5fc677084400, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 7066318275581547428, guid: f9f2a046dfa15fc4992c5fc677084400, type: 3}
       propertyPath: m_Name
       value: Cafe
@@ -5782,6 +5790,10 @@ PrefabInstance:
       propertyPath: cardData
       value: 
       objectReference: {fileID: 11400000, guid: 1e830e198b43e054984a2c1ca9d54e46, type: 2}
+    - target: {fileID: -5749523203799147314, guid: e862d4b6ae58049448df8f1dddef4a79, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 1669181921349161083, guid: e862d4b6ae58049448df8f1dddef4a79, type: 3}
       propertyPath: m_Material
       value: 
@@ -6123,6 +6135,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1866724805}
     m_Modifications:
+    - target: {fileID: 1235460754159369820, guid: 51589b294d6354e498b1a9878ca24ac5, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 1669181921349161083, guid: 51589b294d6354e498b1a9878ca24ac5, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -6273,7 +6289,7 @@ MonoBehaviour:
   total: 0
   animator: {fileID: 426730987}
   btn: {fileID: 2143562447}
-  dice2: {fileID: 0}
+  dice2: {fileID: 1464989302}
   gare: 0
 --- !u!95 &426730987
 Animator:
@@ -7754,6 +7770,10 @@ PrefabInstance:
       propertyPath: cardData
       value: 
       objectReference: {fileID: 11400000, guid: 0252d96b6cbb552428c1d19bc98ac6b7, type: 2}
+    - target: {fileID: -4091006372398201175, guid: e4f634bc8563a2f4bbf46f87211b1cbe, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 1669181921349161083, guid: e4f634bc8563a2f4bbf46f87211b1cbe, type: 3}
       propertyPath: m_Material
       value: 
@@ -8483,7 +8503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -11827,6 +11847,7 @@ RectTransform:
   - {fileID: 468948635}
   - {fileID: 1619355609}
   - {fileID: 812083732}
+  - {fileID: 1464989303}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -14541,6 +14562,10 @@ PrefabInstance:
       propertyPath: cardData
       value: 
       objectReference: {fileID: 11400000, guid: ad88040f6cd87504f91ae0a093974211, type: 2}
+    - target: {fileID: -1000800563915980527, guid: a44db35e65cd30f489f0cca0dde595d2, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 1669181921349161083, guid: a44db35e65cd30f489f0cca0dde595d2, type: 3}
       propertyPath: m_Material
       value: 
@@ -17203,6 +17228,10 @@ PrefabInstance:
       propertyPath: cardData
       value: 
       objectReference: {fileID: 11400000, guid: e0f25488168f26940aec4b62adedc236, type: 2}
+    - target: {fileID: -5985547406498030433, guid: 114c233b2fff79d4f9e60153a6b64d8b, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 1669181921349161083, guid: 114c233b2fff79d4f9e60153a6b64d8b, type: 3}
       propertyPath: m_Material
       value: 
@@ -19180,6 +19209,10 @@ PrefabInstance:
       propertyPath: cardData
       value: 
       objectReference: {fileID: 11400000, guid: c2c77da3eef9cb445a8de5e64b42dc7a, type: 2}
+    - target: {fileID: 2754050154496516278, guid: 4fa7710c6070eed408251540e191f5fa, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 7066318275581547428, guid: 4fa7710c6070eed408251540e191f5fa, type: 3}
       propertyPath: m_Name
       value: Stade
@@ -19571,6 +19604,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4701826516083663030, guid: 2ce79fdeba9f213439f287a58337535c, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 7066318275581547428, guid: 2ce79fdeba9f213439f287a58337535c, type: 3}
       propertyPath: m_Name
       value: Foret
@@ -19812,6 +19849,10 @@ PrefabInstance:
       propertyPath: cardData
       value: 
       objectReference: {fileID: 11400000, guid: df28363a302dfe54cbb6d801ff8f44d1, type: 2}
+    - target: {fileID: 1198232996746248509, guid: 5cbf6a934be326d41898fd569ed0bd12, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 1669181921349161083, guid: 5cbf6a934be326d41898fd569ed0bd12, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -20573,6 +20614,147 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8391580647320020310, guid: 97e0df8eff900db4392e5d279988da16, type: 3}
   m_PrefabInstance: {fileID: 1434812217}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1464989302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1464989303}
+  - component: {fileID: 1464989308}
+  - component: {fileID: 1464989307}
+  - component: {fileID: 1464989306}
+  - component: {fileID: 1464989305}
+  - component: {fileID: 1464989304}
+  m_Layer: 5
+  m_Name: Dice2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1464989303
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464989302}
+  m_LocalRotation: {x: -0, y: -0, z: 0.004363274, w: 0.9999905}
+  m_LocalPosition: {x: 0, y: 0, z: -327.07993}
+  m_LocalScale: {x: 2.8641999, y: 2.9141605, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 854030573}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -36.5}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1380.2704, y: 800.5561}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1464989304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464989302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a895fb9ceb1f24ffab373fa3b1e9902f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dice1: {fileID: 426730986}
+  nombre2: 0
+  animator: {fileID: 1464989305}
+  btn: {fileID: 0}
+--- !u!95 &1464989305
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464989302}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a263cdcd07a3d4ff4b3f89f059ac94ba, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1464989306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464989302}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408dd72d5a71b45ef937576746a68dec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  nombre1: 0
+  nombre2: 0
+  total: 0
+  animator: {fileID: 1464989305}
+  btn: {fileID: 0}
+  dice2: {fileID: 0}
+  gare: 0
+--- !u!114 &1464989307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464989302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 7115b09ac8d9a4f4ca5b5b6f2db8d64e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1464989308
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464989302}
+  m_CullTransparentMesh: 1
 --- !u!1 &1470071869
 GameObject:
   m_ObjectHideFlags: 0
@@ -21118,6 +21300,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1671677471925109863, guid: 4681dd99e404de24087ab524c6faac9b, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 7066318275581547428, guid: 4681dd99e404de24087ab524c6faac9b, type: 3}
       propertyPath: m_Name
       value: Chaine de tv
@@ -21219,6 +21405,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1866724805}
     m_Modifications:
+    - target: {fileID: -2020006143662457364, guid: 13c27b522b6b3a34c9aee505d6bf595e, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 1669181921349161083, guid: 13c27b522b6b3a34c9aee505d6bf595e, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -23131,7 +23321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -23524,6 +23714,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1866724805}
     m_Modifications:
+    - target: {fileID: 25171693254969479, guid: c8cc703863bb23844a60a83a786d47e4, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 1669181921349161083, guid: c8cc703863bb23844a60a83a786d47e4, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -24260,6 +24454,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1866724805}
     m_Modifications:
+    - target: {fileID: -5489905963664893923, guid: 0770a08f3c5a2e943b6758680fdf8f8b, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 1669181921349161083, guid: 0770a08f3c5a2e943b6758680fdf8f8b, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -24699,6 +24897,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1866724805}
     m_Modifications:
+    - target: {fileID: 261545585051096795, guid: f59f2bb57056ed545b291bb010c8ac05, type: 3}
+      propertyPath: switchButton
+      value: 
+      objectReference: {fileID: 4205013140389338495, guid: b3c84264f04f80b499b1089a7ab6a172, type: 3}
     - target: {fileID: 1669181921349161083, guid: f59f2bb57056ed545b291bb010c8ac05, type: 3}
       propertyPath: m_Color.a
       value: 1
