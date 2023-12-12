@@ -152,6 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 043c213bed6e9a1478f24188850197e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restartScene: LisandroGameScene
+  menuScene: StartScene
 --- !u!4 &313344
 Transform:
   m_ObjectHideFlags: 0
@@ -459,7 +461,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 279476292}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 313343}
+        m_TargetAssemblyTypeName: SceneManger, Assembly-CSharp
+        m_MethodName: RestartScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &279476292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1110,7 +1124,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.0000038146973, y: 0.0000076293945}
-  m_SizeDelta: {x: 150, y: 150}
+  m_SizeDelta: {x: 160, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1524517251
 MonoBehaviour:
@@ -1132,7 +1146,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0de03da6a72b16041950932b94cd579d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a34fb4f28c7c89e458a2b3714aaf67d2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1163,7 +1177,7 @@ GameObject:
   - component: {fileID: 1573719912}
   - component: {fileID: 1573719911}
   m_Layer: 5
-  m_Name: KeepPlayingPanel
+  m_Name: MenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1233,7 +1247,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1573719912}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 313343}
+        m_TargetAssemblyTypeName: SceneManger, Assembly-CSharp
+        m_MethodName: MenuScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1573719912
 MonoBehaviour:
   m_ObjectHideFlags: 0
