@@ -13953,6 +13953,7 @@ GameObject:
   - component: {fileID: 854030571}
   - component: {fileID: 854030570}
   - component: {fileID: 854030574}
+  - component: {fileID: 854030575}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -14086,6 +14087,26 @@ MonoBehaviour:
   SkipButtonAnimator: {fileID: 77000863}
   DiceButtonAnimator: {fileID: 1315037620}
   DiceButton2Animator: {fileID: 2143562452}
+--- !u!114 &854030575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854030569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 779ef31bada3b0346a8f6a627b08bc88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basep1: {fileID: 1268541643}
+  basep2: {fileID: 1995185562}
+  basep3: {fileID: 1751808405}
+  basep4: {fileID: 72894938}
+  player1: {fileID: 11400000, guid: e0322b36b7a58ad4092dbe86636d4642, type: 2}
+  player2: {fileID: 11400000, guid: 9c3d9fc6b334a8040a17d4eb3c44b4cf, type: 2}
+  player3: {fileID: 11400000, guid: 6a13062efce4283458e32e3f8b0a4379, type: 2}
+  player4: {fileID: 11400000, guid: be966c1d4d2033345ad43b73c7adc14f, type: 2}
 --- !u!1001 &859794762
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28387,7 +28408,11 @@ MonoBehaviour:
   player2: {fileID: 11400000, guid: 9c3d9fc6b334a8040a17d4eb3c44b4cf, type: 2}
   player3: {fileID: 11400000, guid: 6a13062efce4283458e32e3f8b0a4379, type: 2}
   player4: {fileID: 11400000, guid: be966c1d4d2033345ad43b73c7adc14f, type: 2}
+<<<<<<< Updated upstream
   baseActive: {fileID: 0}
+=======
+  baseActive: {fileID: 854030575}
+>>>>>>> Stashed changes
   playerIndicator: {fileID: 1861564840}
   playerImages:
   - {fileID: 21300000, guid: 8534522d4953a4c9982cb457a236885c, type: 3}
