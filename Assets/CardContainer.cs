@@ -33,4 +33,27 @@ public class CardContainer : MonoBehaviour
             }
         }
     }
+
+    public void SelectCardSwitch(GameObject prefab)
+    {
+        foreach (Player player in PlayerManager.GetInstance().playerList)
+        {
+            for (int i = 0; i < PlayerManager.GetInstance().player1.cardObtained.Count; i++)
+            {
+                if (PlayerManager.GetInstance().player1.cardObtained[i].data.nameCard == prefab.GetComponent<CardContainer>().cardData.nameCard)
+                {
+                    GameManager.GetInstance().firstSwitchCard = prefab;
+                    Debug.Log("firstCard = ", GameManager.GetInstance().firstSwitchCard);
+                }
+            }
+            for (int j = 0; j < player.cardObtained.Count; j++)
+            {
+                if (player.cardObtained[j].data.nameCard == prefab.GetComponent<CardContainer>().cardData.nameCard && player != PlayerManager.GetInstance().player1)
+                {
+                    GameManager.GetInstance().secondSwitchCard = prefab;
+                    Debug.Log("secondCard = ", GameManager.GetInstance().secondSwitchCard);
+                }
+            }
+        }
+    }
 }

@@ -45,11 +45,14 @@ public class PlayerHand : MonoBehaviour
                     AddCardBasic(cartes[i], GameManager.GetInstance().selectedCard);
                     GameManager.GetInstance().activePlayer.money -= GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney;
                     print("apr�s = " + GameManager.GetInstance().activePlayer.money);
+                    GameManager.GetInstance().activePlayer.canBuy = false;
                 }
                 else
                 {
                     if(GameManager.GetInstance().activePlayer.money < GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney)
                     {
+                        Debug.Log("INTENTO");
+
                         PlayerManager.GetInstance().notif.changeText("Vous n'avez pas assez d'argent !");
 
                         PlayerManager.GetInstance().notif.showBadNotif();
@@ -64,22 +67,27 @@ public class PlayerHand : MonoBehaviour
                     if (GameManager.GetInstance().activePlayer.money >= GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney)
                     {
                         AddCardUpper(cartes[i], GameManager.GetInstance().selectedCard);
+                        GameManager.GetInstance().activePlayer.canBuy = false;
                         GameManager.GetInstance().activePlayer.money -= GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney;
                         print("apr�s = " + GameManager.GetInstance().activePlayer.money);
+
                     }
                 }
                 else
                 {
                     if (GameManager.GetInstance().activePlayer.money < GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney)
                     {
-                        PlayerManager.GetInstance().notif.changeText("Vous n'avez pas assez d'argent !");
+                        Debug.Log("INTENTO");
 
+                        PlayerManager.GetInstance().notif.changeText("Vous n'avez pas assez d'argent !");
                         PlayerManager.GetInstance().notif.showBadNotif();
                     }
                 }
                 
             }
         }
+
+        
     }
 
     private void AddCardUpper(CardStocker cardStocker, GameObject prefab)

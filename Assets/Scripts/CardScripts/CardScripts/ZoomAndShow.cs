@@ -27,10 +27,6 @@ public class ZoomAndShow : MonoBehaviour
         nuevoObjeto.SetActive(false);
         bg = GameObject.Find("GameCanvas");
         anim = GetComponent<Animator>();
-        if(anim == null)
-        {
-            Debug.Log("There is no animator");
-        }
     }
 
     // Update is called once per frame

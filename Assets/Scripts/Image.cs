@@ -9,7 +9,7 @@ public class Image : MonoBehaviour
 
     public void TriggerEvent()
     {
-        AudioManager.instance.PlayMusic();
+        AudioManager.GetInstance().PlayMusic();
 
     }
 }
