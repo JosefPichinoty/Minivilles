@@ -22,6 +22,8 @@ public class DiceThrow : MonoBehaviour
     [SerializeField]
     private Animator animator;
     System.Random randomNombre;
+    System.Random randomNombre2;
+
     [SerializeField]
     private Button btn1Dice;
     [SerializeField]
@@ -36,9 +38,9 @@ public class DiceThrow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //dice2.SetActive(false);
 
         randomNombre = new System.Random();
+        randomNombre2 = new System.Random();
 
         if (animator == null)
         {
@@ -54,11 +56,18 @@ public class DiceThrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!gare)
+        if (!GameManager.GetInstance().activePlayer.bothDice)
         {
+            Debug.Log(GameManager.GetInstance().activePlayer.bothDice);
             dice2.SetActive(false);
             btn2Dice.interactable = false;
 
+        }
+        else
+        {
+            btn2Dice.gameObject.SetActive(true);
+
+            btn2Dice.interactable = true;
         }
         
 
@@ -114,9 +123,11 @@ public class DiceThrow : MonoBehaviour
         animator.SetTrigger("finished");
 
 
-        nombre1 = randomNombre.Next(1, 7);
+
+        dice2.GetComponent<SecondDice>().nombre2 = randomNombre2.Next(5, 6);
+
+        nombre1 = randomNombre.Next(5, 6);
         animator.SetInteger("valeurDe", nombre1);
-        Debug.Log(nombre1);
         if (!dice2.activeSelf)
         {
             total = nombre1;
@@ -125,8 +136,10 @@ public class DiceThrow : MonoBehaviour
         {
             total = nombre1 + dice2.GetComponent<SecondDice>().nombre2;
         }
+        Debug.Log(nombre1);
 
-        PlayerManager.GetInstance().CheckCardEffect(nombre1);
+
+        PlayerManager.GetInstance().CheckCardEffect(total);
 
 
         //Invoke("resetDice", 6f);

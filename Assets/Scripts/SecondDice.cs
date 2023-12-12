@@ -59,7 +59,6 @@ public class SecondDice : MonoBehaviour
         animator.SetTrigger("finished");
 
 
-        nombre2 = randomNombre.Next(1, 7);
         animator.SetInteger("valeurDe", nombre2);
         Debug.Log(nombre2);
 

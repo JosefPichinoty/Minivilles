@@ -45,6 +45,9 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     public DiceThrow dice;
 
+    [SerializeField]
+    private GameObject btn2Dice;
+
 
     void Start()
     {
@@ -70,6 +73,18 @@ public class PlayerManager : MonoBehaviour
 
     void Update()
     {
+
+        if (GameManager.GetInstance().activePlayer.bothDice)
+        {
+
+            btn2Dice.SetActive(true);
+
+        }
+        else
+        {
+            btn2Dice.SetActive(false);
+        }
+
     }
 
     void CreationPlayers()
