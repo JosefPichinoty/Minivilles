@@ -41,6 +41,11 @@ public class GameManager : MonoBehaviour
     public GameObject firstSwitchCard;
     public GameObject secondSwitchCard;
 
+    public PlayerHand playerHand1;
+    public PlayerHand playerHand2;
+    public PlayerHand playerHand3;
+    public PlayerHand playerHand4;
+
     void Start()
     {
         InitGame();

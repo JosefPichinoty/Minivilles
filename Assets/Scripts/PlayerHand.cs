@@ -42,7 +42,7 @@ public class PlayerHand : MonoBehaviour
                 print("avant = " + GameManager.GetInstance().activePlayer.money);
                 if (GameManager.GetInstance().activePlayer.money >= GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney)
                 {
-                    AddCardBasic(cartes[i], GameManager.GetInstance().selectedCard);
+                    AddCardBasic(cartes[i], GameManager.GetInstance().selectedCard, GameManager.GetInstance().activePlayer);
                     GameManager.GetInstance().activePlayer.money -= GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney;
                     print("apr�s = " + GameManager.GetInstance().activePlayer.money);
                     GameManager.GetInstance().activePlayer.canBuy = false;
@@ -66,7 +66,7 @@ public class PlayerHand : MonoBehaviour
                     print("avant = " + GameManager.GetInstance().activePlayer.money);
                     if (GameManager.GetInstance().activePlayer.money >= GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney)
                     {
-                        AddCardUpper(cartes[i], GameManager.GetInstance().selectedCard);
+                        AddCardUpper(cartes[i], GameManager.GetInstance().selectedCard, GameManager.GetInstance().activePlayer);
                         GameManager.GetInstance().activePlayer.canBuy = false;
                         GameManager.GetInstance().activePlayer.money -= GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney;
                         print("apr�s = " + GameManager.GetInstance().activePlayer.money);
@@ -87,19 +87,19 @@ public class PlayerHand : MonoBehaviour
         }
     }
 
-    public void AddCardToScene(GameObject cardCompare)
+    public void AddCardToScene(GameObject cardCompare, Player player)
     {
         for (int i = 0; i < 15; i++)
         {
             if (cartes[i].currentAmount == 0 && cartes[i].cardIndex == cardCompare.GetComponent<CardContainer>().cardData.cardIndex)
             {
-                AddCardBasic(cartes[i], GameManager.GetInstance().selectedCard);
+                AddCardBasic(cartes[i], GameManager.GetInstance().selectedCard, player);
             }
             else if (cartes[i].currentAmount > 0 && cartes[i].cardIndex == cardCompare.GetComponent<CardContainer>().cardData.cardIndex && GameManager.GetInstance().activePlayer.canBuy)
             {
                 if (cartes[i].currentAmount < GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.maxNumCard)
                 {
-                        AddCardUpper(cartes[i], GameManager.GetInstance().selectedCard);
+                    AddCardUpper(cartes[i], GameManager.GetInstance().selectedCard, player);
                 }
             }
         }
@@ -107,14 +107,14 @@ public class PlayerHand : MonoBehaviour
         
     }
 
-    private void AddCardUpper(CardStocker cardStocker, GameObject prefab)
+    private void AddCardUpper(CardStocker cardStocker, GameObject prefab, Player player)
     {
         for (int i = 0; i < CardLibrary.GetInstance().brutCardContainer.Count; i++)
         {
             if (CardLibrary.GetInstance().brutCardContainer[i].data.nameCard == GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.nameCard)
             {
-                GameManager.GetInstance().activePlayer.cardObtained.Add(CardLibrary.GetInstance().brutCardContainer[i]);
-                GameManager.GetInstance().activePlayer.cardObtained.Last().owner = GameManager.GetInstance().activePlayer;
+                player.cardObtained.Add(CardLibrary.GetInstance().brutCardContainer[i]);
+                player.cardObtained.Last().owner = GameManager.GetInstance().activePlayer;
             }
         }
         GameObject obj = Instantiate(prefab, cardStocker.carteStock[cardStocker.currentAmount - 1].transform);
@@ -125,14 +125,14 @@ public class PlayerHand : MonoBehaviour
         obj.gameObject.GetComponent<Dissolve>().canDissolve = true;
         baseObj.gameObject.GetComponent<Dissolve>().canDissolve = true;
     }
-    private void AddCardBasic(CardStocker cardStocker, GameObject prefab)
+    private void AddCardBasic(CardStocker cardStocker, GameObject prefab, Player player)
     {
         for (int i = 0; i < CardLibrary.GetInstance().brutCardContainer.Count; i++)
         {
             if (CardLibrary.GetInstance().brutCardContainer[i].data.nameCard == GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.nameCard)
             {
-                GameManager.GetInstance().activePlayer.cardObtained.Add(CardLibrary.GetInstance().brutCardContainer[i]);
-                GameManager.GetInstance().activePlayer.cardObtained.Last().owner = GameManager.GetInstance().activePlayer;
+                player.cardObtained.Add(CardLibrary.GetInstance().brutCardContainer[i]);
+                player.cardObtained.Last().owner = GameManager.GetInstance().activePlayer;
             }
 
         }

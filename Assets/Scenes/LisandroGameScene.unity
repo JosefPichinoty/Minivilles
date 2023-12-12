@@ -9760,7 +9760,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
-  baseHand: {fileID: 2121071390}
+  baseHand: {fileID: 1294492359}
 --- !u!1 &546113353
 GameObject:
   m_ObjectHideFlags: 0
@@ -23520,6 +23520,10 @@ MonoBehaviour:
   turn: 0
   firstSwitchCard: {fileID: 0}
   secondSwitchCard: {fileID: 0}
+  playerHand1: {fileID: 0}
+  playerHand2: {fileID: 0}
+  playerHand3: {fileID: 0}
+  playerHand4: {fileID: 0}
 --- !u!4 &1335594748
 Transform:
   m_ObjectHideFlags: 0
@@ -28803,7 +28807,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartes: []
   monuments: []
-  baseHand: {fileID: 239590931}
+  baseHand: {fileID: 408025913}
 --- !u!224 &1611912003 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8391580647320020310, guid: 97e0df8eff900db4392e5d279988da16, type: 3}
