@@ -30,8 +30,8 @@ public class OrangeCard : Card
     {
         if (data.nameCard == "Gare")
         {
-            owner.bothDice = true;
-            PlayerManager.GetInstance().dice.gare = true;
+            GameManager.GetInstance().activePlayer.bothDice = true;
+            //PlayerManager.GetInstance().dice.gare = true;
             Debug.Log("Gare HAAA");
         }
         if (data.nameCard == "Centre Commercial")
