@@ -124,9 +124,9 @@ public class DiceThrow : MonoBehaviour
 
 
 
-        dice2.GetComponent<SecondDice>().nombre2 = randomNombre2.Next(5, 6);
+        dice2.GetComponent<SecondDice>().nombre2 = randomNombre2.Next(2, 3);
 
-        nombre1 = randomNombre.Next(5, 6);
+        nombre1 = randomNombre.Next(2, 3);
         animator.SetInteger("valeurDe", nombre1);
         if (!dice2.activeSelf)
         {
