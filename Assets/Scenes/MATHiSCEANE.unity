@@ -6326,6 +6326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 408dd72d5a71b45ef937576746a68dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio: {fileID: 0}
   animations:
   - {fileID: 0}
   - {fileID: 0}
@@ -6337,7 +6338,8 @@ MonoBehaviour:
   nombre2: 0
   total: 0
   animator: {fileID: 426730987}
-  btn: {fileID: 2143562447}
+  btn1Dice: {fileID: 0}
+  btn2Dice: {fileID: 0}
   dice2: {fileID: 1013004564}
   gare: 0
 --- !u!95 &426730987
@@ -11698,6 +11700,8 @@ MonoBehaviour:
   p2Animator: {fileID: 437396633}
   p3Animator: {fileID: 720975432}
   p4Animator: {fileID: 1257772142}
+  SkipButtonAnimator: {fileID: 0}
+  DiceButtonAnimator: {fileID: 0}
 --- !u!1001 &859794762
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19190,6 +19194,8 @@ MonoBehaviour:
   monumentsGameObjects: []
   isDissolving: 0
   turn: 0
+  firstSwitchCard: {fileID: 0}
+  secondSwitchCard: {fileID: 0}
 --- !u!4 &1335594748
 Transform:
   m_ObjectHideFlags: 0
