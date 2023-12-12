@@ -34,6 +34,7 @@ public class Notification : MonoBehaviour
 
     private void Start()
     {
+        
         if (instance != null)
         {
             Destroy(instance);
@@ -52,6 +53,7 @@ public class Notification : MonoBehaviour
 
     public void showMoneyNotif()
     {
+        gameObject.SetActive(true);
         anim.SetTrigger("badTrigger");
         img.sprite = goodNotif;
 
@@ -69,6 +71,8 @@ public class Notification : MonoBehaviour
 
     public void showGoodNotif()
     {
+        gameObject.SetActive(true);
+
         anim.SetTrigger("badTrigger");
         //gameObject.SetActive(true);
 
@@ -78,6 +82,7 @@ public class Notification : MonoBehaviour
 
     public void showBadNotif()
     {
+        gameObject.SetActive(true);
 
         //gameObject.SetActive(true);
         anim.SetTrigger("badTrigger");

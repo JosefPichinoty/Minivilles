@@ -61,6 +61,7 @@ public class PlayerManager : MonoBehaviour
         playerIndicator.SetActive(true);
 
         notif = NotifPanel.GetComponent<Notification>();
+        notif.gameObject.SetActive(false);
 
 
         CreationPlayers();
