@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LisandroGameScene.unity
     guid: 02937a48816854016924d7ba75a3fbd8
+  - enabled: 1
+    path: Assets/Scenes/SceneLisandro.unity
+    guid: 470e9e626928649549d42df67bba5f44
   m_configObjects: {}

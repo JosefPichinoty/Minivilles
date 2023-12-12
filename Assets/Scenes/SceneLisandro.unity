@@ -522,7 +522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 408dd72d5a71b45ef937576746a68dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialAnim: {fileID: 0}
+  audio: {fileID: 0}
   animations:
   - {fileID: 0}
   - {fileID: 0}
@@ -530,6 +530,14 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  nombre1: 0
+  nombre2: 0
+  total: 0
+  animator: {fileID: 0}
+  btn1Dice: {fileID: 0}
+  btn2Dice: {fileID: 0}
+  dice2: {fileID: 0}
+  gare: 0
 --- !u!1 &414366919
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,6 +1425,7 @@ GameObject:
   - component: {fileID: 1263834201}
   - component: {fileID: 1263834203}
   - component: {fileID: 1263834204}
+  - component: {fileID: 1263834205}
   m_Layer: 5
   m_Name: PlayBtn
   m_TagString: Untagged
@@ -1486,7 +1495,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1263834198}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1263834198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1668,6 +1689,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91425941179df423687f12b5b69690e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1263834205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263834195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5202541f9d542cf922a0933f3a3f81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audiomanager: {fileID: 1345994265}
 --- !u!1 &1345994263
 GameObject:
   m_ObjectHideFlags: 0
@@ -1797,6 +1831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btnHover: {fileID: 8300000, guid: 5a981bafe9bb54a56b2a9a0dad9bc8f2, type: 3}
   btnClick: {fileID: 8300000, guid: 82ebd55224ea94b7ba06e1c336d92e9d, type: 3}
+  diceThrow: {fileID: 0}
   audioSource:
   - {fileID: 1345994264}
   - {fileID: 1345994267}

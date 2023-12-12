@@ -25,10 +25,12 @@ public class ButtonSFX : MonoBehaviour
 
     void TaskOnClick()
     {
+        /*
         if (this.gameObject.name == "PlayBtn")
         {
             panel.SetActive(true);
         }
+        */
     }
 
 
