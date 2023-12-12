@@ -12,6 +12,9 @@ public class DiceThrow : MonoBehaviour
     private System.Random random;
 
     [SerializeField]
+    private AudioManager audio;
+
+    [SerializeField]
     private AnimationClip[] animations = new AnimationClip[6];
     public int nombre1;
     public int nombre2;
@@ -19,8 +22,12 @@ public class DiceThrow : MonoBehaviour
     [SerializeField]
     private Animator animator;
     System.Random randomNombre;
+    System.Random randomNombre2;
+
     [SerializeField]
-    private Button btn;
+    private Button btn1Dice;
+    [SerializeField]
+    private Button btn2Dice;
 
     [SerializeField]
     GameObject dice2;
@@ -31,9 +38,9 @@ public class DiceThrow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dice2.SetActive(false);
 
         randomNombre = new System.Random();
+        randomNombre2 = new System.Random();
 
         if (animator == null)
         {
@@ -41,10 +48,7 @@ public class DiceThrow : MonoBehaviour
         }
         random = new System.Random();
 
-        if (!dice2.activeSelf)
-        {
-            dice2.GetComponent<SecondDice>().nombre2 = 0;
-        }
+        
         //num = random.Next(1, 7);
         //animator.SetInteger("valeurDe", num);
     }
@@ -52,10 +56,20 @@ public class DiceThrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!gare)
+        if (!GameManager.GetInstance().activePlayer.bothDice)
         {
+            Debug.Log(GameManager.GetInstance().activePlayer.bothDice);
             dice2.SetActive(false);
+            btn2Dice.interactable = false;
+
         }
+        else
+        {
+            btn2Dice.gameObject.SetActive(true);
+
+            btn2Dice.interactable = true;
+        }
+        
 
     }
 
@@ -67,7 +81,7 @@ public class DiceThrow : MonoBehaviour
         dice2.SetActive(false);
         nombre1 = 0;
         dice2.GetComponent<SecondDice>().nombre2 = 0;
-        btn.interactable = true;
+        btn1Dice.interactable = true;
 
     }
 
@@ -76,6 +90,7 @@ public class DiceThrow : MonoBehaviour
     {
         if (GameManager.GetInstance().activePlayer.canThrow == true)
         {
+            audio.playDice();
             GameManager.GetInstance().activePlayer.canThrow = false;
             gameObject.SetActive(true);
             StartCoroutine(PlayFirstAnimationAndWait());
@@ -100,7 +115,7 @@ public class DiceThrow : MonoBehaviour
     {
         // Reproduce la primera animación
         //animator.Play("still");
-        btn.interactable = false;
+        btn1Dice.interactable = false;
         
 
         // Espera a que la primera animación termine
@@ -108,12 +123,23 @@ public class DiceThrow : MonoBehaviour
         animator.SetTrigger("finished");
 
 
-        nombre1 = randomNombre.Next(4, 5);
+
+        dice2.GetComponent<SecondDice>().nombre2 = randomNombre2.Next(5, 6);
+
+        nombre1 = randomNombre.Next(5, 6);
         animator.SetInteger("valeurDe", nombre1);
+        if (!dice2.activeSelf)
+        {
+            total = nombre1;
+        }
+        else
+        {
+            total = nombre1 + dice2.GetComponent<SecondDice>().nombre2;
+        }
         Debug.Log(nombre1);
 
-        total = nombre1 + dice2.GetComponent<SecondDice>().nombre2;
-        PlayerManager.GetInstance().CheckCardEffect(nombre1);
+
+        PlayerManager.GetInstance().CheckCardEffect(total);
 
 
         //Invoke("resetDice", 6f);

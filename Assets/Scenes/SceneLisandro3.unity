@@ -440,6 +440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 408dd72d5a71b45ef937576746a68dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio: {fileID: 0}
   animations:
   - {fileID: 0}
   - {fileID: 0}
@@ -1311,6 +1312,7 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: 3a91722bfc3d86a4f82b957f42cbf782, type: 2}
   monumentOwned: 0
   trash2: 0
+  monu: {fileID: 0}
 --- !u!114 &301658086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1569,6 +1571,8 @@ MonoBehaviour:
   player2: {fileID: 11400000, guid: 9c3d9fc6b334a8040a17d4eb3c44b4cf, type: 2}
   player3: {fileID: 11400000, guid: 6a13062efce4283458e32e3f8b0a4379, type: 2}
   player4: {fileID: 11400000, guid: be966c1d4d2033345ad43b73c7adc14f, type: 2}
+  playerIndicator: {fileID: 1174813965}
+  playerImages: []
   NotifPanel: {fileID: 1109880434}
   notif: {fileID: 1109880436}
   dice: {fileID: 2006615140}
@@ -6356,6 +6360,7 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: 8e3c12aa2fb5bf34dab138b556979ceb, type: 2}
   monumentOwned: 0
   trash2: 0
+  monu: {fileID: 0}
 --- !u!95 &1582987957
 Animator:
   serializedVersion: 5
@@ -7237,6 +7242,7 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: b6c53a5f0d3f95648a00184f0c3f0bc0, type: 2}
   monumentOwned: 0
   trash2: 0
+  monu: {fileID: 0}
 --- !u!114 &1634216767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7735,6 +7741,7 @@ MonoBehaviour:
     maxAmount: 0
     currentAmount: 0
   monuments: []
+  baseHand: {fileID: 0}
 --- !u!1001 &1717045526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7879,6 +7886,7 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: 9444927abccee35428e96ff3fdbee0ca, type: 2}
   monumentOwned: 0
   trash2: 0
+  monu: {fileID: 0}
 --- !u!114 &1717045531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9190,7 +9198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BuyUI: {fileID: 887768458}
-  dice: {fileID: 0}
+  dice: {fileID: 2006615140}
   activePlayer: {fileID: 0}
   selectedCard: {fileID: 0}
   allCards: []
@@ -9202,6 +9210,8 @@ MonoBehaviour:
   - {fileID: 301658083}
   isDissolving: 0
   turn: 0
+  firstSwitchCard: {fileID: 0}
+  secondSwitchCard: {fileID: 0}
 --- !u!1 &1918901603 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7066318275581547428, guid: f9f2a046dfa15fc4992c5fc677084400, type: 3}
@@ -10138,6 +10148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 408dd72d5a71b45ef937576746a68dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio: {fileID: 0}
   animations:
   - {fileID: 0}
   - {fileID: 0}

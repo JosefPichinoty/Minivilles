@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonDices : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class ButtonDices : MonoBehaviour
     private GameObject dice1;
     [SerializeField]
     private GameObject dice2;
+    [SerializeField]
+    private Button btn;
 
 
     public void enableDice()

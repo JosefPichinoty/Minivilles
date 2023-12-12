@@ -7,6 +7,9 @@ public class UiAnim : MonoBehaviour
     [SerializeField] private Animator p2Animator;
     [SerializeField] private Animator p3Animator;
     [SerializeField] private Animator p4Animator;
+    [SerializeField] private Animator SkipButtonAnimator;
+    [SerializeField] private Animator DiceButtonAnimator;
+    [SerializeField] private Animator DiceButton2Animator;
 
     private bool sIsOpen;
     private bool p1IsOpen;
@@ -20,6 +23,9 @@ public class UiAnim : MonoBehaviour
         if (sIsOpen == false)
         {
             sAnimator.SetTrigger("sOpenTrigger");
+            SkipButtonAnimator.SetTrigger("moveTrigger");
+            DiceButtonAnimator.SetTrigger("openTrigger");
+            DiceButton2Animator.SetTrigger("openTrigger");
             sIsOpen = true;
             lockUi = 5;
             closeOther();
@@ -28,6 +34,10 @@ public class UiAnim : MonoBehaviour
         else if (sIsOpen)
         {
             sAnimator.SetTrigger("sCloseTrigger");
+            SkipButtonAnimator.SetTrigger("closeTrigger");
+            DiceButtonAnimator.SetTrigger("closeTrigger");
+            DiceButton2Animator.SetTrigger("closeTrigger");
+
             sIsOpen = false;
         }
     }
@@ -127,6 +137,7 @@ public class UiAnim : MonoBehaviour
         else if (sIsOpen && lockUi != 5)
         {
             sAnimator.SetTrigger("sCloseTrigger");
+            sIsOpen = false;
         }
     }
 }

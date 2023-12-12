@@ -21,6 +21,7 @@ public class CardContainer : MonoBehaviour
         {
             GameManager.GetInstance().activePlayer.money -= cardData.valueMoney;
             monumentOwned = true;
+
             GameManager.GetInstance().activePlayer.monumentAcquired.Add(cardData);
             monu.SetActive(true);
             for (int i = 0; i < CardLibrary.GetInstance().brutMonumentContainer.Count; i++)
