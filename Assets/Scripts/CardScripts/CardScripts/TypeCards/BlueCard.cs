@@ -36,7 +36,7 @@ public class BlueCard : Card
         }
         else if (type == typeCard.animal)
         {
-            if ( (dice.total == 2) && data.nameCard == "Ferme")
+            if ( (nombre == 2) && data.nameCard == "Ferme")
             {
                 didEffect = true;
                 PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().moneyGained = 1;

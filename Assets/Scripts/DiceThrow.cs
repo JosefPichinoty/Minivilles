@@ -114,7 +114,7 @@ public class DiceThrow : MonoBehaviour
         animator.SetTrigger("finished");
 
 
-        nombre1 = randomNombre.Next(4, 5);
+        nombre1 = randomNombre.Next(1, 7);
         animator.SetInteger("valeurDe", nombre1);
         Debug.Log(nombre1);
         if (!dice2.activeSelf)
