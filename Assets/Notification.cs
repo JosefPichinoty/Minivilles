@@ -11,12 +11,17 @@ public class Notification : MonoBehaviour
     private TextMeshProUGUI text;
     private Animator anim;
 
+    public String cardOwner;
+
     [SerializeField]
     Sprite goodNotif;
     [SerializeField]
     Sprite badNotif;
 
     public int moneyGained;
+
+    [SerializeField]
+    private Sprite[] imgs;
 
     [SerializeField]
     private UnityEngine.UI.Image img;
@@ -51,12 +56,42 @@ public class Notification : MonoBehaviour
     {
     }
 
+    void changeColor()
+    {
+        if(cardOwner == "Player1")
+        {
+            img.sprite = imgs[0];
+
+        }
+        else
+        {
+            if(cardOwner == "Player2")
+            {
+                img.sprite = imgs[1];
+            }
+            else
+            {
+                if(cardOwner == "Player3")
+                {
+                    img.sprite = imgs[2];
+                }
+                else
+                {
+                    if(cardOwner == "Player4")
+                    {
+                        img.sprite = imgs[3];
+                    }
+                }
+            }
+        }
+    }
+
     public void showMoneyNotif()
     {
         gameObject.SetActive(true);
+        Debug.Log(cardOwner);
+        changeColor();
         anim.SetTrigger("badTrigger");
-        img.sprite = goodNotif;
-
         if (moneyGained == 1) {
             text.text = "Vous avez gagné " + moneyGained + " piece !";
 
@@ -72,23 +107,21 @@ public class Notification : MonoBehaviour
     public void showGoodNotif()
     {
         gameObject.SetActive(true);
-
+        changeColor();
         anim.SetTrigger("badTrigger");
         //gameObject.SetActive(true);
 
-        gameObject.GetComponent<UnityEngine.UI.Image>().sprite = goodNotif;
 
     }
 
     public void showBadNotif()
     {
         gameObject.SetActive(true);
-
+        img.sprite = badNotif;
         //gameObject.SetActive(true);
         anim.SetTrigger("badTrigger");
 
         
-        gameObject.GetComponent<UnityEngine.UI.Image>().sprite = badNotif;
 
 
     }

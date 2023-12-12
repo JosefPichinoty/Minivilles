@@ -17703,9 +17703,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1830762196}
+  cardOwner: 
   goodNotif: {fileID: 21300000, guid: 925d7298dab6f4659a59180a63913b80, type: 3}
   badNotif: {fileID: 21300000, guid: 2d0c3977f04d2445d937bbeb57137bb3, type: 3}
   moneyGained: 0
+  imgs:
+  - {fileID: 21300000, guid: 431368ecdad2b4f57ae98612fcba9317, type: 3}
+  - {fileID: 21300000, guid: 4e58cda5fc7114731aee1aff0ab73d98, type: 3}
+  - {fileID: 21300000, guid: aa44db065c0d943828fc9410f862f601, type: 3}
+  - {fileID: 21300000, guid: 8b932458f636445438d1347f9463670a, type: 3}
   img: {fileID: 1004201221}
 --- !u!114 &1004201221
 MonoBehaviour:

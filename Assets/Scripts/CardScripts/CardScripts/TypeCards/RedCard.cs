@@ -23,6 +23,8 @@ public class RedCard : Card
     
     public override void Effect(int nombre, ref bool didEffect)
     {
+        PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().cardOwner = owner.name;
+
         if (nombre == 3  && data.nameCard == "Café")
         {
             GameManager.GetInstance().activePlayer.money--;
