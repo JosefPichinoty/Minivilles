@@ -139,18 +139,6 @@ public class PlayerManager : MonoBehaviour
     {
         if (GameManager.GetInstance().activePlayer.rePlay)
         {
-            playerCounter = (playerCounter + 1) % playerImages.Length;
-
-            // Muestra la imagen del jugador actual
-            playerIndicator.GetComponent<UnityEngine.UI.Image>().sprite = playerImages[playerCounter];
-            playerIndicator.SetActive(true);
-            if (playerIndicator.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Idle"))
-            {
-                playerIndicator.SetActive(false);
-
-            }
-
-
             playerList[0].BecomeActivePlayer();
             playerList[0].canThrow = true;
             playerList[0].playerTurn = true;
