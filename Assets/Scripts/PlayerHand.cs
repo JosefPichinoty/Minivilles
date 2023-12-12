@@ -103,8 +103,6 @@ public class PlayerHand : MonoBehaviour
                 }
             }
         }
-
-        
     }
 
     private void AddCardUpper(CardStocker cardStocker, GameObject prefab, Player player)
@@ -134,7 +132,6 @@ public class PlayerHand : MonoBehaviour
                 player.cardObtained.Add(CardLibrary.GetInstance().brutCardContainer[i]);
                 player.cardObtained.Last().owner = GameManager.GetInstance().activePlayer;
             }
-
         }
         GameObject obj = Instantiate(prefab, handParent.transform);
         cardStocker.carteStock.Add(obj.gameObject);

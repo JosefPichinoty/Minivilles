@@ -14,8 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0, g: 0, b: 1, a: 0}
   cardObtainedScrptable: []
-  monumentAcquired: []
-  canBuy: 0
+  monumentAcquired:
+  - {fileID: 11400000, guid: 8e3c12aa2fb5bf34dab138b556979ceb, type: 2}
+  - {fileID: 11400000, guid: 9444927abccee35428e96ff3fdbee0ca, type: 2}
+  - {fileID: 11400000, guid: b6c53a5f0d3f95648a00184f0c3f0bc0, type: 2}
+  - {fileID: 11400000, guid: 3a91722bfc3d86a4f82b957f42cbf782, type: 2}
+  canBuy: 1
   canThrow: 1
   bothDice: 0
   bonusMoney: 0
@@ -25,4 +29,4 @@ MonoBehaviour:
   rethrowDice: 0
   doubleTurn: 0
   playerName: Joueur 1
-  money: 3
+  money: 24
