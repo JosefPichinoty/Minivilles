@@ -31,19 +31,15 @@ public class OrangeCard : Card
         if (data.nameCard == "Gare")
         {
             GameManager.GetInstance().activePlayer.bothDice = true;
-            Debug.Log("Gare HAAA");
         }
-        if (data.nameCard == "Centre Commercial")
         {
             GameManager.GetInstance().activePlayer.bonusMoney = true;
             //owner.bonusMoney = true;
-            Debug.Log("Centre Commercial HAAA");
         }
         if (data.nameCard == "Parc d'attractions")
         {
             GameManager.GetInstance().activePlayer.playAgainAbility = true;
             //owner.playAgainAbility = true;
-            Debug.Log("Parc HAAA");
             /*if(diceResult1 == diceResult2)
             {
                 owner.doubleTurn = true
@@ -53,7 +49,6 @@ public class OrangeCard : Card
         {
             GameManager.GetInstance().activePlayer.rethrowDice = true;
             //owner.rethrowDice = true;
-            Debug.Log("Tour radio HAAA");
         }
         base.Effect(nombre, ref didEffect);
     }

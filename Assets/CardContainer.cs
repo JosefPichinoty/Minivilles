@@ -32,6 +32,10 @@ public class CardContainer : MonoBehaviour
                     GameManager.GetInstance().activePlayer.monumentObtained.Last().Effect(trash, ref trash2);
                 }
             }
+            if (GameManager.GetInstance().activePlayer.monumentObtained.Count == 4)
+            {
+                Debug.Log(GameManager.GetInstance().activePlayer.playerName + " has won");
+            }
         }
     }
 

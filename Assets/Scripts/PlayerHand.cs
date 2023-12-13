@@ -29,7 +29,7 @@ public class PlayerHand : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.K))
         {
             GameManager.GetInstance().activePlayer.money += 2;
-            print(GameManager.GetInstance().activePlayer.money);
+            //print(GameManager.GetInstance().activePlayer.money);
         }
     }
 
