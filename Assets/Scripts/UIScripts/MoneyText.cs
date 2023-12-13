@@ -34,7 +34,7 @@ public class MoneyText : MonoBehaviour
 
     public void ChangeText()
     {
-        //Debug.Log("UPDATE MONEY");
+        
         textMoney.text = Convert.ToString(GameManager.GetInstance().activePlayer.money);
 
     }
