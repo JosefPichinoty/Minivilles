@@ -21,8 +21,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3a91722bfc3d86a4f82b957f42cbf782, type: 2}
   - {fileID: 11400000, guid: 8e3c12aa2fb5bf34dab138b556979ceb, type: 2}
   - {fileID: 11400000, guid: 8e3c12aa2fb5bf34dab138b556979ceb, type: 2}
-  canBuy: 0
-  canThrow: 0
+  canBuy: 1
+  canThrow: 1
   bothDice: 0
   bonusMoney: 0
   playAgainAbility: 0
@@ -31,4 +31,4 @@ MonoBehaviour:
   rethrowDice: 0
   doubleTurn: 0
   playerName: Joueur 1
-  money: 12
+  money: 3
