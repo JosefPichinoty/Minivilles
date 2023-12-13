@@ -1,11 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.EventSystems;
-using UnityEngine.Rendering;
 
 public class CardContainer : MonoBehaviour
 {
@@ -35,6 +30,8 @@ public class CardContainer : MonoBehaviour
             if (GameManager.GetInstance().activePlayer.monumentObtained.Count == 4)
             {
                 Debug.Log(GameManager.GetInstance().activePlayer.playerName + " has won");
+                SceneManager.LoadScene("ENDSCENE");
+                WinnerData.instance.winnerName = GameManager.GetInstance().activePlayer.name;
             }
         }
     }
