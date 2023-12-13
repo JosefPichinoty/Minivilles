@@ -12,7 +12,7 @@ public class CardContainer : MonoBehaviour
 
     public void BuyMonument()
     {
-        if (GameManager.GetInstance().activePlayer.money >= cardData.valueMoney && monumentOwned == false)
+        if (GameManager.GetInstance().activePlayer.money >= cardData.valueMoney && !monumentOwned)
         {
             GameManager.GetInstance().activePlayer.money -= cardData.valueMoney;
             monumentOwned = true;
