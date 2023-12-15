@@ -9,6 +9,12 @@ public class CardContainer : MonoBehaviour
     private int trash = 0;
     public bool trash2 = false;
     [SerializeField] private GameObject monu;
+    public GameObject endCanvas;
+
+    private void Start()
+    {
+        //endCanvas = GameObject.Find("EndCanvas");
+    }
 
     public void BuyMonument()
     {
@@ -30,8 +36,7 @@ public class CardContainer : MonoBehaviour
             if (GameManager.GetInstance().activePlayer.monumentObtained.Count == 4)
             {
                 Debug.Log(GameManager.GetInstance().activePlayer.playerName + " has won");
-                SceneManager.LoadScene("ENDSCENE");
-                WinnerData.instance.winnerName = GameManager.GetInstance().activePlayer.name;
+                endCanvas.SetActive(true);
             }
         }
     }

@@ -10,7 +10,7 @@ public class SceneManger : MonoBehaviour
 
     public void RestartScene()
     {
-        SceneManager.LoadScene(restartScene);
+        Application.Quit();
     }
 
     public void MenuScene()

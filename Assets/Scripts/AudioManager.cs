@@ -66,6 +66,6 @@ public class AudioManager : MonoBehaviour
 
     public void playDice()
     {
-        audioSource[0].PlayOneShot(diceThrow);
+        //audioSource[0].PlayOneShot(diceThrow);
     }
 }

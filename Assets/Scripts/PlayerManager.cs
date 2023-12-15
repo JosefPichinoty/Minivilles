@@ -167,6 +167,7 @@ public class PlayerManager : MonoBehaviour
             playerList[0].playerTurn = true;
             playerList[0].canBuy = true;
             Debug.Log(playerList[0].playerName);
+            //GameManager.GetInstance().activePlayer.Turn();
             dice.resetDice();
         }
         baseActive.changeTurnUI();

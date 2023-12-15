@@ -1845,7 +1845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btnHover: {fileID: 8300000, guid: 5a981bafe9bb54a56b2a9a0dad9bc8f2, type: 3}
   btnClick: {fileID: 8300000, guid: 82ebd55224ea94b7ba06e1c336d92e9d, type: 3}
-  diceThrow: {fileID: 0}
+  diceThrow: {fileID: 8300000, guid: 0dda1c652722e4ecaa2f08fe820f8916, type: 3}
   audioSource:
   - {fileID: 1345994264}
   - {fileID: 1345994267}
