@@ -29,9 +29,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b6c53a5f0d3f95648a00184f0c3f0bc0, type: 2}
   - {fileID: 11400000, guid: 9444927abccee35428e96ff3fdbee0ca, type: 2}
   canBuy: 1
-  canThrow: 1
-  bothDice: 1
-  bonusMoney: 1
+  canThrow: 0
+  bothDice: 0
+  bonusMoney: 0
   playAgainAbility: 0
   rePlay: 0
   playerTurn: 1
