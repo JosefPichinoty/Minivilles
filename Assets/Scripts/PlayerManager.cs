@@ -90,7 +90,7 @@ public class PlayerManager : MonoBehaviour
 
     }
 
-    void CreationPlayers()
+    void CreationPlayers() //Crée le nombre de joueurs choisis
     {
         if (numPlayers == 1)
         {
@@ -121,7 +121,7 @@ public class PlayerManager : MonoBehaviour
         playerList[0].canBuy = true;
     }
 
-    void RefreshListPlayers()
+    void RefreshListPlayers() //Permet de dire que le prochain joueur devient le premier joueur de la liste
     {
         if (GameManager.GetInstance().activePlayer.doubleTurn == false)
         {
@@ -135,7 +135,7 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void ChangeTurn()
+    public void ChangeTurn()//Change le tour du joueur et actualise ce que les joueurs peuvent faire
     {
         if (GameManager.GetInstance().activePlayer.rePlay)
         {
@@ -174,48 +174,7 @@ public class PlayerManager : MonoBehaviour
 
     }
 
-
-
-    /*public void CheckCardEffect()
-    {
-        foreach (Player player in playerList)
-        {
-            if (player.playerTurn)
-            {
-                foreach (GreenCard greenCard in player.cardObtained)
-                {
-                    greenCard.Effect();
-                }
-
-                foreach (PurpleCard purpleCard in player.cardObtained)
-                {
-                    purpleCard.Effect();
-                }
-            }
-            else if (!player.playerTurn)
-            {
-                Debug.Log(player.cardObtained.Any(c => c.data.nameCard == "Caf�" || c.data.nameCard == "Restaurant"));
-                for (int i = 0; i < player.cardObtained.Count; i++)
-                {
-                    if (player.cardObtained[i].data.nameCard == "Caf�" || player.cardObtained[i].data.nameCard == "Restaurant")
-                    {
-                        Debug.Log("pussy");
-                    }
-                }
-                //foreach (RedCard redCard in player.cardObtained)
-                //{
-                //    redCard.Effect();
-                //}
-            }
-
-            foreach (BlueCard blueCard in player.cardObtained)
-            {
-                blueCard.Effect();
-            }
-        }
-    }*/
-
-    public void CheckCardEffect(int nombre)
+    public void CheckCardEffect(int nombre) //Lance les effets des cartes en fonction des tours des joueurs
     {
         bool didEffect = false;
         foreach (Player player in playerList)
