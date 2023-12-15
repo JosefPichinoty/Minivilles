@@ -15,9 +15,9 @@ public class PlayerHand : MonoBehaviour
     [SerializeField] GameObject baseHand;
 
 
-    // Start is called before the first frame update
     void Start()
     {
+        //On récupère l'endroit ou instancier les cartes et on initialise la main du joueur
         handParent = gameObject.GetComponent<Transform>().GetChild(0).GetChild(0).GetComponent<Transform>();
         for (int i = 0; i < 15; i++)
         {
@@ -26,10 +26,10 @@ public class PlayerHand : MonoBehaviour
     }
     private void Update()
     {
+        //Argent pour débug plus facilement
         if(Input.GetKeyDown(KeyCode.K))
         {
             GameManager.GetInstance().activePlayer.money += 2;
-            //print(GameManager.GetInstance().activePlayer.money);
         }
     }
 
@@ -39,19 +39,16 @@ public class PlayerHand : MonoBehaviour
         {
             if (cartes[i].currentAmount == 0 && cartes[i].cardIndex == GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.cardIndex && GameManager.GetInstance().activePlayer.canBuy)
             {
-                print("avant = " + GameManager.GetInstance().activePlayer.money);
                 if (GameManager.GetInstance().activePlayer.money >= GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney)
                 {
                     AddCardBasic(cartes[i], GameManager.GetInstance().selectedCard, GameManager.GetInstance().activePlayer);
                     GameManager.GetInstance().activePlayer.money -= GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney;
-                    print("apr�s = " + GameManager.GetInstance().activePlayer.money);
                     GameManager.GetInstance().activePlayer.canBuy = false;
                 }
                 else
                 {
                     if(GameManager.GetInstance().activePlayer.money < GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney)
                     {
-                        Debug.Log("INTENTO");
 
                         PlayerManager.GetInstance().notif.changeText("Vous n'avez pas assez d'argent !");
 
@@ -77,8 +74,6 @@ public class PlayerHand : MonoBehaviour
                 {
                     if (GameManager.GetInstance().activePlayer.money < GameManager.GetInstance().selectedCard.GetComponent<CardContainer>().cardData.valueMoney)
                     {
-                        Debug.Log("INTENTO");
-
                         PlayerManager.GetInstance().notif.changeText("Vous n'avez pas assez d'argent !");
                         PlayerManager.GetInstance().notif.showBadNotif();
                     }
