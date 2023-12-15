@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "newCard", menuName = "cardContainer/card")]
-public class CardData : ScriptableObject
+public class CardData : ScriptableObject //On définit toutes les propriétés des cartes dans l'inspecteur
 {
     public string nameCard;
     protected Player owner;
