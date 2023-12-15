@@ -33,6 +33,7 @@ public class PlayerHand : MonoBehaviour
         }
     }
 
+    //Fonction d'achats
     public void Buy()
     {
         for (int i = 0; i < 15; i++)
@@ -82,6 +83,7 @@ public class PlayerHand : MonoBehaviour
         }
     }
 
+    //Ajouter une carte
     public void AddCardToScene(GameObject cardCompare, Player player)
     {
         for (int i = 0; i < 15; i++)
@@ -100,6 +102,7 @@ public class PlayerHand : MonoBehaviour
         }
     }
 
+    //Ajouter une carte au dessus d'une autre
     private void AddCardUpper(CardStocker cardStocker, GameObject prefab, Player player)
     {
         for (int i = 0; i < CardLibrary.GetInstance().brutCardContainer.Count; i++)
