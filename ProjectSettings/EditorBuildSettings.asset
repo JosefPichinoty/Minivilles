@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/LisandroGameScene.unity
-    guid: 02937a48816854016924d7ba75a3fbd8
+    guid: ca9501a37d520254c956343db6a3c299
   - enabled: 1
     path: Assets/Scenes/ENDSCENE.unity
     guid: ad502786785cff84ab31fb1e0ccfc745
