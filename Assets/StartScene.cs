@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
@@ -5,11 +6,17 @@ using UnityEngine;
 
 public class StartScene : MonoBehaviour
 {
-    public string launchScene;
+    public GameObject game;
+    public GameObject start;
 
-
-    public void LaunchScene()
+    public void starGame()
     {
-        SceneManager.LoadScene("LisandroGameScene");
+        game.SetActive(true);
+        start.SetActive(false);
+    }
+
+    public void quitGame()
+    {
+        Application.Quit();
     }
 }
