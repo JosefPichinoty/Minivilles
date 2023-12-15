@@ -25,7 +25,7 @@ public class PurpleCard : Card
     }
 
     
-    public override void Effect(int nombre, ref bool didEffect)
+    public override void Effect(int nombre, ref bool didEffect)  //Cette fonction permet de lancer les effets des cartes si le joueur fait le bon lancé de dés.
     {
         if (nombre == 6 && data.nameCard == "Stade")
         {
@@ -62,7 +62,7 @@ public class PurpleCard : Card
         //Quand on va cliquer sur le joueur a target, le joueur sera stocké dans une variable (pour l'effet de la chaine de télévision).
     }
 
-    public void SwitchCards()
+    public void SwitchCards() //Cette fonction permet d'échanger une carte avec celle d'un autre joueur.
     {
         bool stopPlayerSearching = false;
         if (wantSwitchCard)

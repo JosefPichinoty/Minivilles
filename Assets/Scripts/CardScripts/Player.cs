@@ -40,7 +40,7 @@ public class Player : ScriptableObject
 
     }
 
-    public void BecomeActivePlayer()
+    public void BecomeActivePlayer() //Permet au joueur de devenir le joueur actif pendant son tour
     {
         GameManager.GetInstance().activePlayer = this;
         foreach (OrangeCard monument in monumentList)
@@ -49,27 +49,7 @@ public class Player : ScriptableObject
         }
     }
 
-    public void Turn()
-    {
-        
-    }
-
-    public void BuyMonument()
-    {
-        
-    }
-
-    public void DisplayTurnOptions()
-    {
-
-    }
-
-    public void AddBoughtCardToList()
-    {
-        
-    }
-
-    public void PlayAgain()
+    public void PlayAgain() //Lance l'effet du parc d'attraction
     {
         if (playAgainAbility/* && diceResult1 == diceResult2*/)
         {

@@ -46,17 +46,17 @@ public class Card
 
     }
 
-    public virtual void CardBought(Player player)
+    public virtual void CardBought(Player player) //Cette fonction définit le possésseur de la carte.
     {
         owner = player;
     }
 
-    public virtual void Effect(int nombre, ref bool didEffect)
+    public virtual void Effect(int nombre, ref bool didEffect) //Cette fonction sera overridée par ces enfants et activera l'effet des cartes.
     {
         ChangeStateCard();
     }
 
-    public virtual void CommercialCenterEffect()
+    public virtual void CommercialCenterEffect() //Cette fonction donne une pièce au joueur à chaque fois qu'elle est appelée
     {
         if (owner.bonusMoney == true)
         {
@@ -64,7 +64,7 @@ public class Card
         }
     }
 
-    public void ChangeStateCard()
+    public void ChangeStateCard() //Permet de vérifier si le monument est achetable ou non
     {
         foreach (Player player in PlayerManager.GetInstance().playerList)
         {

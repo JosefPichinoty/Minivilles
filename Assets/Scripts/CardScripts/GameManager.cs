@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
-    public void CheckMonuments()
+    public void CheckMonuments() //Cette fonction permet de vérifier si les cartes monuments sont achetables par le joueur
     {
         foreach (Player player in PlayerManager.GetInstance().playerList)
         {
@@ -79,13 +79,9 @@ public class GameManager : MonoBehaviour
                     monument.buyable = false;
                 }
             }
-        }
-        
-        foreach (Player player in PlayerManager.GetInstance().playerList)
-        {
             for (int i = 0; i < player.monumentList.Count; i++)
             {
-;               //Debug.Log("la carte" + monumentsGameObjects[i] + " est achetable");
+                ;               //Debug.Log("la carte" + monumentsGameObjects[i] + " est achetable");
                 if (player.monumentList[i].buyable)
                 {
                     monumentsGameObjects[i].GetComponent<Button>().interactable = true;
@@ -93,9 +89,6 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-
-        
-        //PlayerManager.GetInstance().player1.BecomeActivePlayer();
     }
 
     void Update()
@@ -105,7 +98,7 @@ public class GameManager : MonoBehaviour
         Notification.GetInstance().moneyGained = moneyGained;
     }
 
-    void CheckMonumentsToBeBuy()
+    void CheckMonumentsToBeBuy() //Permet d'activer le bouton si le monument est achetable
     {
         foreach(GameObject monument in monumentsGameObjects)
         {
@@ -118,9 +111,5 @@ public class GameManager : MonoBehaviour
                 monument.GetComponent<Button>().interactable = true;
             }
         }
-    }
-
-    public void SetSellectedCard() {
-    
     }
 }

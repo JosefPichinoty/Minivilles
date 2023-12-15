@@ -17,7 +17,7 @@ public class BlueCard : Card
     }
 
     
-    public override void Effect(int nombre, ref bool didEffect)
+    public override void Effect(int nombre, ref bool didEffect)  //Cette fonction permet de lancer les effets des cartes si le joueur fait le bon lancé de dés.
     {
         if (type == typeCard.wheat)
         {

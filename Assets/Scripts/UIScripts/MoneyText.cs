@@ -9,7 +9,7 @@ public class MoneyText : MonoBehaviour
 {
     static private MoneyText instance;
 
-    static public MoneyText GetInstance()
+    static public MoneyText GetInstance() //On fait un singleton de MonetText
     {
         if (instance == null) instance = new MoneyText();
         return instance;
@@ -32,7 +32,7 @@ public class MoneyText : MonoBehaviour
         ChangeText();
     }
 
-    public void ChangeText()
+    public void ChangeText() //On actualise l'argent du joueur et on l'affiche
     {
         
         textMoney.text = Convert.ToString(GameManager.GetInstance().activePlayer.money);
