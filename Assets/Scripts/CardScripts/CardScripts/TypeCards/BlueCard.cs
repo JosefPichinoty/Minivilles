@@ -19,6 +19,7 @@ public class BlueCard : Card
     
     public override void Effect(int nombre, ref bool didEffect)  //Cette fonction permet de lancer les effets des cartes si le joueur fait le bon lancé de dés.
     {
+        PlayerManager.GetInstance().NotifPanel.GetComponent<Notification>().cardOwner = owner.name;
         if (type == typeCard.wheat)
         {
             if (nombre == 1 && data.nameCard == "Champs de blé")

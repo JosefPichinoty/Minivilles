@@ -137,6 +137,9 @@ public class UiAnim : MonoBehaviour
         else if (sIsOpen && lockUi != 5)
         {
             sAnimator.SetTrigger("sCloseTrigger");
+            SkipButtonAnimator.SetTrigger("closeTrigger");
+            DiceButton2Animator.SetTrigger("closeTrigger");
+            DiceButtonAnimator.SetTrigger("closeTrigger");
             sIsOpen = false;
         }
     }
